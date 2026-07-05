@@ -1018,6 +1018,334 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_01x06"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J2"
+				(at -0.254 11.176 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Encoder"
+				(at -0.254 8.636 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x06_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -2.54) (xy -1.27 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -5.08) (xy -1.27 -5.08)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -7.62) (xy -1.27 -7.62)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Conn_01x06_1_1"
+				(rectangle
+					(start -1.27 6.35)
+					(end 1.27 -8.89)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -7.493)
+					(end 0 -7.747)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0 5.207)
+					(end 1.27 4.953)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 0 2.667)
+					(end 1.27 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -6.35 -5.08 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E-A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -6.35 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E-B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -6.35 -7.62 0)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E-GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -6.35 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "E-VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 5.08 180)
+					(length 3.81)
+					(name "M+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 3.81)
+					(name "M-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "M-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Converter_DCDC:TSR_1-2412"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3493,6 +3821,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 207.01) (xy 309.88 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b38e28b-3ba4-48e8-9d81-a5b386262101")
+	)
+	(wire
+		(pts
 			(xy 177.8 27.94) (xy 177.8 35.56)
 		)
 		(stroke
@@ -3533,6 +3871,16 @@
 	)
 	(wire
 		(pts
+			(xy 349.25 204.47) (xy 356.87 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6bd9eab1-fce3-40ea-b0fd-77636f5095d0")
+	)
+	(wire
+		(pts
 			(xy 168.91 35.56) (xy 162.56 35.56)
 		)
 		(stroke
@@ -3540,6 +3888,16 @@
 			(type default)
 		)
 		(uuid "6e245a89-46d7-4114-b4f5-486559cc4de2")
+	)
+	(wire
+		(pts
+			(xy 349.25 207.01) (xy 349.25 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7113e535-a79d-4dcc-a395-43f8c58682e5")
 	)
 	(wire
 		(pts
@@ -3580,6 +3938,16 @@
 			(type default)
 		)
 		(uuid "8d41498f-e0d1-4450-a61a-466fb6f1a53c")
+	)
+	(wire
+		(pts
+			(xy 309.88 217.17) (xy 317.5 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90dab98f-719c-49b0-a2c3-0ef56f2dc401")
 	)
 	(wire
 		(pts
@@ -3663,6 +4031,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 204.47) (xy 317.5 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db3728d3-e4ce-4303-bf80-f354f3b57315")
+	)
+	(wire
+		(pts
 			(xy 193.04 105.41) (xy 195.58 105.41)
 		)
 		(stroke
@@ -3710,6 +4088,16 @@
 			(type default)
 		)
 		(uuid "ef607699-fa2f-46ff-a6e3-076eea0ae2bd")
+	)
+	(wire
+		(pts
+			(xy 349.25 217.17) (xy 356.87 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4283475-45a7-4af7-a5f3-589aaf736313")
 	)
 	(wire
 		(pts
@@ -3961,86 +4349,6 @@
 			(project "schematics"
 				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
 					(reference "JST2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Motor:Motor_DC")
-		(at 252.73 223.52 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "226795c4-e51e-43ea-a577-08974a7b4332")
-		(property "Reference" "M1"
-			(at 250.19 215.9 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "N20 100RPM"
-			(at 250.19 218.44 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 250.444 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 250.444 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "DC Motor"
-			(at 252.73 223.52 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "cf01143e-22e8-4da6-b873-948d6a02755b")
-		)
-		(pin "1"
-			(uuid "af325adb-8379-46cd-afd2-b70d9d18b37b")
-		)
-		(instances
-			(project "schematics"
-				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
-					(reference "M1")
 					(unit 1)
 				)
 			)
@@ -4307,6 +4615,101 @@
 			(project "schematics"
 				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
 					(reference "MotorControl")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x06")
+		(at 344.17 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "48424010-379f-45e7-8a59-1d2bd5e9bc44")
+		(property "Reference" "J3"
+			(at 343.916 198.374 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Encoder"
+			(at 343.916 200.914 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 344.17 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 344.17 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 344.17 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "E-B"
+			(uuid "5b4d6f41-e2c8-43bf-8433-afffb32d0e09")
+		)
+		(pin "M-"
+			(uuid "d1c60999-99b5-4570-a738-b476977b775e")
+		)
+		(pin "E-VCC"
+			(uuid "dd97ff69-6009-41fe-a0d4-446593049046")
+		)
+		(pin "E-A"
+			(uuid "5d2c6fc3-dc48-4a4b-b19b-ae2abfad1afe")
+		)
+		(pin "E-GND"
+			(uuid "10c6465d-e5fc-427a-a1c8-96813f64caf0")
+		)
+		(pin "M+"
+			(uuid "bd565696-28bb-4832-9521-e3739772026c")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -4825,6 +5228,101 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x06")
+		(at 304.8 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a13a0cde-cb73-42bd-9288-954c2e7fc643")
+		(property "Reference" "J2"
+			(at 304.546 198.374 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Encoder"
+			(at 304.546 200.914 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 304.8 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 304.8 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 304.8 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "E-B"
+			(uuid "090661d5-5b26-4182-a01a-6ad9da139637")
+		)
+		(pin "M-"
+			(uuid "523e4e82-0712-4e56-aefa-1252d34275c2")
+		)
+		(pin "E-VCC"
+			(uuid "dc50af4a-9786-4660-96bc-c9df4a15a89f")
+		)
+		(pin "E-A"
+			(uuid "fff6a17b-b306-47f5-afca-b450418137d3")
+		)
+		(pin "E-GND"
+			(uuid "c5eb3a1a-b28d-40f2-ab47-1704c7175736")
+		)
+		(pin "M+"
+			(uuid "93d02037-3f9d-4320-937a-d492859b59dd")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "MCU_Espressif:ESP32-C3")
 		(at 182.88 165.1 0)
 		(unit 1)
@@ -5000,6 +5498,88 @@
 		)
 	)
 	(symbol
+		(lib_id "Motor:Motor_DC")
+		(at 317.5 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "abcb0983-416a-4c97-aa3f-ae3706ca0a80")
+		(property "Reference" "M1"
+			(at 322.58 210.8199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Motor_DC"
+			(at 322.58 213.3599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 317.5 211.836 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 317.5 211.836 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC Motor"
+			(at 317.5 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d3b12576-8d06-4877-bcc9-e26db087abce")
+		)
+		(pin "1"
+			(uuid "2d646dcb-f5a4-46fc-aa62-9ae3212d87cb")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "M1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Converter_DCDC:TSR_1-2412")
 		(at 175.26 105.41 270)
 		(unit 1)
@@ -5081,86 +5661,6 @@
 			(project "schematics"
 				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
 					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Motor:Motor_DC")
-		(at 323.85 218.44 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bbb13860-9f01-4775-b532-1a114bae49ff")
-		(property "Reference" "M2"
-			(at 321.31 210.82 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "N20 100RPM"
-			(at 321.31 213.36 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 321.564 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 321.564 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "DC Motor"
-			(at 323.85 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "80bc86c3-702c-48b0-9a12-d0b6351fab35")
-		)
-		(pin "1"
-			(uuid "cea3672b-a39d-403a-b0c6-6481ac0a05ed")
-		)
-		(instances
-			(project "schematics"
-				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
-					(reference "M2")
 					(unit 1)
 				)
 			)
@@ -5441,6 +5941,88 @@
 			(project "schematics"
 				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
 					(reference "JST3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Motor:Motor_DC")
+		(at 356.87 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e844163c-19f9-4d09-b2dc-35335c52641d")
+		(property "Reference" "M2"
+			(at 361.95 210.8199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Motor_DC"
+			(at 361.95 213.3599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 356.87 211.836 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 356.87 211.836 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "DC Motor"
+			(at 356.87 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "c20c7a06-b20e-4037-9a60-393ac637f58f")
+		)
+		(pin "1"
+			(uuid "2e811fd4-6628-4f7b-9435-24d800018d2d")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "M2")
 					(unit 1)
 				)
 			)
