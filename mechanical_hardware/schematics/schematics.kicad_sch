@@ -5,6 +5,187 @@
 	(uuid "997b8fea-6110-49db-b0d2-1e961e621252")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Connector:Conn_01x02_Pin"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x02_Pin"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x02, script generated"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x02_Pin_1_1"
+				(rectangle
+					(start 0.8636 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start 0.8636 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy 0.8636 0)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:Battery_Cell"
 			(pin_numbers
 				(hide yes)
@@ -229,598 +410,264 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Switching:CRE1S0305S3C"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -8.89 8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
+	)
+	(text "-"
+		(exclude_from_sim no)
+		(at 64.262 56.896 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 0 0 0 1)
 			)
-			(property "Value" "CRE1S0305S3C"
-				(at 2.54 8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
+		)
+		(uuid "5cc3a277-b63c-4587-97af-b206adbb083c")
+	)
+	(text "+"
+		(exclude_from_sim no)
+		(at 69.596 57.15 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 132 0 0 1)
 			)
-			(property "Footprint" "Converter_DCDC:Converter_DCDC_Murata_CRE1xxxxxx3C_THT"
-				(at 0 -10.16 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
+		)
+		(uuid "68c5877b-d63d-4384-a99c-2410daf0f22e")
+	)
+	(text "-"
+		(exclude_from_sim no)
+		(at 39.878 56.642 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 0 0 0 1)
 			)
-			(property "Datasheet" "https://pim.murata.com/asset/pim4/isolatedDCDCconverter/KDC_CRE1_PDF_ISOLATEDDCDCCONVERTER"
-				(at 0 -12.7 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
+		)
+		(uuid "cce56c32-bb2a-485d-aa48-ccb5c55bcc6a")
+	)
+	(text "+"
+		(exclude_from_sim no)
+		(at 45.974 56.896 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(color 132 0 0 1)
 			)
-			(property "Description" "3.3V to 5V 200mA, Isolated 2W Single-Output DC-DC Converter Modules with 3kV isolation, SIP-4"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "Murata isolated isolation dc-dc converter transformer"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Converter*DCDC*Murata*CRE1xxxxxx3C*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "CRE1S0305S3C_0_1"
-				(rectangle
-					(start -10.16 7.62)
-					(end 10.16 -7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 7.366) (xy -0.635 6.096)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 4.826) (xy -0.635 3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 2.286) (xy -0.635 1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -0.254) (xy -0.635 -1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -2.794) (xy -0.635 -4.064)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.635 -5.334) (xy -0.635 -6.604)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 5.334) (xy 0.635 6.604)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 2.794) (xy 0.635 4.064)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.254) (xy 0.635 1.524)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -2.286) (xy 0.635 -1.016)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -4.826) (xy 0.635 -3.556)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -7.366) (xy 0.635 -6.096)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "CRE1S0305S3C_1_1"
-				(pin power_in line
-					(at -12.7 -5.08 0)
-					(length 2.54)
-					(name "-VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -12.7 5.08 0)
-					(length 2.54)
-					(name "+VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 12.7 -5.08 180)
-					(length 2.54)
-					(name "-VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 12.7 5.08 180)
-					(length 2.54)
-					(name "+VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
 		)
-	)
-	(junction
-		(at 124.46 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "82746c57-3670-4b86-a0ea-b1ce44430f2b")
-	)
-	(junction
-		(at 54.61 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8c02842a-587f-4ef7-8171-f3481fe99efb")
-	)
-	(junction
-		(at 80.01 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8dc18805-9bf9-407a-a65b-8b90e56c8183")
-	)
-	(junction
-		(at 85.09 43.18)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c099f741-7a0c-4729-896c-22ddcd144e65")
+		(uuid "d09e8a1d-693c-47c9-b826-8035d7602dc6")
 	)
 	(wire
 		(pts
-			(xy 82.55 26.67) (xy 82.55 41.91)
+			(xy 63.5 24.13) (xy 59.69 24.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0586aca2-5ce9-4428-9b0c-9513360efc1b")
+		(uuid "08ab334a-2f63-4faf-bfc3-bdef4d55b639")
 	)
 	(wire
 		(pts
-			(xy 124.46 43.18) (xy 124.46 52.07)
+			(xy 44.45 31.75) (xy 44.45 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0ce9f48f-067e-4463-9831-f8e2da9bb951")
+		(uuid "1011aebd-8aaa-4b8c-a4c9-f4a238d6fab5")
 	)
 	(wire
 		(pts
-			(xy 119.38 44.45) (xy 119.38 69.85)
+			(xy 50.8 24.13) (xy 50.8 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1520d257-1c23-4330-87cc-d5c3531f56a1")
+		(uuid "12b0f142-de7d-4e54-8c93-6e98c192189a")
 	)
 	(wire
 		(pts
-			(xy 80.01 44.45) (xy 80.01 69.85)
+			(xy 35.56 31.75) (xy 41.91 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1e424f2f-9798-4f02-b6f2-e2c9f205ffcb")
+		(uuid "1dff08e1-3499-45d7-9d86-7bfc5613ed4b")
 	)
 	(wire
 		(pts
-			(xy 54.61 44.45) (xy 27.94 44.45)
+			(xy 66.04 60.96) (xy 66.04 55.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1f8a430c-2fd7-4c89-b4aa-4cbc2cce73a5")
+		(uuid "3533aac9-26fb-41db-8118-3620df26bed0")
 	)
 	(wire
 		(pts
-			(xy 54.61 44.45) (xy 80.01 44.45)
+			(xy 59.69 24.13) (xy 59.69 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2777faf8-0ef9-4cfb-aa51-016aad40a912")
+		(uuid "3bfd4080-e33c-4a6d-b5cc-a05abc389325")
 	)
 	(wire
 		(pts
-			(xy 54.61 26.67) (xy 82.55 26.67)
+			(xy 41.91 55.88) (xy 41.91 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5259edc6-656c-4eb2-8a33-168d3b9d14de")
+		(uuid "3f1d91b8-a19d-43e3-b02f-300ecb03e0a7")
 	)
 	(wire
 		(pts
-			(xy 124.46 43.18) (xy 85.09 43.18)
+			(xy 39.37 24.13) (xy 35.56 24.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "5eab2e12-4f65-4726-a7d9-bcbefa96e65e")
+		(uuid "5c07387f-2483-4f9f-8a29-d1654b7381c7")
 	)
 	(wire
 		(pts
-			(xy 85.09 43.18) (xy 46.99 43.18)
+			(xy 50.8 31.75) (xy 44.45 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "71f6c7ab-64f9-4556-a807-f657084d9e4a")
+		(uuid "6e245a89-46d7-4114-b4f5-486559cc4de2")
 	)
 	(wire
 		(pts
-			(xy 101.6 22.86) (xy 124.46 22.86)
+			(xy 66.04 31.75) (xy 66.04 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8025086b-2d15-4e2a-aa15-8fd89767957a")
+		(uuid "71f76b6a-d8ca-42d4-bc1c-70befbc41b55")
 	)
 	(wire
 		(pts
-			(xy 80.01 44.45) (xy 119.38 44.45)
+			(xy 71.12 24.13) (xy 74.93 24.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "ad682d6d-ee18-4f56-8272-312b352d9cd7")
+		(uuid "8d41498f-e0d1-4450-a61a-466fb6f1a53c")
 	)
 	(wire
 		(pts
-			(xy 124.46 52.07) (xy 123.19 52.07)
+			(xy 44.45 55.88) (xy 44.45 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b15ade4b-05d5-4220-b6fc-b172aeadf4e3")
+		(uuid "9d28fc17-4fb2-47d5-8116-64780f9bc1f5")
 	)
 	(wire
 		(pts
-			(xy 82.55 41.91) (xy 101.6 41.91)
+			(xy 46.99 24.13) (xy 50.8 24.13)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b9276321-1175-47d8-8d12-ec069085922c")
+		(uuid "aaf0dffd-567c-44fc-aa9a-7c16e5f359b1")
 	)
 	(wire
 		(pts
-			(xy 85.09 43.18) (xy 85.09 59.69)
+			(xy 74.93 24.13) (xy 74.93 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d0aef65a-db40-4882-b9b9-4da5f1811e31")
+		(uuid "bcc79653-c22e-4f17-8a21-7e96d50fd015")
 	)
 	(wire
 		(pts
-			(xy 101.6 41.91) (xy 101.6 34.29)
+			(xy 35.56 24.13) (xy 35.56 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d5749e4c-68fe-4d0a-88dd-855711bcbd6e")
+		(uuid "ee81e498-c597-4b4f-b7a2-39c808afde68")
 	)
 	(wire
 		(pts
-			(xy 124.46 22.86) (xy 124.46 43.18)
+			(xy 44.45 60.96) (xy 66.04 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d694a8a1-1522-4a13-ae43-b16e676e783d")
+		(uuid "ef607699-fa2f-46ff-a6e3-076eea0ae2bd")
 	)
 	(wire
 		(pts
-			(xy 101.6 26.67) (xy 101.6 22.86)
+			(xy 41.91 31.75) (xy 41.91 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d9937996-0453-44e0-9828-973bd8b0cd0f")
+		(uuid "f444e8df-6646-4f05-9f91-45d8b288645f")
 	)
 	(wire
 		(pts
-			(xy 46.99 43.18) (xy 46.99 59.69)
+			(xy 68.58 31.75) (xy 68.58 36.83)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dd3a7f74-334c-4463-a9a3-c441caaa8254")
+		(uuid "f4c9bc62-543c-4f8e-8237-3b57a77887b1")
 	)
 	(wire
 		(pts
-			(xy 119.38 69.85) (xy 123.19 69.85)
+			(xy 68.58 55.88) (xy 68.58 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "df11087e-695e-4045-8fe0-e626213b69cb")
+		(uuid "f7c7cecc-7a3f-49f5-be14-662fcfbc1298")
 	)
 	(wire
 		(pts
-			(xy 27.94 44.45) (xy 27.94 69.85)
+			(xy 59.69 31.75) (xy 66.04 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e475ec64-f6b1-4796-b123-27009c8e12f0")
+		(uuid "f8ebee42-6267-4731-85f8-0bd8e90c4be1")
 	)
 	(wire
 		(pts
-			(xy 80.01 69.85) (xy 87.63 69.85)
+			(xy 74.93 31.75) (xy 68.58 31.75)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "eb6a3d9f-7034-4a88-8834-7ba47b7cb1b8")
-	)
-	(wire
-		(pts
-			(xy 85.09 59.69) (xy 87.63 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f30bed53-8438-42d6-96de-e8c8fe691c91")
-	)
-	(wire
-		(pts
-			(xy 123.19 52.07) (xy 123.19 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f5d03c0c-b0f4-456a-a9ac-4feaf24e7516")
-	)
-	(wire
-		(pts
-			(xy 27.94 69.85) (xy 46.99 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f66a5a5b-c4b4-43e6-875b-559e4cc0ebba")
-	)
-	(wire
-		(pts
-			(xy 54.61 34.29) (xy 54.61 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fca52e0b-562b-4f44-aad7-5ad349302f74")
+		(uuid "fa1edbd3-83e1-48c4-a015-c1e942a2f3b4")
 	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 101.6 31.75 0)
+		(at 66.04 24.13 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -829,31 +676,29 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "079c4b8b-acaa-4287-8dcb-6e2355a7ffd8")
+		(uuid "0d75b53c-0ebd-4eb7-b75c-9ecdb6366afd")
 		(property "Reference" "BT2"
-			(at 105.41 28.6384 0)
+			(at 67.8815 16.51 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "Battery_Cell"
-			(at 105.41 31.1784 0)
+		(property "Value" "Battery_Cell 2000mAh"
+			(at 67.8815 19.05 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 101.6 30.226 90)
+			(at 67.564 24.13 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -864,7 +709,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 101.6 30.226 90)
+			(at 67.564 24.13 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -875,7 +720,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 101.6 31.75 0)
+			(at 66.04 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -886,7 +731,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 101.6 31.75 0)
+			(at 66.04 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -897,7 +742,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 101.6 31.75 0)
+			(at 66.04 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -908,7 +753,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 101.6 31.75 0)
+			(at 66.04 24.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -919,10 +764,10 @@
 			)
 		)
 		(pin "2"
-			(uuid "d2e35fee-5f51-45b8-918e-b5e1ea12a6ea")
+			(uuid "6d5b8f89-09c8-4f64-bc7a-39304409fdd0")
 		)
 		(pin "1"
-			(uuid "c0a3de80-abd5-4319-91e0-52d0c8661aa1")
+			(uuid "3d872c1f-4746-49a1-8a71-b0e60f0750e8")
 		)
 		(instances
 			(project "schematics"
@@ -934,180 +779,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Switching:CRE1S0305S3C")
-		(at 59.69 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "455c337e-85c7-430c-9fcc-d1cfcbfb75b4")
-		(property "Reference" "U1:5,1V"
-			(at 59.69 54.102 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CRE1S0305S3C"
-			(at 59.69 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Converter_DCDC:Converter_DCDC_Murata_CRE1xxxxxx3C_THT"
-			(at 59.69 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://pim.murata.com/asset/pim4/isolatedDCDCconverter/KDC_CRE1_PDF_ISOLATEDDCDCCONVERTER"
-			(at 59.69 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "3.3V to 5V 200mA, Isolated 2W Single-Output DC-DC Converter Modules with 3kV isolation, SIP-4"
-			(at 59.69 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "64d27ef6-ba6c-4e7e-af4e-1f942ec07bfa")
-		)
-		(pin "2"
-			(uuid "5c470959-17e0-4b0a-8673-f043a8e7747c")
-		)
-		(pin "4"
-			(uuid "14175e29-feaf-429a-9e25-da9e6edc0920")
-		)
-		(pin "3"
-			(uuid "06ebeb9d-6911-43eb-aa4d-0faeb2640798")
-		)
-		(instances
-			(project "schematics"
-				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
-					(reference "U1:5,1V")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Switching:CRE1S0305S3C")
-		(at 100.33 64.77 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6233dff1-8252-4775-b3cc-9a2a09a74e81")
-		(property "Reference" "U2:5V"
-			(at 100.33 54.102 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "CRE1S0305S3C"
-			(at 100.33 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Converter_DCDC:Converter_DCDC_Murata_CRE1xxxxxx3C_THT"
-			(at 100.33 74.93 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://pim.murata.com/asset/pim4/isolatedDCDCconverter/KDC_CRE1_PDF_ISOLATEDDCDCCONVERTER"
-			(at 100.33 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "3.3V to 5V 200mA, Isolated 2W Single-Output DC-DC Converter Modules with 3kV isolation, SIP-4"
-			(at 100.33 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b815384b-aac1-4254-8429-48782626024e")
-		)
-		(pin "2"
-			(uuid "0e17c789-e0b4-4b3c-87b4-25dd6ff10d2f")
-		)
-		(pin "4"
-			(uuid "a9128cb5-1ab8-4bab-929e-db925c14fbd5")
-		)
-		(pin "3"
-			(uuid "63b1938c-43e4-4d8f-b842-0be61d8f40d4")
-		)
-		(instances
-			(project "schematics"
-				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
-					(reference "U2:5V")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery_Cell")
-		(at 54.61 31.75 0)
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 66.04 41.91 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1116,31 +789,31 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "824dc516-a0b2-4617-92f5-9083dd4a55de")
-		(property "Reference" "BT1"
-			(at 58.42 28.6384 0)
+		(uuid "1f2560d9-7dac-4027-8dcb-ce482cf09006")
+		(property "Reference" "JST2"
+			(at 69.85 40.0049 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Value" "Battery_Cell"
-			(at 58.42 31.1784 0)
+		(property "Value" "Female"
+			(at 69.85 42.5449 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 54.61 30.226 90)
+			(at 66.04 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1151,7 +824,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 30.226 90)
+			(at 66.04 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1161,41 +834,8 @@
 				)
 			)
 		)
-		(property "Description" "Single-cell battery"
-			(at 54.61 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "V"
-			(at 54.61 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Type" "DC"
-			(at 54.61 31.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=+ 2=-"
-			(at 54.61 31.75 0)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 66.04 41.91 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1206,10 +846,205 @@
 			)
 		)
 		(pin "1"
-			(uuid "6574e86c-24da-4874-888a-d19f9b9da4ae")
+			(uuid "675cda92-377e-4b29-a34f-8888332e1a46")
 		)
 		(pin "2"
-			(uuid "2efb7f65-17b8-431f-b6ae-2bf6b9612807")
+			(uuid "692c42e9-3c23-4b17-a313-7d0b721d0e58")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "JST2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 41.91 41.91 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c0e9004-e69f-4f94-a5cd-5e456917b0a0")
+		(property "Reference" "JST1"
+			(at 45.72 40.0049 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Female"
+			(at 45.72 42.5449 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 41.91 41.91 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "de6f770f-6a93-44a8-a5fa-15fb8df83bc2")
+		)
+		(pin "2"
+			(uuid "99d21854-ad3a-4924-a3e1-965282e28640")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "JST1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 41.91 24.13 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8c17522f-d328-470e-96b8-3810f3ed4d2b")
+		(property "Reference" "BT1"
+			(at 43.7515 16.51 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Battery_Cell 2000mAh"
+			(at 43.7515 19.05 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 43.434 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.434 24.13 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Single-cell battery"
+			(at 41.91 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 41.91 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 41.91 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 41.91 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "60ae162c-755f-45f8-8fc2-3d54029ee0c1")
+		)
+		(pin "1"
+			(uuid "df9432dc-770a-4e20-af49-e8e3a9c25214")
 		)
 		(instances
 			(project "schematics"
@@ -1221,8 +1056,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Switching:CRE1S0305S3C")
-		(at 135.89 64.77 0)
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 44.45 50.8 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1230,19 +1065,32 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a4eba615-bbae-40f5-8048-5fa6fe728c6d")
-		(property "Reference" "U3:12V"
-			(at 135.89 54.102 0)
+		(fields_autoplaced yes)
+		(uuid "e265b6d5-6919-4b61-baad-2a00693e4e66")
+		(property "Reference" "JST3"
+			(at 45.72 50.1649 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 			)
 		)
-		(property "Value" "CRE1S0305S3C"
-			(at 135.89 54.61 0)
+		(property "Value" "Male"
+			(at 45.72 52.7049 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 44.45 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1252,8 +1100,8 @@
 				)
 			)
 		)
-		(property "Footprint" "Converter_DCDC:Converter_DCDC_Murata_CRE1xxxxxx3C_THT"
-			(at 135.89 74.93 0)
+		(property "Datasheet" ""
+			(at 44.45 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1263,19 +1111,8 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://pim.murata.com/asset/pim4/isolatedDCDCconverter/KDC_CRE1_PDF_ISOLATEDDCDCCONVERTER"
-			(at 135.89 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "3.3V to 5V 200mA, Isolated 2W Single-Output DC-DC Converter Modules with 3kV isolation, SIP-4"
-			(at 135.89 64.77 0)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 44.45 50.8 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1286,21 +1123,97 @@
 			)
 		)
 		(pin "1"
-			(uuid "42bfcee1-f905-4c44-8a74-9909e770c70f")
+			(uuid "439d9805-01c7-4417-90e6-5e21c2013185")
 		)
 		(pin "2"
-			(uuid "7907a5be-028a-47b3-bc5a-5ab034064d92")
-		)
-		(pin "4"
-			(uuid "40a7ab86-e53b-4575-8d43-2ee6fa290780")
-		)
-		(pin "3"
-			(uuid "76579a48-a2fb-4f63-97c6-93bacd12c626")
+			(uuid "0b47448c-1f63-46a8-9818-553d16d7ec23")
 		)
 		(instances
 			(project "schematics"
 				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
-					(reference "U3:12V")
+					(reference "JST3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Pin")
+		(at 68.58 50.8 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fafc7811-ddf9-45f3-af8a-66cc1e2379fc")
+		(property "Reference" "JST4"
+			(at 69.85 50.1649 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Male"
+			(at 69.85 52.7049 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 68.58 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3f8275d6-accb-4471-bae5-86df4dee91c8")
+		)
+		(pin "2"
+			(uuid "0f5a6af0-12e9-475d-a6c2-c4c0b8cf03d0")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "JST4")
 					(unit 1)
 				)
 			)
