@@ -19,7 +19,7 @@ The target end state is a two-wheeled self-balancing robot that:
 |---|---|
 | Raspberry Pi 4B 4GB | Main computer running ROS2 |
 | ESP32 DevKit C V4 | Real-time motor control + IMU bridge |
-| 2× N20 6V 100 RPM + Hall encoders | Drive wheels + wheel odometry |
+| 2× N20 100 RPM + Hall encoders | Drive wheels + wheel odometry |
 | TB6612FNG dual motor driver | Motor direction + PWM speed control |
 | MPU-9250 9-DOF IMU | Accelerometer, gyroscope, magnetometer |
 | 7.4V 2000mAh Li-Ion 2S | Main power source |
