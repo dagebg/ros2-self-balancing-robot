@@ -4084,7 +4084,7 @@
 		(at 186.69 78.74)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2a32b444-631b-4d0e-b132-e4a1e0dcd9da")
+		(uuid "1a8b5d84-e3bb-4011-a1cf-db7d7103986d")
 	)
 	(junction
 		(at 160.02 85.09)
@@ -4124,7 +4124,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 57.15) (xy 160.02 85.09)
+			(xy 160.02 57.15) (xy 160.02 67.31)
 		)
 		(stroke
 			(width 0)
@@ -4244,6 +4244,16 @@
 	)
 	(wire
 		(pts
+			(xy 160.02 77.47) (xy 160.02 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28b8d664-5257-468f-92bd-60521905fefa")
+	)
+	(wire
+		(pts
 			(xy 336.55 170.18) (xy 344.17 170.18)
 		)
 		(stroke
@@ -4261,16 +4271,6 @@
 			(type default)
 		)
 		(uuid "2d85578e-0ba2-411e-a104-6ea0e7b194e1")
-	)
-	(wire
-		(pts
-			(xy 186.69 76.2) (xy 186.69 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "300da18e-207e-4c6f-9933-7f84db18e42a")
 	)
 	(wire
 		(pts
@@ -4381,6 +4381,16 @@
 			(type default)
 		)
 		(uuid "5eacf0d1-c515-4c18-bf04-834125af22b7")
+	)
+	(wire
+		(pts
+			(xy 186.69 78.74) (xy 203.2 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61263202-8820-4228-877e-c77eac789b7b")
 	)
 	(wire
 		(pts
@@ -4561,6 +4571,16 @@
 			(type default)
 		)
 		(uuid "99740535-3116-4cfc-9009-11dda4df307a")
+	)
+	(wire
+		(pts
+			(xy 186.69 57.15) (xy 186.69 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99e8fb46-ded8-4a5e-8423-309ee57d660f")
 	)
 	(wire
 		(pts
@@ -4784,16 +4804,6 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 78.74) (xy 203.2 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ed9de3ef-4c60-4dcf-948b-8dc179aad59b")
-	)
-	(wire
-		(pts
 			(xy 153.67 27.94) (xy 153.67 35.56)
 		)
 		(stroke
@@ -4831,16 +4841,6 @@
 			(type default)
 		)
 		(uuid "f4c9bc62-543c-4f8e-8237-3b57a77887b1")
-	)
-	(wire
-		(pts
-			(xy 186.69 57.15) (xy 186.69 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7c7cecc-7a3f-49f5-be14-662fcfbc1298")
 	)
 	(wire
 		(pts
@@ -5504,7 +5504,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_SPST")
-		(at 186.69 71.12 270)
+		(at 160.02 72.39 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5515,7 +5515,7 @@
 		(fields_autoplaced yes)
 		(uuid "73fd2431-d2c8-469d-95b3-e160e7c57d37")
 		(property "Reference" "SW1"
-			(at 189.23 69.8499 90)
+			(at 162.56 71.1199 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5526,7 +5526,7 @@
 			)
 		)
 		(property "Value" "PWR"
-			(at 189.23 72.3899 90)
+			(at 162.56 73.6599 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5537,7 +5537,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 186.69 71.12 0)
+			(at 160.02 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5548,7 +5548,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 71.12 0)
+			(at 160.02 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5559,7 +5559,7 @@
 			)
 		)
 		(property "Description" "Single Pole Single Throw (SPST) switch"
-			(at 186.69 71.12 0)
+			(at 160.02 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
