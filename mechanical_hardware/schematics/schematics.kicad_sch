@@ -2166,162 +2166,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Converter_DCDC:TSR_1-2412"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -7.62 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "TSR_1-2412"
-				(at -1.27 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
-				(at 0 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" "http://www.tracopower.com/products/tsr1.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "1A step-down regulator module, fixed 1.2V output voltage, 6-36V input voltage, -40°C to +85°C temperature range, TO-220 compatible LM78xx replacement"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "dc-dc traco buck"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "Converter*DCDC*TRACO*TSR?1*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "TSR_1-2412_0_1"
-				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -2.54)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "TSR_1-2412_1_1"
-				(pin power_in line
-					(at -10.16 2.54 0)
-					(length 2.54)
-					(name "Vin"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 10.16 2.54 180)
-					(length 2.54)
-					(name "Vout"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:Battery_Cell"
 			(pin_numbers
 				(hide yes)
@@ -3535,6 +3379,547 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Sensor_Motion:MPU-6050"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -11.43 13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MPU-6050"
+				(at 7.62 -15.24 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm"
+				(at 0 -20.32 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "InvenSense 6-Axis Motion Sensor, Gyroscope, Accelerometer, I2C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "mems"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*QFN*4x4mm*P0.5mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MPU-6050_0_1"
+				(rectangle
+					(start -12.7 13.97)
+					(end 12.7 -13.97)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "MPU-6050_1_1"
+				(pin input clock
+					(at -17.78 -7.62 0)
+					(length 5.08)
+					(name "CLKIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -12.7 12.7 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -12.7 10.16 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -12.7 0 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -12.7 -2.54 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 17.78 2.54 180)
+					(length 5.08)
+					(name "AUX_DA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output clock
+					(at 17.78 0 180)
+					(length 5.08)
+					(name "AUX_CL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 17.78 270)
+					(length 3.81)
+					(name "VLOGIC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 2.54 0)
+					(length 5.08)
+					(name "AD0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -7.62 180)
+					(length 5.08)
+					(name "REGOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 -5.08 0)
+					(length 5.08)
+					(name "FSYNC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 17.78 7.62 180)
+					(length 5.08)
+					(name "INT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 17.78 270)
+					(length 3.81)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at -12.7 -10.16 0)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 12.7 12.7 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 12.7 10.16 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 12.7 5.08 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -17.78 90)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 12.7 -10.16 180)
+					(length 2.54)
+					(hide yes)
+					(name "RESV"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 17.78 -5.08 180)
+					(length 5.08)
+					(name "CPOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 12.7 -2.54 180)
+					(length 2.54)
+					(hide yes)
+					(name "RESV"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 12.7 -12.7 180)
+					(length 2.54)
+					(hide yes)
+					(name "RESV"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -17.78 5.08 0)
+					(length 5.08)
+					(name "SCL"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -17.78 7.62 0)
+					(length 5.08)
+					(name "SDA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Sensor_Motion:MPU-9250"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -3885,7 +4270,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Switch:SW_SPST"
+		(symbol "Switch:SW_DIP_x02"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -3896,7 +4281,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "SW"
-				(at 0 3.175 0)
+				(at 0 6.35 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3905,8 +4290,8 @@
 					)
 				)
 			)
-			(property "Value" "SW_SPST"
-				(at 0 -2.54 0)
+			(property "Value" "SW_DIP_x02"
+				(at 0 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -3937,7 +4322,7 @@
 					)
 				)
 			)
-			(property "Description" "Single Pole Single Throw (SPST) switch"
+			(property "Description" "2x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3948,7 +4333,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "switch lever"
+			(property "ki_keywords" "dip switch"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3959,7 +4344,29 @@
 					)
 				)
 			)
-			(symbol "SW_SPST_0_0"
+			(property "ki_fp_filters" "SW?DIP?x2*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "SW_DIP_x02_0_0"
+				(circle
+					(center -2.032 2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(circle
 					(center -2.032 0)
 					(radius 0.508)
@@ -3973,8 +4380,31 @@
 				)
 				(polyline
 					(pts
-						(xy -1.524 0.254) (xy 1.524 1.778)
+						(xy -1.524 2.667) (xy 2.3622 3.7084)
 					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.127) (xy 2.3622 1.1684)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.508)
 					(stroke
 						(width 0)
 						(type default)
@@ -3995,11 +4425,24 @@
 					)
 				)
 			)
-			(symbol "SW_SPST_1_1"
+			(symbol "SW_DIP_x02_0_1"
+				(rectangle
+					(start -3.81 5.08)
+					(end 3.81 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "SW_DIP_x02_1_1"
 				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "A"
+					(at -7.62 2.54 0)
+					(length 5.08)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4015,9 +4458,9 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "B"
+					(at -7.62 0 0)
+					(length 5.08)
+					(name ""
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4032,13 +4475,223 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 5.08)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 5.08)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "TSR_1-2412_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U3"
+				(at -1.2701 6.35 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "11.5V motors"
+				(at 1.2699 6.35 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "http://www.tracopower.com/products/tsr1.pdf"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "1A step-down regulator module, fixed 1.2V output voltage, 6-36V input voltage, -40°C to +85°C temperature range, TO-220 compatible LM78xx replacement"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dc-dc traco buck"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Converter*DCDC*TRACO*TSR?1*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TSR_1-2412_1_0_1"
+				(rectangle
+					(start -7.62 5.08)
+					(end 7.62 -2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "TSR_1-2412_1_1_1"
+				(pin power_in line
+					(at -10.16 2.54 0)
+					(length 2.54)
+					(name "Vin"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -10.16 0 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 10.16 2.54 180)
+					(length 2.54)
+					(name "Vout"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 10.16 0 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 			(embedded_fonts no)
 		)
 	)
 	(text "-"
 		(exclude_from_sim no)
-		(at 164.084 57.912 0)
+		(at 164.084 52.832 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4049,7 +4702,7 @@
 	)
 	(text "+"
 		(exclude_from_sim no)
-		(at 158.496 57.912 0)
+		(at 158.496 52.832 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4060,7 +4713,7 @@
 	)
 	(text "-"
 		(exclude_from_sim no)
-		(at 187.706 58.166 0)
+		(at 187.706 53.086 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4071,7 +4724,7 @@
 	)
 	(text "+"
 		(exclude_from_sim no)
-		(at 182.626 58.166 0)
+		(at 182.626 53.086 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4081,40 +4734,34 @@
 		(uuid "d09e8a1d-693c-47c9-b826-8035d7602dc6")
 	)
 	(junction
-		(at 186.69 78.74)
+		(at 175.26 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "1a8b5d84-e3bb-4011-a1cf-db7d7103986d")
+		(uuid "1e182ab9-4218-4325-b7c8-2f2957946bd9")
+	)
+	(junction
+		(at 200.66 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "36978c71-17ea-4382-8b3c-533e67cbbdf3")
+	)
+	(junction
+		(at 163.83 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3e666963-1db6-4f01-a73d-9509c20b816a")
+	)
+	(junction
+		(at 149.86 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5fc20e17-08ba-4720-9831-d61f3771fd42")
 	)
 	(junction
 		(at 160.02 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "3ffd1a35-9020-4a12-8051-63ed214975a8")
-	)
-	(junction
-		(at 167.64 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "51cfe6fe-510d-4a80-9ebd-9d489cb0a79a")
-	)
-	(junction
-		(at 167.64 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5486ce84-8d86-48fa-b32e-954c812034e7")
-	)
-	(junction
-		(at 142.24 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6f505450-b9ec-4488-91b3-905b719aa972")
-	)
-	(junction
-		(at 193.04 105.41)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a271b2e9-2494-46a1-aad5-2c7239e11507")
+		(uuid "c5d21e9a-315e-4a7f-8254-4b4af814006a")
 	)
 	(junction
 		(at 177.8 78.74)
@@ -4124,17 +4771,17 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 57.15) (xy 160.02 67.31)
+			(xy 163.83 130.81) (xy 175.26 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "071f4bd4-3ed4-4acd-b190-7d92cd9ab262")
+		(uuid "07679b87-ec56-4519-a9b4-538e33f5323f")
 	)
 	(wire
 		(pts
-			(xy 162.56 35.56) (xy 162.56 40.64)
+			(xy 162.56 30.48) (xy 162.56 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4144,7 +4791,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 27.94) (xy 168.91 35.56)
+			(xy 168.91 22.86) (xy 168.91 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4154,7 +4801,17 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 27.94) (xy 157.48 27.94)
+			(xy 173.99 74.93) (xy 173.99 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13d8e7ae-32c0-4316-8b02-9e3eacef641f")
+	)
+	(wire
+		(pts
+			(xy 153.67 22.86) (xy 157.48 22.86)
 		)
 		(stroke
 			(width 0)
@@ -4184,13 +4841,43 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 35.56) (xy 160.02 35.56)
+			(xy 200.66 85.09) (xy 200.66 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "194b5917-b582-4f2e-8aa7-6a73cbbf9bdd")
+	)
+	(wire
+		(pts
+			(xy 173.99 57.15) (xy 173.99 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c741d21-ec6a-4a12-976a-3bdb57febeca")
+	)
+	(wire
+		(pts
+			(xy 153.67 30.48) (xy 160.02 30.48)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "1dff08e1-3499-45d7-9d86-7bfc5613ed4b")
+	)
+	(wire
+		(pts
+			(xy 149.86 85.09) (xy 149.86 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21b247c0-ae4b-4fda-85f3-6abb9e4f2108")
 	)
 	(wire
 		(pts
@@ -4214,26 +4901,6 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 78.74) (xy 186.69 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2636cf7d-93aa-4935-96b4-f984c67c7f0c")
-	)
-	(wire
-		(pts
-			(xy 167.64 85.09) (xy 167.64 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27a5f534-9f54-464a-8104-f6d28b87c0ce")
-	)
-	(wire
-		(pts
 			(xy 203.2 217.17) (xy 203.2 212.09)
 		)
 		(stroke
@@ -4244,7 +4911,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 77.47) (xy 160.02 85.09)
+			(xy 160.02 76.2) (xy 160.02 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4274,13 +4941,33 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 62.23) (xy 184.15 57.15)
+			(xy 184.15 55.88) (xy 184.15 52.07)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "3533aac9-26fb-41db-8118-3620df26bed0")
+	)
+	(wire
+		(pts
+			(xy 175.26 115.57) (xy 175.26 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3922962c-4458-4114-8cf8-5ad008c46ef0")
+	)
+	(wire
+		(pts
+			(xy 149.86 115.57) (xy 149.86 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a12bb49-2afd-443a-b995-73f2b60430b5")
 	)
 	(wire
 		(pts
@@ -4294,7 +4981,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 27.94) (xy 177.8 35.56)
+			(xy 177.8 22.86) (xy 177.8 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4311,6 +4998,16 @@
 			(type default)
 		)
 		(uuid "422ad26e-30e7-422e-853f-9b493dc68af8")
+	)
+	(wire
+		(pts
+			(xy 160.02 85.09) (xy 149.86 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4393d116-42de-4ec0-b115-10332a6fc133")
 	)
 	(wire
 		(pts
@@ -4344,13 +5041,23 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 105.41) (xy 167.64 135.89)
+			(xy 173.99 76.2) (xy 177.8 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "543670ac-42df-4797-a671-6c255f609f36")
+		(uuid "4c45acd0-a2fc-4618-85bb-579bf0b44ea7")
+	)
+	(wire
+		(pts
+			(xy 336.55 184.15) (xy 344.17 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e29b5e5-bb51-4e10-9adf-64e476711a93")
 	)
 	(wire
 		(pts
@@ -4364,6 +5071,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 52.07) (xy 186.69 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bbd35b9-466b-4229-91ba-9a5766da18fa")
+	)
+	(wire
+		(pts
 			(xy 281.94 162.56) (xy 281.94 165.1)
 		)
 		(stroke
@@ -4374,7 +5091,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 85.09) (xy 167.64 85.09)
+			(xy 160.02 85.09) (xy 200.66 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4384,13 +5101,23 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 78.74) (xy 203.2 78.74)
+			(xy 177.8 78.74) (xy 203.2 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "61263202-8820-4228-877e-c77eac789b7b")
+	)
+	(wire
+		(pts
+			(xy 171.45 57.15) (xy 171.45 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64048ccc-c672-43d9-b3d1-3ce746fc95b5")
 	)
 	(wire
 		(pts
@@ -4414,7 +5141,17 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 35.56) (xy 162.56 35.56)
+			(xy 149.86 130.81) (xy 163.83 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a9836ba-fb16-4a9b-bb50-01ca35137f03")
+	)
+	(wire
+		(pts
+			(xy 168.91 30.48) (xy 162.56 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4434,7 +5171,7 @@
 	)
 	(wire
 		(pts
-			(xy 184.15 35.56) (xy 184.15 40.64)
+			(xy 184.15 30.48) (xy 184.15 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4444,13 +5181,13 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 105.41) (xy 144.78 105.41)
+			(xy 160.02 57.15) (xy 171.45 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "77f3df74-0848-40cb-a461-0c9293709bbe")
+		(uuid "7200e37d-2e32-489a-b961-0c3a4d3f2ff3")
 	)
 	(wire
 		(pts
@@ -4484,7 +5221,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 196.85) (xy 48.26 127)
+			(xy 50.8 196.85) (xy 50.8 130.81)
 		)
 		(stroke
 			(width 0)
@@ -4494,33 +5231,33 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 85.09) (xy 142.24 105.41)
+			(xy 186.69 57.15) (xy 173.99 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "847e735d-f0fb-40ab-b9fd-7930e82a04bf")
+		(uuid "85d03113-bbe0-40b1-b0e2-1d0c29450eeb")
 	)
 	(wire
 		(pts
-			(xy 189.23 27.94) (xy 193.04 27.94)
+			(xy 160.02 52.07) (xy 160.02 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89b448e3-fd7e-4c1e-8b68-ba9672491b2e")
+	)
+	(wire
+		(pts
+			(xy 189.23 22.86) (xy 193.04 22.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "8d41498f-e0d1-4450-a61a-466fb6f1a53c")
-	)
-	(wire
-		(pts
-			(xy 142.24 127) (xy 142.24 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8df46a83-2944-43e2-bb16-74e2282b1b4f")
 	)
 	(wire
 		(pts
@@ -4534,13 +5271,23 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 127) (xy 142.24 127)
+			(xy 50.8 130.81) (xy 149.86 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "90dea6f2-9e96-4926-a732-2b602a6ca165")
+	)
+	(wire
+		(pts
+			(xy 200.66 130.81) (xy 269.24 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "934de782-3d0f-43fb-b029-6c990c797e18")
 	)
 	(wire
 		(pts
@@ -4554,7 +5301,7 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 196.85) (xy 48.26 196.85)
+			(xy 92.71 196.85) (xy 50.8 196.85)
 		)
 		(stroke
 			(width 0)
@@ -4574,17 +5321,17 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 57.15) (xy 186.69 78.74)
+			(xy 175.26 130.81) (xy 200.66 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "99e8fb46-ded8-4a5e-8423-309ee57d660f")
+		(uuid "9aef004e-f00a-4c60-8e0e-5cf55aa27c89")
 	)
 	(wire
 		(pts
-			(xy 163.83 135.89) (xy 163.83 217.17)
+			(xy 163.83 130.81) (xy 163.83 217.17)
 		)
 		(stroke
 			(width 0)
@@ -4594,7 +5341,17 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 57.15) (xy 162.56 62.23)
+			(xy 171.45 74.93) (xy 171.45 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d2516c3-28f5-4ac0-9038-f46608c3c04e")
+	)
+	(wire
+		(pts
+			(xy 162.56 52.07) (xy 162.56 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4604,7 +5361,7 @@
 	)
 	(wire
 		(pts
-			(xy 177.8 27.94) (xy 181.61 27.94)
+			(xy 177.8 22.86) (xy 181.61 22.86)
 		)
 		(stroke
 			(width 0)
@@ -4624,17 +5381,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 105.41) (xy 170.18 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a2e9ff91-ac14-44a7-9ea3-be6919e6b528")
-	)
-	(wire
-		(pts
-			(xy 165.1 27.94) (xy 168.91 27.94)
+			(xy 165.1 22.86) (xy 168.91 22.86)
 		)
 		(stroke
 			(width 0)
@@ -4644,27 +5391,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 135.89) (xy 163.83 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b135ee1d-82ff-49a7-9438-0089941a6adb")
-	)
-	(wire
-		(pts
-			(xy 193.04 85.09) (xy 193.04 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b5aab55d-4915-488f-865a-bec075651ed7")
-	)
-	(wire
-		(pts
-			(xy 193.04 27.94) (xy 193.04 35.56)
+			(xy 193.04 22.86) (xy 193.04 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4694,16 +5421,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 105.41) (xy 193.04 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca788e28-1dcc-4119-8dc3-3c4ee380a7a2")
-	)
-	(wire
-		(pts
 			(xy 177.8 78.74) (xy 152.4 78.74)
 		)
 		(stroke
@@ -4714,23 +5431,23 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 130.81) (xy 269.24 130.81)
+			(xy 177.8 76.2) (xy 177.8 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d1b6e023-e8cd-476d-9693-1eab6deb4f4f")
+		(uuid "d464bd84-9ae6-4110-913f-f496471aad31")
 	)
 	(wire
 		(pts
-			(xy 167.64 85.09) (xy 193.04 85.09)
+			(xy 171.45 76.2) (xy 160.02 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d2d5904d-81a7-4f16-a255-50fb796670bf")
+		(uuid "d75294a3-21bc-4416-b35f-d918da403f4d")
 	)
 	(wire
 		(pts
@@ -4784,16 +5501,6 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 105.41) (xy 195.58 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea518c10-2c8c-4e84-98f2-524283c76be7")
-	)
-	(wire
-		(pts
 			(xy 177.8 78.74) (xy 177.8 95.25)
 		)
 		(stroke
@@ -4804,7 +5511,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 27.94) (xy 153.67 35.56)
+			(xy 153.67 22.86) (xy 153.67 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4814,7 +5521,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 62.23) (xy 184.15 62.23)
+			(xy 162.56 55.88) (xy 184.15 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4824,7 +5531,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 35.56) (xy 160.02 40.64)
+			(xy 160.02 30.48) (xy 160.02 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4834,7 +5541,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 35.56) (xy 186.69 40.64)
+			(xy 186.69 30.48) (xy 186.69 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4844,17 +5551,7 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 85.09) (xy 160.02 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f8e841c5-5983-4e1f-b5b9-ff58cb276852")
-	)
-	(wire
-		(pts
-			(xy 177.8 35.56) (xy 184.15 35.56)
+			(xy 177.8 30.48) (xy 184.15 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4864,7 +5561,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 35.56) (xy 186.69 35.56)
+			(xy 193.04 30.48) (xy 186.69 30.48)
 		)
 		(stroke
 			(width 0)
@@ -4872,9 +5569,167 @@
 		)
 		(uuid "fa1edbd3-83e1-48c4-a015-c1e942a2f3b4")
 	)
+	(wire
+		(pts
+			(xy 200.66 115.57) (xy 200.66 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb638a06-db61-42a4-b34e-cb878c33f697")
+	)
+	(symbol
+		(lib_id "Sensor_Motion:MPU-6050")
+		(at 227.33 254 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "05a54e9f-b674-4529-b031-9310a6ffd462")
+		(property "Reference" "U6"
+			(at 230.4481 234.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MPU-6050"
+			(at 230.4481 237.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm"
+			(at 227.33 233.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf"
+			(at 227.33 250.19 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "InvenSense 6-Axis Motion Sensor, Gyroscope, Accelerometer, I2C"
+			(at 227.33 254 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "5"
+			(uuid "c9266747-bf9d-4ebb-a2c8-6f49fd15a48b")
+		)
+		(pin "6"
+			(uuid "b22c872b-de94-49f3-b0c3-ab4625be4dde")
+		)
+		(pin "8"
+			(uuid "e1749a09-d14a-4381-bc85-d7ee63fd6442")
+		)
+		(pin "9"
+			(uuid "cd6661a1-52fc-41c6-95ae-6b0ef226054b")
+		)
+		(pin "2"
+			(uuid "fe789157-4752-483e-9b86-f95a9dd2b619")
+		)
+		(pin "3"
+			(uuid "273034c5-1cc2-4b3c-8b30-9c6610113ed4")
+		)
+		(pin "4"
+			(uuid "80feccc4-4dd8-4ebd-abbe-3eef6bcf00f0")
+		)
+		(pin "7"
+			(uuid "4214671a-4aef-41ea-b969-4d214bb9414e")
+		)
+		(pin "11"
+			(uuid "64fc1820-c0b5-4d94-9177-0bb6cb905b33")
+		)
+		(pin "10"
+			(uuid "d22ec11d-b8a4-4f16-827d-f62c4e6e5bc2")
+		)
+		(pin "1"
+			(uuid "27b0ce97-da81-40b1-a052-db852e9b0c4e")
+		)
+		(pin "14"
+			(uuid "e5e94cc0-fbea-4a07-804c-ac20005a24ca")
+		)
+		(pin "15"
+			(uuid "ebe4b697-2f1c-4107-8b20-eaaddff85ec1")
+		)
+		(pin "16"
+			(uuid "ba52ebf4-0f9a-408a-8a3b-a18c2df97ffa")
+		)
+		(pin "17"
+			(uuid "b5a46ab3-56d7-4e65-8ace-a25f20caa053")
+		)
+		(pin "18"
+			(uuid "bb4eb249-f1e3-4680-bc8d-5991c08a0578")
+		)
+		(pin "19"
+			(uuid "286cc8dc-8930-4c77-a19b-2213f23fcf05")
+		)
+		(pin "20"
+			(uuid "3e9c73cb-5102-46ac-9914-349ef5f3248f")
+		)
+		(pin "21"
+			(uuid "fd3555ed-d5d3-47f6-bfa3-74bab952bfdb")
+		)
+		(pin "22"
+			(uuid "438d202d-07cf-46c2-9573-8679c6b2531c")
+		)
+		(pin "13"
+			(uuid "c8c692ff-57be-4ee9-8178-c9629d4d0635")
+		)
+		(pin "12"
+			(uuid "99a424be-3998-46d3-bd1b-fe2d3978dded")
+		)
+		(pin "23"
+			(uuid "acba3832-393f-4c7b-988d-14ba88df7c02")
+		)
+		(pin "24"
+			(uuid "1da0797d-8705-4fa2-9b49-251828e43a65")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "U6")
+					(unit 1)
+				)
+			)
+		)
+	)
 	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 186.69 27.94 90)
+		(at 186.69 22.86 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4885,7 +5740,7 @@
 		(fields_autoplaced yes)
 		(uuid "0d75b53c-0ebd-4eb7-b75c-9ecdb6366afd")
 		(property "Reference" "BT2"
-			(at 184.8485 20.32 90)
+			(at 184.8485 15.24 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4895,7 +5750,7 @@
 			)
 		)
 		(property "Value" "Battery_Cell 2000mAh"
-			(at 184.8485 22.86 90)
+			(at 184.8485 17.78 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -4905,7 +5760,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 185.166 27.94 90)
+			(at 185.166 22.86 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4916,7 +5771,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 185.166 27.94 90)
+			(at 185.166 22.86 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4927,7 +5782,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 186.69 27.94 0)
+			(at 186.69 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4938,7 +5793,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 186.69 27.94 0)
+			(at 186.69 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4949,7 +5804,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 186.69 27.94 0)
+			(at 186.69 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4960,7 +5815,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 186.69 27.94 0)
+			(at 186.69 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4987,7 +5842,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 184.15 45.72 90)
+		(at 184.15 40.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4998,7 +5853,7 @@
 		(fields_autoplaced yes)
 		(uuid "1f2560d9-7dac-4027-8dcb-ce482cf09006")
 		(property "Reference" "JST2"
-			(at 187.96 43.8149 90)
+			(at 187.96 38.7349 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5009,7 +5864,7 @@
 			)
 		)
 		(property "Value" "Female"
-			(at 187.96 46.3549 90)
+			(at 187.96 41.2749 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5020,7 +5875,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 184.15 45.72 0)
+			(at 184.15 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5031,7 +5886,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 184.15 45.72 0)
+			(at 184.15 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5042,7 +5897,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 184.15 45.72 0)
+			(at 184.15 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5068,8 +5923,99 @@
 		)
 	)
 	(symbol
+		(lib_name "TSR_1-2412_1")
+		(lib_id "Converter_DCDC:TSR_1-2412")
+		(at 175.26 105.41 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "222f62b0-f378-4453-915d-4ade96f91f06")
+		(property "Reference" "U2"
+			(at 181.61 104.1399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5V"
+			(at 181.61 106.6799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
+			(at 171.45 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.tracopower.com/products/tsr1.pdf"
+			(at 175.26 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1A step-down regulator module, fixed 1.2V output voltage, 6-36V input voltage, -40°C to +85°C temperature range, TO-220 compatible LM78xx replacement"
+			(at 175.26 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6d106099-2182-4233-88d0-4bbf0eff8267")
+		)
+		(pin "2"
+			(uuid "a64c5e79-2234-4246-84bd-14a0cf858efa")
+		)
+		(pin "3"
+			(uuid "0de7523b-112c-4f4c-aaa1-032385a09f2d")
+		)
+		(pin "4"
+			(uuid "a53f9f91-653b-4428-b216-e504619162f8")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Sensor_Motion:MPU-9250")
-		(at 195.58 252.73 180)
+		(at 182.88 252.73 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5080,7 +6026,7 @@
 		(fields_autoplaced yes)
 		(uuid "2f9b45d2-908c-490a-a6f9-9c9f30b11bc1")
 		(property "Reference" "U5"
-			(at 198.6981 229.87 0)
+			(at 185.9981 229.87 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5091,7 +6037,7 @@
 			)
 		)
 		(property "Value" "MPU-9250"
-			(at 198.6981 232.41 0)
+			(at 185.9981 232.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5102,7 +6048,7 @@
 			)
 		)
 		(property "Footprint" "Sensor_Motion:InvenSense_QFN-24_3x3mm_P0.4mm"
-			(at 195.58 227.33 0)
+			(at 182.88 227.33 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5113,7 +6059,7 @@
 			)
 		)
 		(property "Datasheet" "https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf"
-			(at 195.58 248.92 0)
+			(at 182.88 248.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5124,7 +6070,7 @@
 			)
 		)
 		(property "Description" "InvenSense 9-Axis Motion Sensor, Accelerometer, Gyroscope, Compass, I2C/SPI"
-			(at 195.58 252.73 0)
+			(at 182.88 252.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5422,7 +6368,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 160.02 45.72 90)
+		(at 160.02 40.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5433,7 +6379,7 @@
 		(fields_autoplaced yes)
 		(uuid "5c0e9004-e69f-4f94-a5cd-5e456917b0a0")
 		(property "Reference" "JST1"
-			(at 163.83 43.8149 90)
+			(at 163.83 38.7349 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5444,7 +6390,7 @@
 			)
 		)
 		(property "Value" "Female"
-			(at 163.83 46.3549 90)
+			(at 163.83 41.2749 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5455,7 +6401,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 160.02 45.72 0)
+			(at 160.02 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5466,7 +6412,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 160.02 45.72 0)
+			(at 160.02 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5477,7 +6423,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 160.02 45.72 0)
+			(at 160.02 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5503,90 +6449,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Switch:SW_SPST")
-		(at 160.02 72.39 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "73fd2431-d2c8-469d-95b3-e160e7c57d37")
-		(property "Reference" "SW1"
-			(at 162.56 71.1199 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PWR"
-			(at 162.56 73.6599 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 160.02 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 160.02 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Single Pole Single Throw (SPST) switch"
-			(at 160.02 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "b6d0607b-62f9-44e3-8778-d40af26372a4")
-		)
-		(pin "1"
-			(uuid "b2cf06dd-6c17-448f-b339-df73d651ed7d")
-		)
-		(instances
-			(project "schematics"
-				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Battery_Cell")
-		(at 162.56 27.94 90)
+		(at 162.56 22.86 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5597,7 +6461,7 @@
 		(fields_autoplaced yes)
 		(uuid "8c17522f-d328-470e-96b8-3810f3ed4d2b")
 		(property "Reference" "BT1"
-			(at 160.7185 20.32 90)
+			(at 160.7185 15.24 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5607,7 +6471,7 @@
 			)
 		)
 		(property "Value" "Battery_Cell 2000mAh"
-			(at 160.7185 22.86 90)
+			(at 160.7185 17.78 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5617,7 +6481,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 161.036 27.94 90)
+			(at 161.036 22.86 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5628,7 +6492,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 161.036 27.94 90)
+			(at 161.036 22.86 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5639,7 +6503,7 @@
 			)
 		)
 		(property "Description" "Single-cell battery"
-			(at 162.56 27.94 0)
+			(at 162.56 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5650,7 +6514,7 @@
 			)
 		)
 		(property "Sim.Device" "V"
-			(at 162.56 27.94 0)
+			(at 162.56 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5661,7 +6525,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 162.56 27.94 0)
+			(at 162.56 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5672,7 +6536,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 162.56 27.94 0)
+			(at 162.56 22.86 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5888,93 +6752,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Converter_DCDC:TSR_1-2412")
-		(at 149.86 105.41 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9d01d116-8b63-46af-8d4b-df268caf16ac")
-		(property "Reference" "U1"
-			(at 156.21 104.1399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "5.1V - Pi"
-			(at 156.21 106.6799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
-			(at 146.05 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "http://www.tracopower.com/products/tsr1.pdf"
-			(at 149.86 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1A step-down regulator module, fixed 1.2V output voltage, 6-36V input voltage, -40°C to +85°C temperature range, TO-220 compatible LM78xx replacement"
-			(at 149.86 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e8780f5e-39af-4d4a-aff0-634680940395")
-		)
-		(pin "2"
-			(uuid "33a23b2f-a594-4633-beca-fe2b625cf4f7")
-		)
-		(pin "3"
-			(uuid "ba2aa94b-5270-44cd-bff8-ae24775d97d6")
-		)
-		(instances
-			(project "schematics"
-				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "Conn_01x06_1")
 		(lib_id "Connector_Generic:Conn_01x06")
 		(at 331.47 176.53 0)
@@ -6153,93 +6930,6 @@
 			(project "schematics"
 				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
 					(reference "M1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Converter_DCDC:TSR_1-2412")
-		(at 175.26 105.41 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b7708f35-be10-44f2-b6e5-bb11bfea2e2c")
-		(property "Reference" "U2"
-			(at 181.61 104.1399 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "5V ESP32"
-			(at 181.61 106.6799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
-			(at 171.45 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "http://www.tracopower.com/products/tsr1.pdf"
-			(at 175.26 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1A step-down regulator module, fixed 1.2V output voltage, 6-36V input voltage, -40°C to +85°C temperature range, TO-220 compatible LM78xx replacement"
-			(at 175.26 105.41 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "103fb547-1871-4179-9e48-03cf7cdd6de0")
-		)
-		(pin "2"
-			(uuid "44dd962a-902b-4885-b32b-b7f85a019331")
-		)
-		(pin "3"
-			(uuid "03d066b1-2643-43d1-b6e9-5f60fe6d146d")
-		)
-		(instances
-			(project "schematics"
-				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -6527,7 +7217,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 162.56 52.07 270)
+		(at 162.56 46.99 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6538,7 +7228,7 @@
 		(fields_autoplaced yes)
 		(uuid "e265b6d5-6919-4b61-baad-2a00693e4e66")
 		(property "Reference" "JST3"
-			(at 163.83 51.4349 90)
+			(at 163.83 46.3549 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6549,7 +7239,7 @@
 			)
 		)
 		(property "Value" "Male"
-			(at 163.83 53.9749 90)
+			(at 163.83 48.8949 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6560,7 +7250,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 52.07 0)
+			(at 162.56 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6571,7 +7261,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 52.07 0)
+			(at 162.56 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6582,7 +7272,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 162.56 52.07 0)
+			(at 162.56 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6608,6 +7298,98 @@
 		)
 	)
 	(symbol
+		(lib_name "TSR_1-2412_1")
+		(lib_id "Converter_DCDC:TSR_1-2412")
+		(at 149.86 105.41 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6450286-4b91-49b2-93ca-1a9177907150")
+		(property "Reference" "U1"
+			(at 156.21 104.1399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5.1V"
+			(at 156.21 106.6799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
+			(at 146.05 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.tracopower.com/products/tsr1.pdf"
+			(at 149.86 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "1A step-down regulator module, fixed 1.2V output voltage, 6-36V input voltage, -40°C to +85°C temperature range, TO-220 compatible LM78xx replacement"
+			(at 149.86 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5f3202fb-9265-406a-9c77-5271895480d0")
+		)
+		(pin "2"
+			(uuid "67253512-12a0-4f4f-ac60-51f3b7bb2b81")
+		)
+		(pin "3"
+			(uuid "63fb4fc0-766c-47dd-ae8f-6ed31e6c774c")
+		)
+		(pin "4"
+			(uuid "90361c7e-74de-4ecb-930b-f8233cfbaa9f")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "TSR_1-2412_1")
 		(lib_id "Converter_DCDC:TSR_1-2412")
 		(at 200.66 105.41 270)
 		(unit 1)
@@ -6630,7 +7412,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "11.5V motors"
+		(property "Value" "11.5V"
 			(at 207.01 106.6799 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6685,6 +7467,9 @@
 		(pin "3"
 			(uuid "703a8fe5-1432-497b-8874-f31b494d9fe9")
 		)
+		(pin "4"
+			(uuid "6324ef9c-46f1-4367-be19-5c00bab9ae09")
+		)
 		(instances
 			(project "schematics"
 				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
@@ -6696,7 +7481,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 186.69 52.07 270)
+		(at 186.69 46.99 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6707,7 +7492,7 @@
 		(fields_autoplaced yes)
 		(uuid "fafc7811-ddf9-45f3-af8a-66cc1e2379fc")
 		(property "Reference" "JST4"
-			(at 187.96 51.4349 90)
+			(at 187.96 46.3549 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6718,7 +7503,7 @@
 			)
 		)
 		(property "Value" "Male"
-			(at 187.96 53.9749 90)
+			(at 187.96 48.8949 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6729,7 +7514,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 186.69 52.07 0)
+			(at 186.69 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6740,7 +7525,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 52.07 0)
+			(at 186.69 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6751,7 +7536,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 186.69 52.07 0)
+			(at 186.69 46.99 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6771,6 +7556,94 @@
 			(project "schematics"
 				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
 					(reference "JST4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_DIP_x02")
+		(at 171.45 67.31 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fc729710-470a-4bc6-8171-a33783b41928")
+		(property "Reference" "SW2"
+			(at 177.8 66.0399 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "SW_DIP_x02"
+			(at 177.8 68.5799 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 171.45 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 171.45 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "2x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
+			(at 171.45 67.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "4"
+			(uuid "550921bf-4da3-4d82-986a-13d9a024928d")
+		)
+		(pin "1"
+			(uuid "3284e9f3-56b4-45a2-9b33-1290022558a2")
+		)
+		(pin "2"
+			(uuid "5e6a0325-53a2-4484-8c92-07d583899d91")
+		)
+		(pin "3"
+			(uuid "aba8c99d-a463-4a12-b3d7-3b9212fc73fd")
+		)
+		(instances
+			(project "schematics"
+				(path "/997b8fea-6110-49db-b0d2-1e961e621252"
+					(reference "SW2")
 					(unit 1)
 				)
 			)
