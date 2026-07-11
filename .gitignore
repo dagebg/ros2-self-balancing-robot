@@ -79,3 +79,4 @@ docs/build/
 htmlcov/
 
 .ipynb_checkpoints/
+mechanical_hardware/schematics/.history/
