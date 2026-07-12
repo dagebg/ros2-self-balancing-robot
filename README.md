@@ -17,8 +17,8 @@ The target end state is a two-wheeled self-balancing robot that:
 ## Hardware
 
 <p align="center">
-  <img src="docs/img/robot_front.jpg" width="48%" />
-  <img src="docs/img/robot_top.jpg" width="48%" />
+  <img src="docs/img/robot_front.JPG" width="48%" />
+  <img src="docs/img/robot_top.JPG" width="48%" />
 </p>
 
 | Component | Role |
@@ -38,7 +38,7 @@ The target end state is a two-wheeled self-balancing robot that:
 The robot uses a multi-rail power architecture with dedicated buck converters for compute and embedded subsystems.  
 
 <p align="center">
-  <img src="docs/img/buck_converters.jpg" width="55%" />
+  <img src="docs/img/buck_converters.JPG" width="55%" />
 </p>
 
 ## Sensor Fusion Architecture
@@ -51,8 +51,8 @@ This robot uses two physically mounted IMUs at different locations and orientati
 | MPU-6050 | Second deck | Facing backward | Secondary IMU, comparison/reference sensing |
 
 <p align="center">
-  <img src="docs/img/mpu9250_lower_deck_front.jpg" width="48%" />
-  <img src="docs/img/mpu6050_second_deck_back.jpg" width="48%" />
+  <img src="docs/img/mpu9250_lower_deck_front.JPG" width="48%" />
+  <img src="docs/img/mpu6050_second_deck_back.JPG" width="48%" />
 </p>
 
 ## Repository layout
