@@ -16,6 +16,11 @@ The target end state is a two-wheeled self-balancing robot that:
 
 ## Hardware
 
+<p align="center">
+  <img src="docs/images/robot_front.jpg" width="48%" />
+  <img src="docs/images/robot_top.jpg" width="48%" />
+</p>
+
 | Component | Role |
 |---|---|
 | Raspberry Pi 4B 4GB | Main computer running ROS2 |
@@ -27,6 +32,28 @@ The target end state is a two-wheeled self-balancing robot that:
 | 2x 7.4V 2000mAh Li-Ion 2S | Main power source |
 | 3x HW-140 DC-DC Buck Boost Converter | Power converter |
 | 3D-printed chassis + wheels | Custom mechanical platform |
+
+## Power System
+
+The robot uses a multi-rail power architecture with dedicated buck converters for compute and embedded subsystems.  
+
+<p align="center">
+  <img src="docs/images/buck_converters.jpg" width="55%" />
+</p>
+
+## Sensor Fusion Architecture
+
+This robot uses two physically mounted IMUs at different locations and orientations for sensor fusion experimentation.
+
+| IMU | Location | Orientation | Function |
+|---|---|---|---|
+| MPU-9250 | Lower deck | Facing forward | Primary IMU, 9-DOF orientation sensing |
+| MPU-6050 | Second deck | Facing backward | Secondary IMU, comparison/reference sensing |
+
+<p align="center">
+  <img src="docs/images/mpu9250_lower_deck_front.jpg" width="48%" />
+  <img src="docs/images/mpu6050_second_deck_back.jpg" width="48%" />
+</p>
 
 ## Repository layout
 
