@@ -1,4 +1,8 @@
 # ROS2 Self-Balancing Differential-Drive Robot
+![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?logo=ros)
+![Status](https://img.shields.io/badge/status-WIP-yellow)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 > A personal learning project — building a differential-drive robot from scratch
 > using ROS2 on a Raspberry Pi 4, an ESP32 for real-time motor/sensor control,
 > and a fully 3D-printed chassis.
