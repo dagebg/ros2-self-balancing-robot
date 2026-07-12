@@ -1,5 +1,4 @@
-# ROS2 Differential Drive Robot
-
+# ROS2 Self-Balancing Differential-Drive Robot
 > A personal learning project — building a differential-drive robot from scratch
 > using ROS2 on a Raspberry Pi 4, an ESP32 for real-time motor/sensor control,
 > and a fully 3D-printed chassis.
