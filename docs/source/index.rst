@@ -1,4 +1,4 @@
-ROS2 DiffDrive Robot
+ROS2 Self Balancing Robot
 ====================
 
 .. toctree::
