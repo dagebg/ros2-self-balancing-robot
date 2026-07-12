@@ -65,8 +65,8 @@ The robot electronics are documented in KiCad with a complete schematic of the m
 </p>
 
 Files:
-- [`mechanical_hardware/schematics/schematics.kicad_sch`](hardware/schematics.kicad_sch)
-- [`mechanical_hardware/schematics/schematics.pdf`](hardware/schematics.pdf)
+- [`mechanical_hardware/schematics/schematics.kicad_sch`](mechanical_hardware/schematics/schematics.kicad_sch)
+- [`mechanical_hardware/schematics/schematics.pdf`](mechanical_hardware/schematics/schematics.pdf)
 
 ## Repository layout
 
