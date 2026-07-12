@@ -4760,6 +4760,12 @@
 		(uuid "d09e8a1d-693c-47c9-b826-8035d7602dc6")
 	)
 	(junction
+		(at 264.16 217.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1cf37500-0f7e-47d6-ade5-75c024d2fd0a")
+	)
+	(junction
 		(at 175.26 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4784,16 +4790,40 @@
 		(uuid "3e666963-1db6-4f01-a73d-9509c20b816a")
 	)
 	(junction
+		(at 207.01 233.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e1a749f-5540-4ce3-a8f8-d8e981a015a0")
+	)
+	(junction
 		(at 261.62 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "659add40-5119-4301-bd88-48f5c2e4424a")
 	)
 	(junction
+		(at 201.93 260.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "81b1febc-7785-4c73-a0c4-5ad489732cea")
+	)
+	(junction
 		(at 203.2 223.52)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "92e0830b-9244-4b9f-a62c-2685ae8ac85a")
+	)
+	(junction
+		(at 198.12 257.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a6c5e8a3-77fd-43eb-b94c-09a2cee92f76")
+	)
+	(junction
+		(at 261.62 176.53)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a860c668-5e22-4486-96b0-48e7476aebc9")
 	)
 	(junction
 		(at 149.86 130.81)
@@ -4839,7 +4869,7 @@
 	)
 	(wire
 		(pts
-			(xy 270.51 217.17) (xy 203.2 217.17)
+			(xy 270.51 217.17) (xy 264.16 217.17)
 		)
 		(stroke
 			(width 0)
@@ -4856,6 +4886,16 @@
 			(type default)
 		)
 		(uuid "0553026a-3023-4adc-a6f6-3316fb876046")
+	)
+	(wire
+		(pts
+			(xy 240.03 227.33) (xy 198.12 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "06e940c6-882d-4d36-99a4-69165b9febea")
 	)
 	(wire
 		(pts
@@ -4946,6 +4986,26 @@
 			(type default)
 		)
 		(uuid "109f6131-bbff-44b3-91df-d969772d2cd1")
+	)
+	(wire
+		(pts
+			(xy 261.62 231.14) (xy 201.93 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11357f3a-8d35-41f9-ae8a-9d3323733e05")
+	)
+	(wire
+		(pts
+			(xy 198.12 227.33) (xy 198.12 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1213e21b-0f4e-4194-9c5f-7be4fd4a7842")
 	)
 	(wire
 		(pts
@@ -5089,6 +5149,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 260.35) (xy 213.36 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "202b8ec1-5bf8-4d8a-aba9-63425459dc93")
+	)
+	(wire
+		(pts
 			(xy 149.86 85.09) (xy 149.86 95.25)
 		)
 		(stroke
@@ -5126,6 +5196,16 @@
 			(type default)
 		)
 		(uuid "2374d87b-0d5a-42ca-84b6-cec7a27c89d4")
+	)
+	(wire
+		(pts
+			(xy 245.11 168.91) (xy 236.22 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24faba9c-8b27-4582-9db3-8e10c4fed63b")
 	)
 	(wire
 		(pts
@@ -5169,6 +5249,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 274.32) (xy 234.95 274.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28b03c35-683d-41d7-ad00-b221533f99eb")
+	)
+	(wire
+		(pts
 			(xy 160.02 76.2) (xy 160.02 85.09)
 		)
 		(stroke
@@ -5206,6 +5296,16 @@
 			(type default)
 		)
 		(uuid "2f582613-ed56-41ca-9fd3-98a0c4c11bc1")
+	)
+	(wire
+		(pts
+			(xy 260.35 233.68) (xy 207.01 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34c0c1b5-36df-4439-b366-5d0f595c87ed")
 	)
 	(wire
 		(pts
@@ -5269,6 +5369,16 @@
 	)
 	(wire
 		(pts
+			(xy 264.16 217.17) (xy 203.2 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3af22930-fa4f-4fda-98ab-1541e7f94a22")
+	)
+	(wire
+		(pts
 			(xy 336.55 135.89) (xy 336.55 147.32)
 		)
 		(stroke
@@ -5276,6 +5386,16 @@
 			(type default)
 		)
 		(uuid "3b38e28b-3ba4-48e8-9d81-a5b386262101")
+	)
+	(wire
+		(pts
+			(xy 215.9 234.95) (xy 261.62 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b42718d-3693-4ea5-a321-503c1b1edf0a")
 	)
 	(wire
 		(pts
@@ -5289,6 +5409,26 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 260.35) (xy 185.42 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d6ecbf2-eed0-46ae-94e7-c7fbe83ac66c")
+	)
+	(wire
+		(pts
+			(xy 185.42 257.81) (xy 198.12 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "402936e7-4214-4494-8d4d-ef4b63210930")
+	)
+	(wire
+		(pts
 			(xy 261.62 175.26) (xy 261.62 176.53)
 		)
 		(stroke
@@ -5296,6 +5436,16 @@
 			(type default)
 		)
 		(uuid "40396563-71d5-48af-9ce9-d5658323e63e")
+	)
+	(wire
+		(pts
+			(xy 201.93 231.14) (xy 201.93 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41231fd0-739e-444b-90c8-1e8b06d47c9f")
 	)
 	(wire
 		(pts
@@ -5399,6 +5549,16 @@
 	)
 	(wire
 		(pts
+			(xy 201.93 260.35) (xy 201.93 283.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b119257-c169-4867-8a19-36cfa7dac935")
+	)
+	(wire
+		(pts
 			(xy 261.62 176.53) (xy 321.31 176.53)
 		)
 		(stroke
@@ -5439,6 +5599,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 233.68) (xy 207.01 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4fc0a85d-3fd6-44ea-a7f6-21fa0f574bba")
+	)
+	(wire
+		(pts
 			(xy 283.21 152.4) (xy 283.21 166.37)
 		)
 		(stroke
@@ -5459,7 +5629,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 236.22) (xy 227.33 223.52)
+			(xy 237.49 238.76) (xy 237.49 223.52)
 		)
 		(stroke
 			(width 0)
@@ -5509,7 +5679,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 229.87) (xy 182.88 223.52)
+			(xy 167.64 232.41) (xy 167.64 223.52)
 		)
 		(stroke
 			(width 0)
@@ -5536,6 +5706,16 @@
 			(type default)
 		)
 		(uuid "5fff9d5c-4a08-44f1-ac75-a6e0d3d31d0d")
+	)
+	(wire
+		(pts
+			(xy 245.11 219.71) (xy 245.11 168.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6043e52e-97aa-452f-8dba-31ee842265d5")
 	)
 	(wire
 		(pts
@@ -5589,6 +5769,16 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 219.71) (xy 245.11 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "688235ca-de7b-467a-a1e1-d118ad8a1b6d")
+	)
+	(wire
+		(pts
 			(xy 316.23 172.72) (xy 325.12 172.72)
 		)
 		(stroke
@@ -5596,6 +5786,16 @@
 			(type default)
 		)
 		(uuid "68bbca51-4924-4476-90d7-e5826f39325e")
+	)
+	(wire
+		(pts
+			(xy 255.27 264.16) (xy 260.35 264.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a3cf13f-3286-409c-b057-062fb38f7550")
 	)
 	(wire
 		(pts
@@ -5709,7 +5909,7 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 223.52) (xy 203.2 223.52)
+			(xy 237.49 223.52) (xy 203.2 223.52)
 		)
 		(stroke
 			(width 0)
@@ -5779,6 +5979,16 @@
 	)
 	(wire
 		(pts
+			(xy 255.27 259.08) (xy 264.16 259.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "811b044a-3a5f-4fea-bc09-e2a65898ad41")
+	)
+	(wire
+		(pts
 			(xy 313.69 133.35) (xy 325.12 133.35)
 		)
 		(stroke
@@ -5809,6 +6019,26 @@
 	)
 	(wire
 		(pts
+			(xy 207.01 233.68) (xy 207.01 219.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "85f95707-b9e4-4c31-a474-34c252b9b6e3")
+	)
+	(wire
+		(pts
+			(xy 165.1 283.21) (xy 201.93 283.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "872b670f-3404-4e40-a8ff-00e980cb3345")
+	)
+	(wire
+		(pts
 			(xy 295.91 158.75) (xy 316.23 158.75)
 		)
 		(stroke
@@ -5836,6 +6066,16 @@
 			(type default)
 		)
 		(uuid "89b448e3-fd7e-4c1e-8b68-ba9672491b2e")
+	)
+	(wire
+		(pts
+			(xy 240.03 171.45) (xy 240.03 227.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89f60931-c992-4af3-9a16-7ba7687a44eb")
 	)
 	(wire
 		(pts
@@ -5949,6 +6189,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 234.95) (xy 261.62 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bf09177-1fa6-4a26-9de2-741ce0cfebd3")
+	)
+	(wire
+		(pts
 			(xy 171.45 74.93) (xy 171.45 76.2)
 		)
 		(stroke
@@ -5969,6 +6219,16 @@
 	)
 	(wire
 		(pts
+			(xy 198.12 257.81) (xy 215.9 257.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d607aee-d694-43e6-a35e-04d6216f6d50")
+	)
+	(wire
+		(pts
 			(xy 177.8 22.86) (xy 181.61 22.86)
 		)
 		(stroke
@@ -5979,7 +6239,7 @@
 	)
 	(wire
 		(pts
-			(xy 182.88 223.52) (xy 203.2 223.52)
+			(xy 167.64 223.52) (xy 203.2 223.52)
 		)
 		(stroke
 			(width 0)
@@ -6029,6 +6289,16 @@
 	)
 	(wire
 		(pts
+			(xy 264.16 259.08) (xy 264.16 217.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3d5c982-fbc4-40fb-86a7-40a0b2659d69")
+	)
+	(wire
+		(pts
 			(xy 369.57 163.83) (xy 369.57 190.5)
 		)
 		(stroke
@@ -6036,6 +6306,16 @@
 			(type default)
 		)
 		(uuid "a854927c-9a99-4ba5-bb0f-5ba82ff12d5c")
+	)
+	(wire
+		(pts
+			(xy 236.22 171.45) (xy 240.03 171.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a927a47f-3829-4205-bacd-c6af73d92d4c")
 	)
 	(wire
 		(pts
@@ -6169,6 +6449,26 @@
 	)
 	(wire
 		(pts
+			(xy 260.35 264.16) (xy 260.35 233.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c29c4c19-0b24-4fbb-80bd-be43ea43e95f")
+	)
+	(wire
+		(pts
+			(xy 201.93 260.35) (xy 213.36 260.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2da424c-5bee-49e8-8428-e5dbd465d951")
+	)
+	(wire
+		(pts
 			(xy 290.83 165.1) (xy 316.23 165.1)
 		)
 		(stroke
@@ -6219,6 +6519,16 @@
 	)
 	(wire
 		(pts
+			(xy 215.9 257.81) (xy 215.9 234.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9ee0023-9a4a-4292-a1ce-3bccda18db39")
+	)
+	(wire
+		(pts
 			(xy 261.62 175.26) (xy 261.62 166.37)
 		)
 		(stroke
@@ -6226,6 +6536,16 @@
 			(type default)
 		)
 		(uuid "ca881ea4-a5c8-4abf-80fb-e89e7b91e1c0")
+	)
+	(wire
+		(pts
+			(xy 261.62 261.62) (xy 255.27 261.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ccf97086-4b55-4430-9b65-760dd5dfd4a1")
 	)
 	(wire
 		(pts
@@ -6379,6 +6699,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 278.13) (xy 165.1 283.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5e662ca-d39d-4744-b4f9-bc10ae19f2a7")
+	)
+	(wire
+		(pts
 			(xy 259.08 181.61) (xy 259.08 218.44)
 		)
 		(stroke
@@ -6479,6 +6809,16 @@
 	)
 	(wire
 		(pts
+			(xy 261.62 176.53) (xy 261.62 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f563688d-d08e-4df5-8d6f-c5de30a7df7a")
+	)
+	(wire
+		(pts
 			(xy 144.78 180.34) (xy 144.78 222.25)
 		)
 		(stroke
@@ -6529,6 +6869,16 @@
 	)
 	(wire
 		(pts
+			(xy 185.42 262.89) (xy 207.01 262.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb8432db-2188-4930-a7c8-373a4deb56fb")
+	)
+	(wire
+		(pts
 			(xy 259.08 218.44) (xy 156.21 218.44)
 		)
 		(stroke
@@ -6549,7 +6899,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Motion:MPU-6050")
-		(at 227.33 254 180)
+		(at 237.49 256.54 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6560,7 +6910,7 @@
 		(fields_autoplaced yes)
 		(uuid "05a54e9f-b674-4529-b031-9310a6ffd462")
 		(property "Reference" "U6"
-			(at 230.4481 234.95 0)
+			(at 240.6081 237.49 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6571,7 +6921,7 @@
 			)
 		)
 		(property "Value" "MPU-6050"
-			(at 230.4481 237.49 0)
+			(at 240.6081 240.03 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6582,7 +6932,7 @@
 			)
 		)
 		(property "Footprint" "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm"
-			(at 227.33 233.68 0)
+			(at 237.49 236.22 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6593,7 +6943,7 @@
 			)
 		)
 		(property "Datasheet" "https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf"
-			(at 227.33 250.19 0)
+			(at 237.49 252.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6604,7 +6954,7 @@
 			)
 		)
 		(property "Description" "InvenSense 6-Axis Motion Sensor, Gyroscope, Accelerometer, I2C"
-			(at 227.33 254 0)
+			(at 237.49 256.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6983,7 +7333,7 @@
 	)
 	(symbol
 		(lib_id "Sensor_Motion:MPU-9250")
-		(at 182.88 252.73 180)
+		(at 167.64 255.27 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6994,7 +7344,7 @@
 		(fields_autoplaced yes)
 		(uuid "2f9b45d2-908c-490a-a6f9-9c9f30b11bc1")
 		(property "Reference" "U5"
-			(at 185.9981 229.87 0)
+			(at 170.7581 232.41 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7005,7 +7355,7 @@
 			)
 		)
 		(property "Value" "MPU-9250"
-			(at 185.9981 232.41 0)
+			(at 170.7581 234.95 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7016,7 +7366,7 @@
 			)
 		)
 		(property "Footprint" "Sensor_Motion:InvenSense_QFN-24_3x3mm_P0.4mm"
-			(at 182.88 227.33 0)
+			(at 167.64 229.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7027,7 +7377,7 @@
 			)
 		)
 		(property "Datasheet" "https://invensense.tdk.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf"
-			(at 182.88 248.92 0)
+			(at 167.64 251.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7038,7 +7388,7 @@
 			)
 		)
 		(property "Description" "InvenSense 9-Axis Motion Sensor, Accelerometer, Gyroscope, Compass, I2C/SPI"
-			(at 182.88 252.73 0)
+			(at 167.64 255.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
