@@ -1,5 +1,5 @@
 # ROS2 Self-Balancing Differential-Drive Robot
-![ROS2](https://img.shields.io/badge/ROS2-Humble-blue?logo=ros)
+![ROS2](https://img.shields.io/badge/ROS2-Jazzy-blue?logo=ros)
 ![Status](https://img.shields.io/badge/status-WIP-yellow)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
