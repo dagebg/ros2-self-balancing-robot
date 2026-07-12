@@ -18,7 +18,7 @@ The target end state is a two-wheeled self-balancing robot that:
 
 <p align="center">
   <img src="docs/img/robot_front.JPG" width="48%" />
-  <img src="docs/img/robot_top.JPG" width="48%" />
+  <img src="docs/img/robot_back.JPG" width="48%" />
 </p>
 
 | Component | Role |
