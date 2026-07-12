@@ -61,7 +61,7 @@ This robot uses two physically mounted IMUs at different locations and orientati
 The robot electronics are documented in KiCad with a complete schematic of the main system.
 
 <p align="center">
-  <img src="mechanical_hardware/schematics/schematics.png" width="85%" />
+  <img src="mechanical_hardware/schematics/schematics.png" width="100%" />
 </p>
 
 Files:
