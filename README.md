@@ -55,6 +55,18 @@ This robot uses two physically mounted IMUs at different locations and orientati
   <img src="docs/img/mpu6050_second_deck_back.JPG" width="48%" />
 </p>
 
+## Electronics Documentation
+
+The robot electronics are documented in KiCad with a complete schematic of the main system.
+
+<p align="center">
+  <img src="mechanical_hardware/schematics/schematics.pdf" width="85%" />
+</p>
+
+Files:
+- [`mechanical_hardware/schematics/schematics.kicad_sch`](hardware/schematics.kicad_sch)
+- [`mechanical_hardware/schematics/schematics.pdf`](hardware/schematics.pdf)
+
 ## Repository layout
 
 ```text
