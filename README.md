@@ -7,7 +7,7 @@
 > using ROS2 on a Raspberry Pi 4, an ESP32 for real-time motor/sensor control,
 > and a fully 3D-printed chassis.
 
-**[Full documentation → dagebg.github.io/ros2-diffdrive-robot](https://dagebg.github.io/ros2-self-balancing-robot/)**
+**[Full documentation → dagebg.github.io/ros2-self-balancing-robot](https://dagebg.github.io/ros2-self-balancing-robot/)**
 
 ## Goals
 The target end state is a two-wheeled self-balancing robot that:
