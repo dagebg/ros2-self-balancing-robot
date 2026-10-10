@@ -7,6 +7,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-10-10
+
+First complete software stack: firmware, shared C++ libraries, ROS 2 packages, simulation, web
+app, CI/CD and documentation. Verified in simulation; hardware bring-up and tuning follow.
+
 ### Added
 
 - Sphinx documentation with Markdown (MyST), Mermaid diagrams and Doxygen API reference.
@@ -83,13 +88,10 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   ELF, the web app bundle and git-cliff release notes.
 - `tools/merge_firmware.sh` for single-file flash images; deployment and release guides.
 
-### Changed (ROS 2)
+### Changed
 
 - `robot_bridge` publishes odometry for `base_footprint` and the body pitch in `joint_states`.
 - The development image and CI skip GUI-only dependencies (RViz, joint sliders).
-
-### Changed
-
 - CI restructured: a single `lint` job runs pre-commit, all tool versions are pinned and cached,
   and superseded runs are cancelled.
 - `.clang-format` moved to the repository root so one C++ style applies everywhere.
@@ -105,3 +107,6 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Documentation is now built on every pull request, with warnings treated as errors.
 - Firmware failed to build from a fresh clone: `SECRETS.h.example` defined different macro names
   than `main.cpp` used. Credentials now fall back to `secrets.example.hpp` automatically.
+
+[Unreleased]: https://github.com/dagebg/ros2-self-balancing-robot/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/dagebg/ros2-self-balancing-robot/releases/tag/v0.1.0

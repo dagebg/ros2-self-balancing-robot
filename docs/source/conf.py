@@ -16,7 +16,7 @@ GENERATED_DIR = Path(__file__).resolve().parent / "_generated"
 project = "ROS2 Self-Balancing Robot"
 copyright = "2026, David Geßner"
 author = "David Geßner"
-release = "0.1.0-dev"
+release = "0.1.0"
 
 # -- General configuration ---------------------------------------------------
 extensions = [
