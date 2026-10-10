@@ -1,0 +1,23 @@
+# Doxygen configuration — generates XML only; Sphinx (breathe) renders it.
+# Paths are relative to docs/. Run via `make html` (conf.py invokes doxygen).
+
+PROJECT_NAME           = "ROS2 Self-Balancing Robot"
+OUTPUT_DIRECTORY       = doxygen_output
+GENERATE_XML           = YES
+GENERATE_HTML          = NO
+GENERATE_LATEX         = NO
+
+# Public interfaces only: implementation files would duplicate every declaration.
+INPUT                  = ../firmware/esp32/robot-firmware/lib
+FILE_PATTERNS          = *.hpp *.h
+RECURSIVE              = YES
+EXCLUDE_PATTERNS       = */test/* */.pio/*
+
+EXTRACT_ALL            = YES
+EXTRACT_STATIC         = YES
+JAVADOC_AUTOBRIEF      = YES
+BUILTIN_STL_SUPPORT    = YES
+ENABLE_PREPROCESSING   = YES
+
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = NO
