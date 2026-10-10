@@ -4,6 +4,8 @@ Icon?
 ehthumbs.db
 desktop.ini
 
+.claude/
+
 venv/
 .env
 .env.*
