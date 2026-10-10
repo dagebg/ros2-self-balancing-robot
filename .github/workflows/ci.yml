@@ -1,18 +1,25 @@
-name: CI — Code Quality
+name: CI
 
 on:
   push:
     branches:
       - main
   pull_request:
-    branches:
-      - main
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: "3.12"
 
 jobs:
-  python-lint:
-    name: Python linting (ruff)
+  lint:
+    name: Lint and format (pre-commit)
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,21 +27,28 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
 
-      - name: Install ruff
+      - name: Install tools
         run: pip install -r requirements-dev.txt
 
-      - name: Run ruff linter
-        run: ruff check .
+      - name: Cache pre-commit environments
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit
+          key: pre-commit-${{ runner.os }}-${{ hashFiles('.pre-commit-config.yaml') }}
 
-      - name: Run ruff formatter check
-        run: ruff format --check .
+      - name: Run all hooks
+        run: pre-commit run --all-files --show-diff-on-failure
 
   firmware-static-analysis:
     name: Firmware static analysis (cppcheck + clang-tidy)
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: firmware/esp32/robot-firmware
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -42,19 +56,19 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install tools
+        working-directory: .
+        run: pip install -r requirements-dev.txt
 
       - name: Cache PlatformIO
         uses: actions/cache@v4
         with:
-          path: |
-            ~/.platformio
-            ~/.cache/pip
-          key: ${{ runner.os }}-pio-${{ hashFiles('**/platformio.ini') }}
-
-      - name: Install PlatformIO
-        run: pip install --upgrade platformio
+          path: ~/.platformio
+          key: pio-${{ runner.os }}-${{ hashFiles('firmware/**/platformio.ini') }}
 
       - name: Run static analysis
-        working-directory: firmware/esp32/robot-firmware
         run: pio check --fail-on-defect=high --fail-on-defect=medium
