@@ -1,0 +1,14 @@
+# teleop_twist_joy for a typical gamepad: hold the left shoulder button (enable) and steer with the
+# left stick. Speeds stay well inside the controller's limits (0.2 m/s, 2 rad/s).
+teleop_twist_joy_node:
+  ros__parameters:
+    require_enable_button: true
+    enable_button: 4
+    axis_linear:
+      x: 1
+    scale_linear:
+      x: 0.15
+    axis_angular:
+      yaw: 0
+    scale_angular:
+      yaw: 1.2
