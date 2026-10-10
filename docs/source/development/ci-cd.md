@@ -11,7 +11,11 @@ flowchart LR
   PR --> ROS["ros2<br/>colcon build + test in ros:jazzy"]
   PR --> WEB["webapp<br/>lint · typecheck · tests · build"]
   PR --> DOCS["docs<br/>Doxygen + Sphinx -W"]
+  PR --> IMG["docker<br/>robot (arm64) · web"]
   DOCS -- "main only" --> PAGES["GitHub Pages"]
+  IMG -- "main, tags" --> GHCR["GHCR images"]
+  TAG["tag vX.Y.Z"] --> REL["release<br/>firmware images · web app · notes"]
+  TAG --> IMG
 ```
 
 ## Workflows
@@ -20,6 +24,8 @@ flowchart LR
 |---|---|---|
 | `ci.yml` | Pull requests, push to `main` | `lint`, `shared-libs` (2 variants), `firmware`, `ros2`, `webapp` |
 | `docs.yml` | Pull requests, push to `main` | Build docs with warnings as errors; deploy to GitHub Pages from `main` |
+| `docker.yml` | Pull requests touching the images, push to `main`, tags | Build the robot (arm64) and web images; push to GHCR except for pull requests |
+| `release.yml` | Tags `vX.Y.Z` | Firmware flash images, web app bundle and release notes as a GitHub Release (see {doc}`releasing`) |
 
 ## Jobs
 
@@ -47,6 +53,13 @@ and the production build, and uploads `webapp/dist`.
 
 **docs** generates Doxygen XML, builds Sphinx with `-W`, uploads the HTML as an artifact and, on
 `main`, publishes it to GitHub Pages.
+
+**docker** builds the robot image natively on an Arm runner and the multi-architecture web image,
+with layer caches in GitHub Actions; see {doc}`../deployment/docker`.
+
+**release** builds the firmware and bring-up images, merges each into one flashable file, builds
+the web app, generates release notes from the Conventional Commits with git-cliff and publishes a
+GitHub Release.
 
 ## Conventions
 

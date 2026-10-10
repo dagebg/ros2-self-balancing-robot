@@ -1,0 +1,11 @@
+node_modules
+**/node_modules
+**/.pio
+**/build
+**/install
+**/log
+.venv
+docs/build
+docs/doxygen_output
+mechanical_hardware
+.git

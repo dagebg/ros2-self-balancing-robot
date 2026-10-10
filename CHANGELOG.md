@@ -76,6 +76,12 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   (ADR-0012). Unit and component tests against an in-memory client, an opt-in integration test
   against the running simulation, and a CI job (lint, typecheck, tests, build).
 - `ROS_DOCKER_ARGS` for `tools/ros-docker.sh` (e.g. to publish rosbridge's port).
+- Docker images for the Pi: `robot` (arm64, built natively on an Arm runner) and `web` (nginx,
+  multi-architecture), pushed to GHCR from `main` and release tags, and a `docker compose` file for
+  the Pi (ADR-0013).
+- Release workflow: tag `vX.Y.Z` publishes merged firmware and bring-up flash images, the firmware
+  ELF, the web app bundle and git-cliff release notes.
+- `tools/merge_firmware.sh` for single-file flash images; deployment and release guides.
 
 ### Changed (ROS 2)
 

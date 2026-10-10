@@ -1,0 +1,22 @@
+# Runs the robot software on the Raspberry Pi from the published images:
+#
+#   docker compose -f docker/compose.yaml up -d          # latest main
+#   TAG=0.1.0 docker compose -f docker/compose.yaml up -d  # a release
+#
+# The web app is then at http://<pi>:8080 and connects to rosbridge on port 9090.
+services:
+  robot:
+    image: ghcr.io/dagebg/ros2-self-balancing-robot/robot:${TAG:-latest}
+    # Host networking: DDS discovery for other ROS 2 machines and rosbridge on the Pi's port 9090.
+    network_mode: host
+    ipc: host
+    devices:
+      - ${ROBOT_UART:-/dev/serial0}:/dev/serial0
+    command: ["ros2", "launch", "robot_bringup", "robot.launch.py", "port:=/dev/serial0"]
+    restart: unless-stopped
+
+  web:
+    image: ghcr.io/dagebg/ros2-self-balancing-robot/web:${TAG:-latest}
+    ports:
+      - "8080:80"
+    restart: unless-stopped

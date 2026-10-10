@@ -38,6 +38,7 @@ webapp
 :caption: Deployment
 
 deployment/pi-setup
+deployment/docker
 deployment/networking
 :::
 
@@ -49,6 +50,7 @@ development/setup
 development/contributing
 development/testing
 development/ci-cd
+development/releasing
 development/adr/index
 :::
 
