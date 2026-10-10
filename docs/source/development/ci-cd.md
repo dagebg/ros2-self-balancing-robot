@@ -1,0 +1,38 @@
+# CI/CD pipeline
+
+All checks run on GitHub Actions for every pull request and every push to `main`. Each check can
+be reproduced locally with the same pinned tools (see {doc}`setup`).
+
+```mermaid
+flowchart LR
+  PR["Pull request / push to main"] --> LINT["lint<br/>pre-commit"]
+  PR --> SA["firmware-static-analysis<br/>cppcheck + clang-tidy"]
+  PR --> DOCS["docs<br/>Doxygen + Sphinx -W"]
+  DOCS -- "main only" --> PAGES["GitHub Pages"]
+```
+
+## Workflows
+
+| Workflow | Trigger | Jobs |
+|---|---|---|
+| `ci.yml` | Pull requests, push to `main` | `lint`, `firmware-static-analysis` |
+| `docs.yml` | Pull requests, push to `main` | Build docs with warnings as errors; deploy to GitHub Pages from `main` |
+
+## Jobs
+
+**lint** runs `pre-commit run --all-files`, the same hooks that run locally on each commit:
+whitespace and line-ending fixes, YAML/TOML/JSON validation, a large-file guard, `ruff` lint and
+format for Python, and `clang-format` for C++.
+
+**firmware-static-analysis** runs `pio check` with cppcheck and clang-tidy and fails on any
+high- or medium-severity finding.
+
+**docs** generates Doxygen XML, builds Sphinx with `-W`, uploads the HTML as an artifact and, on
+`main`, publishes it to GitHub Pages.
+
+## Conventions
+
+- Concurrency groups cancel superseded runs on the same branch.
+- Python dependencies are pinned and cached; Dependabot proposes updates for actions and Python
+  tools.
+- Jobs are added to this page as new parts of the system land.
