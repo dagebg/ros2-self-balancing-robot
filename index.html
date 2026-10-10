@@ -3,10 +3,10 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html">
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Architecture" href="overview/architecture.html">
 
-    <!-- Generated with Sphinx 9.0.4 and Furo 2025.12.19 -->
-        <title>ROS2 DiffDrive Robot</title>
+    <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
+        <title>ROS2 Self-Balancing Robot</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -161,7 +161,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">ROS2 DiffDrive Robot</div></a>
+      <a href="#"><div class="brand">ROS2 Self-Balancing Robot</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -182,7 +182,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
   
-  <span class="sidebar-brand-text">ROS2 DiffDrive Robot</span>
+  <span class="sidebar-brand-text">ROS2 Self-Balancing Robot</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -190,7 +190,44 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  
+  <p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview/architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="overview/roadmap.html">Roadmap</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Hardware</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="hardware/index.html">Hardware</a><input aria-label="Toggle navigation of Hardware" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/bom.html">Bill of materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/pinout.html">Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/power.html">Power system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/electronics.html">Electronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/mechanical.html">Mechanical Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/known-issues.html">Known hardware issues</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Deployment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deployment/networking.html">Development Networking Setup (Raspberry Pi over Ethernet)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development/contributing.html">Contributing</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="development/adr/index.html">Architecture decision records</a><input aria-label="Toggle navigation of Architecture decision records" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/adr/0001-record-architecture-decisions.html">ADR-0001: Record architecture decisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/adr/0002-cpp17-on-arduino-esp32.html">ADR-0002: Write the firmware in modern C++17 on the Arduino-ESP32 framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/adr/0003-custom-uart-protocol.html">ADR-0003: Use a custom framed binary protocol over UART between ESP32 and Pi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/adr/0000-template.html">ADR-NNNN: Title in imperative form</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
 </div>
 </div>
 
@@ -209,12 +246,16 @@
         </a>
         <div class="content-icon-container">
           <div class="view-this-page">
-  <a class="muted-link" href="_sources/index.rst.txt" title="View this page">
+  <a class="muted-link" href="https://github.com/dagebg/ros2-self-balancing-robot/blob/main/docs/source/index.md?plain=true" title="View this page">
     <svg><use href="#svg-eye"></use></svg>
     <span class="visually-hidden">View this page</span>
   </a>
-</div>
-<div class="theme-toggle-container theme-toggle-content">
+</div><div class="edit-this-page">
+  <a class="muted-link" href="https://github.com/dagebg/ros2-self-balancing-robot/edit/main/docs/source/index.md" rel="edit" title="Edit this page">
+    <svg><use href="#svg-pencil"></use></svg>
+    <span class="visually-hidden">Edit this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
@@ -227,9 +268,80 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="ros2-self-balancing-robot">
-<h1>ROS2 Self Balancing Robot<a class="headerlink" href="#ros2-self-balancing-robot" title="Link to this heading">¶</a></h1>
+          <section class="tex2jax_ignore mathjax_ignore" id="ros2-self-balancing-robot">
+<h1>ROS2 Self-Balancing Robot<a class="headerlink" href="#ros2-self-balancing-robot" title="Link to this heading">¶</a></h1>
+<p>A two-wheeled, self-balancing differential-drive robot built from scratch: a 3D-printed chassis,
+an ESP32 running the real-time balance loop, and a Raspberry Pi 4 running ROS 2 Jazzy as the
+high-level layer.</p>
+<ul class="simple">
+<li><p><strong>Source:</strong> <a class="reference external" href="https://github.com/dagebg/ros2-self-balancing-robot">github.com/dagebg/ros2-self-balancing-robot</a></p></li>
+<li><p><strong>Start here:</strong> <a class="reference internal" href="overview/architecture.html"><span class="doc">Architecture</span></a>, then the <a class="reference internal" href="overview/roadmap.html"><span class="doc">Roadmap</span></a>.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview/architecture.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview/architecture.html#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/architecture.html#responsibilities">Responsibilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview/architecture.html#connections">Connections</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="overview/roadmap.html">Roadmap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview/roadmap.html#future-work">Future work</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Hardware</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hardware/index.html">Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/bom.html">Bill of materials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/pinout.html">Pinout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/power.html">Power system</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/electronics.html">Electronics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/mechanical.html">Mechanical Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/known-issues.html">Known hardware issues</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Deployment</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deployment/networking.html">Development Networking Setup (Raspberry Pi over Ethernet)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="deployment/networking.html#topology">Topology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/networking.html#raspberry-pi-configuration-netplan-systemdresolved">Raspberry Pi configuration (netplan + systemd‑resolved)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/networking.html#fedora-pc-configuration">Fedora PC configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deployment/networking.html#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="development/contributing.html">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/contributing.html#branches-and-pull-requests">Branches and pull requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/contributing.html#commit-messages">Commit messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/contributing.html#documentation">Documentation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development/adr/index.html">Architecture decision records</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="development/adr/0001-record-architecture-decisions.html">ADR-0001: Record architecture decisions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/adr/0002-cpp17-on-arduino-esp32.html">ADR-0002: Write the firmware in modern C++17 on the Arduino-ESP32 framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/adr/0003-custom-uart-protocol.html">ADR-0003: Use a custom framed binary protocol over UART between ESP32 and Pi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development/adr/0000-template.html">ADR-NNNN: Title in imperative form</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
 </div>
 </section>
 
@@ -238,13 +350,21 @@
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="overview/architecture.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Architecture</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 2026, dagebg, David Geßner
+                Copyright &#169; 2026, David Geßner
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -264,7 +384,7 @@
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=2709fde1"></script>
+</div><script src="_static/documentation_options.js?v=ee2d09ae"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/scripts/furo.js?v=46bd48cc"></script>
