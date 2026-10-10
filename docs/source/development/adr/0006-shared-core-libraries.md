@@ -25,7 +25,8 @@ and plain CMake for fast local tests with coverage and sanitizers.
   - `package.xml` so colcon discovers it,
   - `library.json` so PlatformIO can consume it through a `symlink://` dependency.
 - `shared/CMakeLists.txt` builds all libraries with GoogleTest, coverage and sanitizer options.
-- colcon builds with `--base-paths ros2_ws/src shared`.
+- colcon builds with `--base-paths src ../shared/*/` from `ros2_ws` (each library directory is
+  listed, so the standalone `shared/CMakeLists.txt` is not mistaken for a package).
 
 ## Alternatives considered
 

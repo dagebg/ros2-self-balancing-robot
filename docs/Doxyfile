@@ -9,6 +9,7 @@ GENERATE_LATEX         = NO
 
 # Public interfaces only: implementation files would duplicate every declaration.
 INPUT                  = ../shared \
+                         ../ros2_ws/src \
                          ../firmware/esp32/robot-firmware/include \
                          ../firmware/esp32/robot-firmware/lib
 FILE_PATTERNS          = *.hpp *.h

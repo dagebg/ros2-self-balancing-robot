@@ -12,7 +12,7 @@ CI job and documentation together.
 | 5 | Firmware drivers: IMUs, motor driver, encoders, hardware bring-up tool | Done |
 | 6 | Balance core: sensor fusion, cascaded PID, odometry, safety state machine | Done |
 | 7 | Firmware application: FreeRTOS tasks, comms, live tuning | Done |
-| 8 | ROS 2 bridge node | Planned |
+| 8 | ROS 2 bridge node | Done |
 | 9 | Robot description (URDF) and bringup launch files | Planned |
 | 10 | Gazebo software-in-the-loop simulation | Planned |
 | 11 | Web app control panel | Planned |
