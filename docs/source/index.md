@@ -29,12 +29,14 @@ hardware/index
 firmware/index
 protocol
 control
+ros2/index
 :::
 
 :::{toctree}
 :maxdepth: 2
 :caption: Deployment
 
+deployment/pi-setup
 deployment/networking
 :::
 

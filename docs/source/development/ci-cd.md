@@ -8,6 +8,7 @@ flowchart LR
   PR["Pull request / push to main"] --> LINT["lint<br/>pre-commit"]
   PR --> SH["shared-libs<br/>coverage + clang-tidy · sanitizers"]
   PR --> FW["firmware<br/>unit tests · build · cppcheck + clang-tidy"]
+  PR --> ROS["ros2<br/>colcon build + test in ros:jazzy"]
   PR --> DOCS["docs<br/>Doxygen + Sphinx -W"]
   DOCS -- "main only" --> PAGES["GitHub Pages"]
 ```
@@ -16,7 +17,7 @@ flowchart LR
 
 | Workflow | Trigger | Jobs |
 |---|---|---|
-| `ci.yml` | Pull requests, push to `main` | `lint`, `shared-libs` (2 variants), `firmware` |
+| `ci.yml` | Pull requests, push to `main` | `lint`, `shared-libs` (2 variants), `firmware`, `ros2` |
 | `docs.yml` | Pull requests, push to `main` | Build docs with warnings as errors; deploy to GitHub Pages from `main` |
 
 ## Jobs
@@ -35,6 +36,10 @@ same tests under AddressSanitizer and UndefinedBehaviorSanitizer.
 placeholder credentials, writes the RAM/flash usage to the job summary, runs cppcheck and
 clang-tidy (failing on any high- or medium-severity finding) and uploads `firmware.bin` and
 `firmware.elf` as artifacts.
+
+**ros2** runs in the official `ros:jazzy` container: `rosdep` installs the dependencies declared in
+the `package.xml` files, then colcon builds and tests the ROS 2 packages together with the shared
+libraries, and the JUnit results are uploaded.
 
 **docs** generates Doxygen XML, builds Sphinx with `-W`, uploads the HTML as an artifact and, on
 `main`, publishes it to GitHub Pages.

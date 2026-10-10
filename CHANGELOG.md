@@ -48,6 +48,15 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   forwarding to the Pi), both covered by host tests including a firmware-level closed loop.
 - Link supervision: without frames from the Pi for 500 ms the robot stops but keeps balancing.
 - Firmware architecture page and a calibration and tuning guide.
+- ROS 2 packages `robot_interfaces` (`BalanceState`) and `robot_bridge`: cmd_vel forwarding with
+  heartbeat and timeout, balance state, pitch-compensated odometry with TF, joint states, both
+  IMUs, diagnostics, firmware logs in `/rosout`, an `~/arm` service answered by the ESP32's
+  acknowledgement, and live PID gains as validated parameters synced on every connection.
+- Bridge tests: conversions, the serial port over a pseudo-terminal, and the running node against
+  a fake ESP32.
+- `tools/ros-docker.sh` and `docker/dev.Dockerfile`: reproducible ROS 2 Jazzy builds and tests on
+  any machine; CI job that builds and tests all ROS 2 packages in `ros:jazzy`.
+- Raspberry Pi setup guide for the PL011 UART.
 
 ### Changed
 

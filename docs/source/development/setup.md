@@ -25,6 +25,10 @@ System packages:
 On Apple Silicon, `colima` runs an arm64 Linux VM, the same CPU architecture as the Raspberry Pi,
 so ROS 2 containers behave like they do on the robot.
 
+`tools/ros-docker.sh` builds a development image from `ros:jazzy` plus every dependency declared in
+the repository's `package.xml` files (via `rosdep`), mounts the repository at `/ws` and runs the
+given command. The image is rebuilt automatically when a `package.xml` changes.
+
 ## Everyday commands
 
 | Task | Command |
@@ -39,6 +43,9 @@ so ROS 2 containers behave like they do on the robot.
 | Firmware unit tests (host) | `cd firmware/esp32/robot-firmware && pio test -e native` |
 | Firmware build | `cd firmware/esp32/robot-firmware && pio run -e esp32` |
 | Firmware static analysis | `cd firmware/esp32/robot-firmware && pio check -e esp32` |
+| ROS 2: build all packages (Docker) | `tools/ros-docker.sh colcon-build` |
+| ROS 2: build and run all tests | `tools/ros-docker.sh colcon-test` |
+| ROS 2: shell in the container | `tools/ros-docker.sh` |
 | Build the docs | `make -C docs html SPHINXBUILD=../.venv/bin/sphinx-build SPHINXOPTS="-W --keep-going"` |
 
 (`pio`, `cmake`, `ctest`, `gcovr` and `clang-tidy` come from `.venv/bin` unless the venv is
