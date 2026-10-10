@@ -4,8 +4,6 @@ Icon?
 ehthumbs.db
 desktop.ini
 
-.claude/
-
 venv/
 .env
 .env.*
@@ -86,3 +84,5 @@ mechanical_hardware/schematics/.history/
 SECRETS.h
 
 .history/
+
+todo_nextstep.txt
