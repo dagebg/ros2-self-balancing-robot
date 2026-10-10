@@ -73,7 +73,11 @@ bool validGains(const protocol::SetGains& gains) noexcept {
 }  // namespace
 
 ControlLoop::ControlLoop(const ControlConfig& config) noexcept
-    : config_(config), safety_(config.safety), controller_(config.balance) {}
+    : config_(config),
+      primary_bias_(config.bias),
+      secondary_bias_(config.bias),
+      safety_(config.safety),
+      controller_(config.balance) {}
 
 bool ControlLoop::calibrated() const noexcept {
   return primary_bias_.ready() || secondary_bias_.ready();
