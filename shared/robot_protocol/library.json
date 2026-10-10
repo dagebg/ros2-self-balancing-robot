@@ -1,0 +1,12 @@
+{
+  "name": "robot_protocol",
+  "version": "1.0.0",
+  "description": "Framed binary protocol (COBS + CRC-16) between the robot's ESP32 and Raspberry Pi.",
+  "license": "MIT",
+  "frameworks": "*",
+  "platforms": "*",
+  "build": {
+    "srcDir": "src",
+    "includeDir": "include"
+  }
+}
