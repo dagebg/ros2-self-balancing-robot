@@ -12,6 +12,7 @@
 #include "logging/logger.hpp"
 #include "pins.hpp"
 #include "robot_config.hpp"
+#include "robot_protocol/messages.hpp"
 #include "telemetry/telnet_sink.hpp"
 
 namespace {
@@ -61,8 +62,9 @@ void setup() {
   Wire.begin(pins::kI2cSda, pins::kI2cScl, pins::kI2cClockHz);
 
   const IPAddress ip = WiFi.softAPIP();
-  g_log.info("robot firmware ready, debug AP %s, telnet %u.%u.%u.%u:%u", ap_up ? "up" : "FAILED",
-             ip[0], ip[1], ip[2], ip[3], pins::kTelnetPort);
+  g_log.info("robot firmware ready (protocol v%u), debug AP %s, telnet %u.%u.%u.%u:%u",
+             robot::protocol::kProtocolVersion, ap_up ? "up" : "FAILED", ip[0], ip[1], ip[2], ip[3],
+             pins::kTelnetPort);
   if (!robot::config::kAllParamsMeasured) {
     g_log.warn("config/robot_params.yaml still contains placeholder values");
   }

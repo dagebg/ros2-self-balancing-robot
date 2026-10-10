@@ -8,7 +8,8 @@ GENERATE_HTML          = NO
 GENERATE_LATEX         = NO
 
 # Public interfaces only: implementation files would duplicate every declaration.
-INPUT                  = ../firmware/esp32/robot-firmware/include \
+INPUT                  = ../shared \
+                         ../firmware/esp32/robot-firmware/include \
                          ../firmware/esp32/robot-firmware/lib
 FILE_PATTERNS          = *.hpp *.h
 RECURSIVE              = YES

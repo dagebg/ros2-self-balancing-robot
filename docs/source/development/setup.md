@@ -32,12 +32,17 @@ so ROS 2 containers behave like they do on the robot.
 | Lint and format everything | `.venv/bin/pre-commit run --all-files` |
 | Python tool tests | `.venv/bin/pytest` |
 | Regenerate `robot_config.hpp` | `.venv/bin/python tools/gen_config.py` |
+| Shared libraries: build + test | `cmake -S shared -B build/shared -G Ninja && cmake --build build/shared && ctest --test-dir build/shared` |
+| … with sanitizers | add `-DROBOT_SANITIZERS=ON` (separate build directory) |
+| … with coverage | add `-DROBOT_COVERAGE=ON`, then `gcovr -r . --filter 'shared/.*/(src\|include)/' build/shared` |
+| clang-tidy (shared) | `clang-tidy -p build/shared shared/*/src/*.cpp` |
 | Firmware unit tests (host) | `cd firmware/esp32/robot-firmware && pio test -e native` |
 | Firmware build | `cd firmware/esp32/robot-firmware && pio run -e esp32` |
 | Firmware static analysis | `cd firmware/esp32/robot-firmware && pio check -e esp32` |
 | Build the docs | `make -C docs html SPHINXBUILD=../.venv/bin/sphinx-build SPHINXOPTS="-W --keep-going"` |
 
-(`pio` is `.venv/bin/pio` unless the venv is activated.)
+(`pio`, `cmake`, `ctest`, `gcovr` and `clang-tidy` come from `.venv/bin` unless the venv is
+activated. On macOS, gcovr needs `--gcov-executable "xcrun llvm-cov gcov"`.)
 
 ## Troubleshooting (macOS)
 

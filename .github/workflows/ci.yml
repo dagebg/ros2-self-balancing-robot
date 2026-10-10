@@ -46,6 +46,63 @@ jobs:
       - name: Test Python tools
         run: pytest
 
+  shared-libs:
+    name: Shared C++ libraries (${{ matrix.variant }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [coverage, sanitizers]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install tools
+        run: pip install -r requirements-dev.txt
+
+      - name: Configure
+        run: |
+          if [ "${{ matrix.variant }}" = coverage ]; then
+            variant_flag=-DROBOT_COVERAGE=ON
+          else
+            variant_flag=-DROBOT_SANITIZERS=ON
+          fi
+          cmake -S shared -B build/shared -G Ninja -DROBOT_WARNINGS_AS_ERRORS=ON "$variant_flag"
+
+      - name: Build
+        run: cmake --build build/shared
+
+      - name: Test
+        run: ctest --test-dir build/shared --output-on-failure
+
+      - name: clang-tidy
+        if: matrix.variant == 'coverage'
+        run: clang-tidy -p build/shared shared/*/src/*.cpp
+
+      - name: Coverage report (fails below 90 % line coverage)
+        if: matrix.variant == 'coverage'
+        run: |
+          mkdir -p coverage
+          gcovr -r . --filter 'shared/.*/(src|include)/' build/shared \
+            --html-details coverage/index.html --txt coverage/summary.txt \
+            --fail-under-line 90
+          { echo '### Shared library coverage'; echo '```'; cat coverage/summary.txt; echo '```'; } \
+            >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload coverage report
+        if: matrix.variant == 'coverage'
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-shared
+          path: coverage/
+
   firmware:
     name: Firmware (unit tests, build, static analysis)
     runs-on: ubuntu-latest
