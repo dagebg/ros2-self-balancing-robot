@@ -8,8 +8,8 @@ ros2 run robot_bridge bridge_node --ros-args \
   -p wheel_radius:=0.0325 -p track_width:=0.15 -p counts_per_wheel_rev:=4200.0
 ```
 
-The geometry parameters must match `config/robot_params.yaml`; the bridge refuses to start
-without them.
+Normally it is started by `robot_bringup`'s launch file, which takes the geometry from
+`config/robot_params.yaml`; started on its own, it refuses to run without these parameters.
 
 ## Interfaces
 
@@ -18,8 +18,8 @@ without them.
 | `cmd_vel` | `geometry_msgs/Twist` | in | `linear.x` and `angular.z` are forwarded |
 | `balance/state` | `robot_interfaces/BalanceState` | out | controller state, faults, attitude, motor commands, loop timing |
 | `odom` | `nav_msgs/Odometry` | out | wheel odometry with pitch compensation |
-| TF `odom` → `base_link` | `tf2_msgs/TFMessage` | out | when `publish_tf` is true |
-| `joint_states` | `sensor_msgs/JointState` | out | wheel angles and rates relative to the chassis |
+| TF `odom` → `base_footprint` | `tf2_msgs/TFMessage` | out | when `publish_tf` is true |
+| `joint_states` | `sensor_msgs/JointState` | out | `body_pitch_joint` (measured pitch) and the wheel angles and rates relative to the chassis |
 | `imu/data` | `sensor_msgs/Imu` | out | MPU-9250, calibrated body axes; orientation from the ESP32 (yaw integrated from the gyro) |
 | `imu/secondary` | `sensor_msgs/Imu` | out | MPU-6050, calibrated body axes, no orientation |
 | `diagnostics` | `diagnostic_msgs/DiagnosticArray` | out | `link` and `controller` status |
@@ -34,9 +34,9 @@ without them.
 | `baud` | 460800 | must match the firmware |
 | `wheel_radius`, `track_width` | required | [m], from `robot_params.yaml` |
 | `counts_per_wheel_rev` | required | encoder counts per wheel revolution (×4 decoding) |
-| `odom_frame`, `base_frame`, `imu_frame` | `odom`, `base_link`, `imu_link` | frame ids |
-| `left_wheel_joint`, `right_wheel_joint` | `left_wheel_joint`, `right_wheel_joint` | joint names in `joint_states` |
-| `publish_tf` | true | broadcast `odom` → `base_link` |
+| `odom_frame`, `base_frame`, `imu_frame` | `odom`, `base_footprint`, `imu_link` | frame ids |
+| `pitch_joint`, `left_wheel_joint`, `right_wheel_joint` | `body_pitch_joint`, `left_wheel_joint`, `right_wheel_joint` | joint names in `joint_states` |
+| `publish_tf` | true | broadcast `odom` → `base_footprint` |
 | `command_rate` | 20.0 | [Hz] rate at which velocity commands are sent |
 | `cmd_vel_timeout` | 0.5 | [s] older commands are replaced by zero velocity |
 | `reconnect_period` | 1.0 | [s] retry interval while the port cannot be opened |

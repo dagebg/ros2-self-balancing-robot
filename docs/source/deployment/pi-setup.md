@@ -36,8 +36,7 @@ UART by moving Bluetooth off it, and stop Linux from using the port as a console
 With the firmware running and the robot powered:
 
 ```bash
-ros2 run robot_bridge bridge_node --ros-args \
-  -p wheel_radius:=0.0325 -p track_width:=0.15 -p counts_per_wheel_rev:=4200.0
+ros2 launch robot_bringup robot.launch.py
 ros2 topic hz /balance/state      # about 50 Hz
 ros2 topic echo /diagnostics      # "link: receiving"
 ```

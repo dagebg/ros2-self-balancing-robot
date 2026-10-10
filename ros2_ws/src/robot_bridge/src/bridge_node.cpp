@@ -127,8 +127,9 @@ void BridgeNode::declareParameters() {
   port_path_ = declare_parameter<std::string>("port", "/dev/serial0");
   baud_ = static_cast<int>(declare_parameter<int>("baud", 460800));
   odom_frame_ = declare_parameter<std::string>("odom_frame", "odom");
-  base_frame_ = declare_parameter<std::string>("base_frame", "base_link");
+  base_frame_ = declare_parameter<std::string>("base_frame", "base_footprint");
   imu_frame_ = declare_parameter<std::string>("imu_frame", "imu_link");
+  pitch_joint_ = declare_parameter<std::string>("pitch_joint", "body_pitch_joint");
   left_joint_ = declare_parameter<std::string>("left_wheel_joint", "left_wheel_joint");
   right_joint_ = declare_parameter<std::string>("right_wheel_joint", "right_wheel_joint");
   publish_tf_ = declare_parameter<bool>("publish_tf", true);
@@ -287,9 +288,12 @@ void BridgeNode::onTelemetry(const rp::Telemetry& telemetry) {
 
   sensor_msgs::msg::JointState joints;
   joints.header.stamp = stamp;
-  joints.name = {left_joint_, right_joint_};
-  joints.position = {odometry_->leftWheelAngle(), odometry_->rightWheelAngle()};
-  joints.velocity = {telemetry.left_wheel_velocity, telemetry.right_wheel_velocity};
+  // The body's pitch is a joint of the robot model (base_footprint -> base_link), so the model
+  // in RViz leans exactly as measured; wheel angles are relative to the pitching body.
+  joints.name = {pitch_joint_, left_joint_, right_joint_};
+  joints.position = {telemetry.pitch, odometry_->leftWheelAngle(), odometry_->rightWheelAngle()};
+  joints.velocity = {telemetry.pitch_rate, telemetry.left_wheel_velocity,
+                     telemetry.right_wheel_velocity};
   joint_pub_->publish(joints);
 
   diagnostics_.force_update();

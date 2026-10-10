@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!--
+  Self-balancing robot. All dimensions and masses come from config/robot_params.yaml (installed with
+  this package), so the model always matches the firmware and the bridge.
+
+  Frames (REP-103/105): base_footprint on the ground below the axle; base_link at the axle centre,
+  pitching with the body; one continuous joint per wheel, angles relative to the chassis (what the
+  encoders measure).
+
+  Arguments:
+    sim:=false  On the real robot, body_pitch_joint connects base_footprint and base_link so the
+                bridge can show the measured pitch as a joint state.
+    sim:=true   For Gazebo, base_link is the free-floating root: physics decides the pitch.
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="self_balancing_robot">
+  <xacro:arg name="sim" default="false"/>
+
+  <xacro:property name="params"
+    value="${xacro.load_yaml('$(find robot_description)/config/robot_params.yaml')}"/>
+  <xacro:property name="wheel_radius" value="${params['geometry']['wheel_radius']['value']}"/>
+  <xacro:property name="track_width" value="${params['geometry']['track_width']['value']}"/>
+  <xacro:property name="com_height" value="${params['geometry']['com_height']['value']}"/>
+  <xacro:property name="body_mass" value="${params['geometry']['body_mass']['value']}"/>
+  <xacro:property name="wheel_mass" value="${params['geometry']['wheel_mass']['value']}"/>
+
+  <!-- Visual-only proportions derived from the parameters. -->
+  <xacro:property name="wheel_width" value="0.02"/>
+  <xacro:property name="body_height" value="${2.0 * com_height}"/>
+  <xacro:property name="body_depth" value="0.08"/>
+  <xacro:property name="body_width" value="${track_width - wheel_width - 0.01}"/>
+
+  <material name="body"><color rgba="0.20 0.45 0.80 1.0"/></material>
+  <material name="tyre"><color rgba="0.10 0.10 0.10 1.0"/></material>
+  <material name="board"><color rgba="0.10 0.55 0.25 1.0"/></material>
+
+  <xacro:macro name="box_inertia" params="mass x y z">
+    <inertia ixx="${mass * (y * y + z * z) / 12.0}" ixy="0" ixz="0"
+             iyy="${mass * (x * x + z * z) / 12.0}" iyz="0"
+             izz="${mass * (x * x + y * y) / 12.0}"/>
+  </xacro:macro>
+
+  <xacro:unless value="$(arg sim)">
+    <link name="base_footprint"/>
+    <joint name="body_pitch_joint" type="revolute">
+      <parent link="base_footprint"/>
+      <child link="base_link"/>
+      <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+      <limit lower="${-pi / 2}" upper="${pi / 2}" effort="0" velocity="20"/>
+    </joint>
+  </xacro:unless>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 ${body_height / 2}"/>
+      <geometry><box size="${body_depth} ${body_width} ${body_height}"/></geometry>
+      <material name="body"/>
+    </visual>
+    <visual>
+      <!-- Raspberry Pi on the top deck, for orientation in RViz. -->
+      <origin xyz="0 0 ${body_height + 0.01}"/>
+      <geometry><box size="0.085 0.056 0.02"/></geometry>
+      <material name="board"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 ${body_height / 2}"/>
+      <geometry><box size="${body_depth} ${body_width} ${body_height}"/></geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 ${com_height}"/>
+      <mass value="${body_mass}"/>
+      <xacro:box_inertia mass="${body_mass}" x="${body_depth}" y="${body_width}" z="${body_height}"/>
+    </inertial>
+  </link>
+
+  <xacro:macro name="wheel" params="side reflect">
+    <joint name="${side}_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${side}_wheel_link"/>
+      <origin xyz="0 ${reflect * track_width / 2} 0" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+    <link name="${side}_wheel_link">
+      <visual>
+        <origin rpy="${pi / 2} 0 0"/>
+        <geometry><cylinder radius="${wheel_radius}" length="${wheel_width}"/></geometry>
+        <material name="tyre"/>
+      </visual>
+      <collision>
+        <origin rpy="${pi / 2} 0 0"/>
+        <geometry><cylinder radius="${wheel_radius}" length="${wheel_width}"/></geometry>
+      </collision>
+      <inertial>
+        <mass value="${wheel_mass}"/>
+        <inertia ixx="${wheel_mass * (3 * wheel_radius * wheel_radius + wheel_width * wheel_width) / 12}"
+                 ixy="0" ixz="0"
+                 iyy="${wheel_mass * wheel_radius * wheel_radius / 2}" iyz="0"
+                 izz="${wheel_mass * (3 * wheel_radius * wheel_radius + wheel_width * wheel_width) / 12}"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+
+  <xacro:wheel side="left" reflect="1"/>
+  <xacro:wheel side="right" reflect="-1"/>
+
+  <!-- Body-frame IMU data is published in this frame (axes aligned with base_link). -->
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="0 0 0.02" rpy="0 0 0"/>
+  </joint>
+  <link name="imu_link"/>
+</robot>

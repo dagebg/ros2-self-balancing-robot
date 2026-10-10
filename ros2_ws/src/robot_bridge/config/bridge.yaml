@@ -6,7 +6,7 @@ robot_bridge:
     port: /dev/serial0
     baud: 460800
     odom_frame: odom
-    base_frame: base_link
+    base_frame: base_footprint
     imu_frame: imu_link
     publish_tf: true
     command_rate: 20.0

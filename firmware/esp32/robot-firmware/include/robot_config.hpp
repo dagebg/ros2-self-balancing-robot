@@ -15,6 +15,8 @@ inline constexpr float kTrackWidth = 0.15F;
 inline constexpr float kComHeight = 0.08F;
 /// Total mass of the robot without the wheels. [kg] PLACEHOLDER: not measured yet.
 inline constexpr float kBodyMass = 0.9F;
+/// Mass of one wheel including its tyre. [kg] PLACEHOLDER: not measured yet.
+inline constexpr float kWheelMass = 0.03F;
 
 // --- drivetrain --------------------------------------------------------------------------------
 /// Motor revolutions per wheel revolution. [1] PLACEHOLDER: not measured yet.

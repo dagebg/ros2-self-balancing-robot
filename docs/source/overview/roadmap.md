@@ -13,7 +13,7 @@ CI job and documentation together.
 | 6 | Balance core: sensor fusion, cascaded PID, odometry, safety state machine | Done |
 | 7 | Firmware application: FreeRTOS tasks, comms, live tuning | Done |
 | 8 | ROS 2 bridge node | Done |
-| 9 | Robot description (URDF) and bringup launch files | Planned |
+| 9 | Robot description (URDF) and bringup launch files | Done |
 | 10 | Gazebo software-in-the-loop simulation | Planned |
 | 11 | Web app control panel | Planned |
 | 12 | Release and deployment pipeline (firmware images, Docker on the Pi) | Planned |

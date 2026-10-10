@@ -29,7 +29,9 @@ namespace robot_bridge {
 ///
 /// - Subscribes to `cmd_vel` and forwards it at a fixed rate; when commands stop (or are older than
 ///   `cmd_vel_timeout`), it sends zero velocity, which doubles as the link heartbeat.
-/// - Publishes `balance/state`, `odom` (+ TF odom -> base_link), `joint_states`, `imu/data`
+/// - Publishes `balance/state`, `odom` (+ TF odom -> base_footprint), `joint_states` (body pitch
+/// and
+///   wheels), `imu/data`
 ///   (MPU-9250 with the ESP32's orientation estimate), `imu/secondary` (MPU-6050), and
 ///   `diagnostics`. Firmware log lines go to the ROS log (`/rosout`).
 /// - Service `~/arm` (std_srvs/SetBool) arms or disarms; it answers once the ESP32 acknowledges.
@@ -83,6 +85,7 @@ class BridgeNode : public rclcpp::Node {
   std::string odom_frame_;
   std::string base_frame_;
   std::string imu_frame_;
+  std::string pitch_joint_;
   std::string left_joint_;
   std::string right_joint_;
   bool publish_tf_ = true;
