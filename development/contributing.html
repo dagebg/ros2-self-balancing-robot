@@ -3,7 +3,7 @@
   <head><meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Architecture decision records" href="adr/index.html"><link rel="prev" title="Development Networking Setup (Raspberry Pi over Ethernet)" href="../deployment/networking.html">
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Testing strategy" href="testing.html"><link rel="prev" title="Development environment" href="setup.html">
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>Contributing - ROS2 Self-Balancing Robot</title>
@@ -213,7 +213,10 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="setup.html">Development environment</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html">Testing strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ci-cd.html">CI/CD pipeline</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="adr/index.html">Architecture decision records</a><input aria-label="Toggle navigation of Architecture decision records" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="adr/0001-record-architecture-decisions.html">ADR-0001: Record architecture decisions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="adr/0002-cpp17-on-arduino-esp32.html">ADR-0002: Write the firmware in modern C++17 on the Arduino-ESP32 framework</a></li>
@@ -272,6 +275,17 @@
 <h1>Contributing<a class="headerlink" href="#contributing" title="Link to this heading">¶</a></h1>
 <p>This is a personal project, but it follows the workflow of a team project so that every change is
 reviewable and reproducible.</p>
+<section id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Link to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+.venv/bin/pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt<span class="w"> </span>-r<span class="w"> </span>docs/requirements.txt
+.venv/bin/pre-commit<span class="w"> </span>install
+</pre></div>
+</div>
+<p>The pre-commit hooks (formatting, linting, file checks) then run on every commit, and CI runs the
+same hooks on every pull request. The full tool list is in the docs under <em>Development
+environment</em>.</p>
+</section>
 <section id="branches-and-pull-requests">
 <h2>Branches and pull requests<a class="headerlink" href="#branches-and-pull-requests" title="Link to this heading">¶</a></h2>
 <ul class="simple">
@@ -317,23 +331,23 @@ open<span class="w"> </span>docs/build/html/index.html
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="adr/index.html">
+          <a class="next-page" href="testing.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Architecture decision records</div>
+                <div class="title">Testing strategy</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="../deployment/networking.html">
+          <a class="prev-page" href="setup.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Development Networking Setup (Raspberry Pi over Ethernet)</div>
+                <div class="title">Development environment</div>
                 
               </div>
             </a>
@@ -368,6 +382,7 @@ open<span class="w"> </span>docs/build/html/index.html
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Contributing</a><ul>
+<li><a class="reference internal" href="#setup">Setup</a></li>
 <li><a class="reference internal" href="#branches-and-pull-requests">Branches and pull requests</a></li>
 <li><a class="reference internal" href="#commit-messages">Commit messages</a></li>
 <li><a class="reference internal" href="#documentation">Documentation</a></li>

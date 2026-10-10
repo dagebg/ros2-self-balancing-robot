@@ -213,7 +213,10 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Development</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="development/setup.html">Development environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="development/contributing.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/testing.html">Testing strategy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development/ci-cd.html">CI/CD pipeline</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="development/adr/index.html">Architecture decision records</a><input aria-label="Toggle navigation of Architecture decision records" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="development/adr/0001-record-architecture-decisions.html">ADR-0001: Record architecture decisions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="development/adr/0002-cpp17-on-arduino-esp32.html">ADR-0002: Write the firmware in modern C++17 on the Arduino-ESP32 framework</a></li>
@@ -282,6 +285,17 @@ adheres to <a class="reference external" href="https://semver.org/spec/v2.0.0.ht
 <li><p>Hardware reference: bill of materials, netlist-derived pinout, power rails and known issues.</p></li>
 <li><p>Architecture decision records (ADR-0001 to ADR-0003).</p></li>
 <li><p>Contribution guide and this changelog.</p></li>
+<li><p>pre-commit hooks (ruff, clang-format, file hygiene) shared by local commits and CI.</p></li>
+<li><p>Dependabot for GitHub Actions and Python tools, a pull request template and <code class="docutils literal notranslate"><span class="pre">.editorconfig</span></code>.</p></li>
+<li><p>Documentation of the development environment, testing strategy and CI/CD pipeline.</p></li>
+</ul>
+</section>
+<section id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Link to this heading">¶</a></h3>
+<ul class="simple">
+<li><p>CI restructured: a single <code class="docutils literal notranslate"><span class="pre">lint</span></code> job runs pre-commit, all tool versions are pinned and cached,
+and superseded runs are cancelled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.clang-format</span></code> moved to the repository root so one C++ style applies everywhere.</p></li>
 </ul>
 </section>
 <section id="fixed">
@@ -344,6 +358,7 @@ adheres to <a class="reference external" href="https://semver.org/spec/v2.0.0.ht
 <li><a class="reference internal" href="#">Changelog</a><ul>
 <li><a class="reference internal" href="#unreleased">[Unreleased]</a><ul>
 <li><a class="reference internal" href="#added">Added</a></li>
+<li><a class="reference internal" href="#changed">Changed</a></li>
 <li><a class="reference internal" href="#fixed">Fixed</a></li>
 </ul>
 </li>

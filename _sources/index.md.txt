@@ -33,7 +33,10 @@ deployment/networking
 :maxdepth: 2
 :caption: Development
 
+development/setup
 development/contributing
+development/testing
+development/ci-cd
 development/adr/index
 :::
 
