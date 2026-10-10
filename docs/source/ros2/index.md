@@ -7,13 +7,17 @@ C++ libraries:
 |---|---|---|
 | `robot_interfaces` | messages | `BalanceState` |
 | `robot_bridge` | C++ node / component | ESP32 link ↔ ROS 2 graph |
+| `robot_description` | URDF / xacro | robot model from `robot_params.yaml`, RViz preview |
+| `robot_bringup` | launch / Python | starts model, bridge, rosbridge and teleoperation |
 | `robot_protocol` | C++ library (`shared/`) | protocol codec, also used by the firmware |
 | `balance_core` | C++ library (`shared/`) | odometry and controller defaults, also used by the firmware |
 
 :::{toctree}
 :maxdepth: 1
 
+bringup
 bridge
+description
 :::
 
 ## Building

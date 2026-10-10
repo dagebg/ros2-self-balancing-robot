@@ -57,6 +57,17 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `tools/ros-docker.sh` and `docker/dev.Dockerfile`: reproducible ROS 2 Jazzy builds and tests on
   any machine; CI job that builds and tests all ROS 2 packages in `ros:jazzy`.
 - Raspberry Pi setup guide for the PL011 UART.
+- `robot_description`: URDF generated from `robot_params.yaml` (installed with the package), with
+  the body pitch as a joint so RViz shows the measured lean, a free-floating variant for
+  simulation, an RViz preview and model tests.
+- `robot_bringup`: one launch file for model, bridge, rosbridge, optional gamepad teleoperation and
+  RViz; parameters derived from `robot_params.yaml`; a launch test that starts it without hardware.
+- `wheel_mass` robot parameter.
+
+### Changed (ROS 2)
+
+- `robot_bridge` publishes odometry for `base_footprint` and the body pitch in `joint_states`.
+- The development image and CI skip GUI-only dependencies (RViz, joint sliders).
 
 ### Changed
 
