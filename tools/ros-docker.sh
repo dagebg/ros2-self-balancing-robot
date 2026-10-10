@@ -4,6 +4,7 @@
 #   tools/ros-docker.sh colcon-build      build all ROS 2 and shared packages
 #   tools/ros-docker.sh colcon-test       build, then run all tests
 #   tools/ros-docker.sh <command...>      any command, e.g. "ros2 topic list"
+#   ROS_DOCKER_ARGS="-p 9090:9090" tools/ros-docker.sh ...   pass extra docker arguments
 #
 # The image is rebuilt automatically when any package.xml changes (its tag is their hash).
 set -euo pipefail
@@ -54,5 +55,8 @@ if [ -t 0 ] && [ -t 1 ]; then
   TTY_FLAGS=(-it)
 fi
 
-exec docker run --rm "${TTY_FLAGS[@]}" -v "$ROOT:/ws" -w /ws "$IMAGE" \
+# Extra docker arguments, e.g. ROS_DOCKER_ARGS="-p 9090:9090" to reach rosbridge from the host.
+read -r -a EXTRA_ARGS <<< "${ROS_DOCKER_ARGS:-}"
+
+exec docker run --rm "${TTY_FLAGS[@]}" ${EXTRA_ARGS[@]+"${EXTRA_ARGS[@]}"} -v "$ROOT:/ws" -w /ws "$IMAGE" \
   bash -c "source /opt/ros/jazzy/setup.bash && $CMD"
