@@ -11,7 +11,9 @@ add_library(balance_core
   src/balance_controller.cpp
   src/filters.cpp
   src/imu_fusion.cpp
+  src/odometry.cpp
   src/pid.cpp
+  src/safety.cpp
 )
 add_library(balance_core::balance_core ALIAS balance_core)
 target_compile_features(balance_core PUBLIC cxx_std_17)
@@ -28,7 +30,9 @@ set(BALANCE_CORE_TESTS
   test/test_attitude.cpp
   test/test_filters.cpp
   test/test_imu_fusion.cpp
+  test/test_odometry.cpp
   test/test_pid.cpp
+  test/test_safety.cpp
 )
 
 find_package(ament_cmake QUIET)
