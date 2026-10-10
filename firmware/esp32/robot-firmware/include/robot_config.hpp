@@ -38,6 +38,40 @@ inline constexpr std::int32_t kTelemetryRate = 50;
 /// Baud rate of the ESP32 <-> Raspberry Pi UART link. [Bd]
 inline constexpr std::int32_t kUartBaud = 460800;
 
+// --- wiring ------------------------------------------------------------------------------------
+/// TB6612 channel driving the left wheel (0 = A, 1 = B); the other wheel uses the other one. [-]
+/// PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kLeftMotorChannel = 0;
+/// 1 if a positive command turns the left wheel backwards. [-] PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kLeftMotorInverted = 0;
+/// 1 if a positive command turns the right wheel backwards. [-] PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kRightMotorInverted = 1;
+/// Encoder connector of the left wheel (5 = J5, 6 = J6); the other wheel uses the other one. [-]
+/// PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kLeftEncoderConnector = 6;
+/// 1 if the left encoder counts down while the wheel turns forwards. [-] PLACEHOLDER: not measured
+/// yet.
+inline constexpr std::int32_t kLeftEncoderInverted = 0;
+/// 1 if the right encoder counts down while the wheel turns forwards. [-] PLACEHOLDER: not measured
+/// yet.
+inline constexpr std::int32_t kRightEncoderInverted = 1;
+
+// --- imu_mounting ------------------------------------------------------------------------------
+/// MPU-9250 axis along body x (forward). 1/2/3 = sensor x/y/z, negative = reversed. [axis]
+/// PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kMpu9250BodyX = 1;
+/// MPU-9250 axis along body y (left). [axis] PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kMpu9250BodyY = 2;
+/// MPU-9250 axis along body z (up). [axis] PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kMpu9250BodyZ = 3;
+/// MPU-6050 axis along body x (forward). Default assumes it faces backwards. [axis] PLACEHOLDER:
+/// not measured yet.
+inline constexpr std::int32_t kMpu6050BodyX = -1;
+/// MPU-6050 axis along body y (left). [axis] PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kMpu6050BodyY = -2;
+/// MPU-6050 axis along body z (up). [axis] PLACEHOLDER: not measured yet.
+inline constexpr std::int32_t kMpu6050BodyZ = 3;
+
 /// False while any parameter above is still a placeholder.
 inline constexpr bool kAllParamsMeasured = false;
 
