@@ -1,5 +1,10 @@
 # Firmware API
 
+## Application
+
+```{doxygennamespace} robot::app
+```
+
 ## Hardware abstraction
 
 ```{doxygennamespace} robot::hal

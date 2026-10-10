@@ -11,7 +11,7 @@ CI job and documentation together.
 | 4 | Binary UART protocol shared by firmware and ROS 2 | Done |
 | 5 | Firmware drivers: IMUs, motor driver, encoders, hardware bring-up tool | Done |
 | 6 | Balance core: sensor fusion, cascaded PID, odometry, safety state machine | Done |
-| 7 | Firmware application: FreeRTOS tasks, comms, live tuning | Planned |
+| 7 | Firmware application: FreeRTOS tasks, comms, live tuning | Done |
 | 8 | ROS 2 bridge node | Planned |
 | 9 | Robot description (URDF) and bringup launch files | Planned |
 | 10 | Gazebo software-in-the-loop simulation | Planned |

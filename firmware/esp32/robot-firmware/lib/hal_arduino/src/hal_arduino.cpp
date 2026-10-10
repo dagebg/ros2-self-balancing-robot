@@ -98,6 +98,23 @@ std::int16_t PcntQuadratureCounter::rawCount() {
   return count;
 }
 
+// --- SerialByteStream --------------------------------------------------------------------------
+
+void SerialByteStream::begin(std::uint32_t baud) { serial_.begin(baud); }
+
+std::size_t SerialByteStream::read(std::uint8_t* data, std::size_t capacity) {
+  const int available = serial_.available();
+  if (available <= 0) {
+    return 0;
+  }
+  const auto count = std::min(capacity, static_cast<std::size_t>(available));
+  return serial_.readBytes(data, count);
+}
+
+std::size_t SerialByteStream::write(const std::uint8_t* data, std::size_t size) {
+  return serial_.write(data, size);
+}
+
 // --- ArduinoClock ------------------------------------------------------------------------------
 
 std::uint32_t ArduinoClock::micros() { return ::micros(); }

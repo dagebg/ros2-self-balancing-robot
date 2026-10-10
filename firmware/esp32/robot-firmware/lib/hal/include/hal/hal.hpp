@@ -60,6 +60,15 @@ class QuadratureCounter : public Interface {
   virtual std::int16_t rawCount() = 0;
 };
 
+/// Byte-oriented serial link, e.g. a UART. Both calls are non-blocking.
+class ByteStream : public Interface {
+ public:
+  /// Reads up to `capacity` pending bytes; returns how many were read (possibly 0).
+  virtual std::size_t read(std::uint8_t* data, std::size_t capacity) = 0;
+  /// Queues bytes for sending; returns how many were accepted.
+  virtual std::size_t write(const std::uint8_t* data, std::size_t size) = 0;
+};
+
 /// Monotonic time source.
 class Clock : public Interface {
  public:
