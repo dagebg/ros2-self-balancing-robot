@@ -8,7 +8,10 @@ project(robot_protocol VERSION 1.0.0 LANGUAGES CXX)
 
 add_library(robot_protocol
   src/cobs.cpp
+  src/codec.cpp
   src/crc16.cpp
+  src/frame_parser.cpp
+  src/messages.cpp
 )
 add_library(robot_protocol::robot_protocol ALIAS robot_protocol)
 target_compile_features(robot_protocol PUBLIC cxx_std_17)
@@ -24,7 +27,9 @@ endif()
 set(ROBOT_PROTOCOL_TESTS
   test/test_byte_io.cpp
   test/test_cobs.cpp
+  test/test_codec.cpp
   test/test_crc16.cpp
+  test/test_frame_parser.cpp
 )
 
 find_package(ament_cmake QUIET)
