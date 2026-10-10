@@ -17,7 +17,15 @@ CI job and documentation together.
 | 10 | Gazebo software-in-the-loop simulation | Done |
 | 11 | Web app control panel | Done |
 | 12 | Release and deployment pipeline (firmware images, Docker on the Pi) | Done |
-| 13 | Showcase README and v0.1.0 release | Planned |
+| 13 | Showcase README and v0.1.0 release | Done |
+
+## Next: on the robot
+
+1. Measure every placeholder in `config/robot_params.yaml` with the bring-up tool
+   ({doc}`../hardware/bringup`).
+2. Fix the schematic issues listed in {doc}`../hardware/known-issues`.
+3. First balance and tuning ({doc}`../firmware/tuning`), then update the plant model with the
+   measured parameters.
 
 ## Future work
 
