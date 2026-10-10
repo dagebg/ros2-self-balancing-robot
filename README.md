@@ -85,7 +85,9 @@ ros2-self-balancing-robot/
 ## Documentation
 
 - [Full Sphinx docs](https://dagebg.github.io/ros2-self-balancing-robot/)
-- [Architecture overview](docs/ARCHITECTURE.md)
+- [Architecture overview](docs/source/overview/architecture.md)
+- [Hardware reference: pinout, power, known issues](docs/source/hardware/)
+- [Architecture decision records](docs/source/development/adr/)
 
 ## Status
 
