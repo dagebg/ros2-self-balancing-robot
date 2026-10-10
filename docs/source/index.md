@@ -2,10 +2,22 @@
 
 A two-wheeled, self-balancing differential-drive robot built from scratch: a 3D-printed chassis,
 an ESP32 running the real-time balance loop, and a Raspberry Pi 4 running ROS 2 Jazzy as the
-high-level layer.
+high-level layer, controlled from a browser.
 
 - **Source:** [github.com/dagebg/ros2-self-balancing-robot](https://github.com/dagebg/ros2-self-balancing-robot)
-- **Start here:** {doc}`overview/architecture`, then the {doc}`overview/roadmap`.
+- **Status:** software complete and verified in simulation; hardware bring-up next
+  ({doc}`overview/roadmap`).
+
+## Where to start
+
+| If you want to… | Read |
+|---|---|
+| understand the system | {doc}`overview/architecture` |
+| see how it balances | {doc}`control` |
+| run it without hardware | {doc}`ros2/simulation` and {doc}`webapp` |
+| bring up the real robot | {doc}`hardware/bringup`, then {doc}`firmware/tuning` |
+| set up a development machine | {doc}`development/setup` |
+| know why things are the way they are | {doc}`development/adr/index` |
 
 :::{toctree}
 :maxdepth: 2

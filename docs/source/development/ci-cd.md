@@ -66,4 +66,3 @@ GitHub Release.
 - Concurrency groups cancel superseded runs on the same branch.
 - Python and npm dependencies are pinned and cached; Dependabot proposes grouped updates for
   actions, Python tools and the web app.
-- Jobs are added to this page as new parts of the system land.
