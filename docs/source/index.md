@@ -30,6 +30,7 @@ firmware/index
 protocol
 control
 ros2/index
+webapp
 :::
 
 :::{toctree}

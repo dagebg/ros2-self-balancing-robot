@@ -9,6 +9,7 @@ flowchart LR
   PR --> SH["shared-libs<br/>coverage + clang-tidy · sanitizers"]
   PR --> FW["firmware<br/>unit tests · build · cppcheck + clang-tidy"]
   PR --> ROS["ros2<br/>colcon build + test in ros:jazzy"]
+  PR --> WEB["webapp<br/>lint · typecheck · tests · build"]
   PR --> DOCS["docs<br/>Doxygen + Sphinx -W"]
   DOCS -- "main only" --> PAGES["GitHub Pages"]
 ```
@@ -17,7 +18,7 @@ flowchart LR
 
 | Workflow | Trigger | Jobs |
 |---|---|---|
-| `ci.yml` | Pull requests, push to `main` | `lint`, `shared-libs` (2 variants), `firmware`, `ros2` |
+| `ci.yml` | Pull requests, push to `main` | `lint`, `shared-libs` (2 variants), `firmware`, `ros2`, `webapp` |
 | `docs.yml` | Pull requests, push to `main` | Build docs with warnings as errors; deploy to GitHub Pages from `main` |
 
 ## Jobs
@@ -41,12 +42,15 @@ clang-tidy (failing on any high- or medium-severity finding) and uploads `firmwa
 the `package.xml` files, then colcon builds and tests the ROS 2 packages together with the shared
 libraries, and the JUnit results are uploaded.
 
+**webapp** runs ESLint and Prettier, the TypeScript compiler, the Vitest unit and component tests,
+and the production build, and uploads `webapp/dist`.
+
 **docs** generates Doxygen XML, builds Sphinx with `-W`, uploads the HTML as an artifact and, on
 `main`, publishes it to GitHub Pages.
 
 ## Conventions
 
 - Concurrency groups cancel superseded runs on the same branch.
-- Python dependencies are pinned and cached; Dependabot proposes updates for actions and Python
-  tools.
+- Python and npm dependencies are pinned and cached; Dependabot proposes grouped updates for
+  actions, Python tools and the web app.
 - Jobs are added to this page as new parts of the system land.

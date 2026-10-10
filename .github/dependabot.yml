@@ -17,3 +17,11 @@ updates:
     groups:
       python-tools:
         patterns: ["*"]
+
+  - package-ecosystem: npm
+    directory: /webapp
+    schedule:
+      interval: monthly
+    groups:
+      webapp:
+        patterns: ["*"]
