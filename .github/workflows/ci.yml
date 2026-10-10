@@ -176,7 +176,8 @@ jobs:
         run: |
           apt-get update
           rosdep update --rosdistro jazzy
-          rosdep install --from-paths src ../shared --ignore-src --rosdistro jazzy -y
+          rosdep install --from-paths src ../shared --ignore-src --rosdistro jazzy -y \
+            --skip-keys "rviz2 joint_state_publisher_gui"
 
       - name: Build
         run: |
