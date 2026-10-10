@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>robot_sim</name>
+  <version>0.1.0</version>
+  <description>
+    Gazebo Harmonic simulation with a virtual ESP32 that runs the firmware's control code, behind the
+    unchanged ROS 2 bridge.
+  </description>
+  <maintainer email="dagebg.dev@gmail.com">David Geßner</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>balance_core</depend>
+  <depend>rclcpp</depend>
+  <depend>robot_protocol</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+
+  <exec_depend>robot_bringup</exec_depend>
+  <exec_depend>robot_description</exec_depend>
+  <exec_depend>ros_gz_bridge</exec_depend>
+  <exec_depend>ros_gz_sim</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <test_depend>ament_cmake_xmllint</test_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>geometry_msgs</test_depend>
+  <test_depend>launch_testing_ament_cmake</test_depend>
+  <test_depend>nav_msgs</test_depend>
+  <test_depend>rclpy</test_depend>
+  <test_depend>robot_interfaces</test_depend>
+  <test_depend>std_srvs</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

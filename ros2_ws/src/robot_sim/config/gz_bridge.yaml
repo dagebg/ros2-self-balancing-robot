@@ -1,0 +1,36 @@
+# ros_gz_bridge topics between Gazebo and the virtual ESP32.
+- ros_topic_name: /clock
+  gz_topic_name: /clock
+  ros_type_name: rosgraph_msgs/msg/Clock
+  gz_type_name: gz.msgs.Clock
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /sim/imu
+  gz_topic_name: /robot/imu
+  ros_type_name: sensor_msgs/msg/Imu
+  gz_type_name: gz.msgs.IMU
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /sim/joint_states
+  gz_topic_name: /robot/joint_states
+  ros_type_name: sensor_msgs/msg/JointState
+  gz_type_name: gz.msgs.Model
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /sim/left_wheel_torque
+  gz_topic_name: /model/robot/joint/left_wheel_joint/cmd_force
+  ros_type_name: std_msgs/msg/Float64
+  gz_type_name: gz.msgs.Double
+  direction: ROS_TO_GZ
+
+- ros_topic_name: /sim/right_wheel_torque
+  gz_topic_name: /model/robot/joint/right_wheel_joint/cmd_force
+  ros_type_name: std_msgs/msg/Float64
+  gz_type_name: gz.msgs.Double
+  direction: ROS_TO_GZ
+
+- ros_topic_name: /sim/ground_truth
+  gz_topic_name: /robot/ground_truth
+  ros_type_name: nav_msgs/msg/Odometry
+  gz_type_name: gz.msgs.Odometry
+  direction: GZ_TO_ROS
