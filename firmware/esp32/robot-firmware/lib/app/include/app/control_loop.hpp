@@ -28,6 +28,7 @@ struct ControlConfig {
   float nominal_period = 0.005F;  ///< [s] expected time between ticks
   balance::BalanceConfig balance{};
   balance::SafetyConfig safety{};
+  balance::GyroBiasEstimator::Config bias{};  ///< calibration window (default 2 s)
 };
 
 /// One snapshot of the sensors, taken at the start of a tick.

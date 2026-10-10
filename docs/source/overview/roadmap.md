@@ -14,7 +14,7 @@ CI job and documentation together.
 | 7 | Firmware application: FreeRTOS tasks, comms, live tuning | Done |
 | 8 | ROS 2 bridge node | Done |
 | 9 | Robot description (URDF) and bringup launch files | Done |
-| 10 | Gazebo software-in-the-loop simulation | Planned |
+| 10 | Gazebo software-in-the-loop simulation | Done |
 | 11 | Web app control panel | Planned |
 | 12 | Release and deployment pipeline (firmware images, Docker on the Pi) | Planned |
 | 13 | Showcase README and v0.1.0 release | Planned |

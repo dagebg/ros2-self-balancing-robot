@@ -46,6 +46,7 @@ given command. The image is rebuilt automatically when a `package.xml` changes.
 | ROS 2: build all packages (Docker) | `tools/ros-docker.sh colcon-build` |
 | ROS 2: build and run all tests | `tools/ros-docker.sh colcon-test` |
 | ROS 2: shell in the container | `tools/ros-docker.sh` |
+| Simulation (headless) | `tools/ros-docker.sh "cd ros2_ws && source install/setup.bash && ros2 launch robot_sim sim.launch.py"` |
 | Build the docs | `make -C docs html SPHINXBUILD=../.venv/bin/sphinx-build SPHINXOPTS="-W --keep-going"` |
 
 (`pio`, `cmake`, `ctest`, `gcovr` and `clang-tidy` come from `.venv/bin` unless the venv is

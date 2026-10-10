@@ -92,3 +92,6 @@ for 2 s; arming is refused until it is.
   reversed: the firmware's whole data path from bias calibration to motor commands.
 - `test_comms` feeds encoded frames into a fake UART and checks routing, acknowledgements, the
   telemetry rate and log forwarding.
+
+The same classes also run in the Gazebo simulation as a virtual ESP32 (see
+{doc}`../ros2/simulation`).

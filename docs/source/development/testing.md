@@ -17,7 +17,7 @@ flowchart BT
 | Unit | Protocol codec, filters, controllers, kinematics, drivers against fake buses | Host (macOS/Linux) and CI |
 | Closed loop | The balance controller against a wheeled-pendulum model with noisy, biased, delayed sensors | Host and CI |
 | Integration | The ROS 2 bridge node against a fake ESP32 on a pseudo-terminal; the bringup launch file without hardware (launch_testing) | `ros:jazzy` container and CI |
-| Simulation | The real balance controller code keeping a simulated robot upright | Gazebo Harmonic, headless, CI |
+| Simulation | Gazebo with a virtual ESP32 running the firmware's control and comms code behind the real bridge: arming, balancing, driving | Gazebo Harmonic, headless, CI |
 | Hardware | IMU orientation, motor direction, encoder counts, final tuning | Robot, with the bring-up firmware |
 
 ## Principles
