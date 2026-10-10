@@ -75,6 +75,7 @@ temp/
 docs/_build/
 docs/build/
 docs/doxygen_output/
+docs/source/_generated/
 
 .pytest_cache/
 .mypy_cache/
@@ -84,6 +85,6 @@ htmlcov/
 .ipynb_checkpoints/
 mechanical_hardware/schematics/.history/
 
-SECRETS.h
+firmware/esp32/robot-firmware/include/secrets.hpp
 
 .history/

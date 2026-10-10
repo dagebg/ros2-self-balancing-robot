@@ -6,7 +6,7 @@ be reproduced locally with the same pinned tools (see {doc}`setup`).
 ```mermaid
 flowchart LR
   PR["Pull request / push to main"] --> LINT["lint<br/>pre-commit"]
-  PR --> SA["firmware-static-analysis<br/>cppcheck + clang-tidy"]
+  PR --> FW["firmware<br/>unit tests · build · cppcheck + clang-tidy"]
   PR --> DOCS["docs<br/>Doxygen + Sphinx -W"]
   DOCS -- "main only" --> PAGES["GitHub Pages"]
 ```
@@ -15,17 +15,20 @@ flowchart LR
 
 | Workflow | Trigger | Jobs |
 |---|---|---|
-| `ci.yml` | Pull requests, push to `main` | `lint`, `firmware-static-analysis` |
+| `ci.yml` | Pull requests, push to `main` | `lint`, `firmware` |
 | `docs.yml` | Pull requests, push to `main` | Build docs with warnings as errors; deploy to GitHub Pages from `main` |
 
 ## Jobs
 
 **lint** runs `pre-commit run --all-files`, the same hooks that run locally on each commit:
 whitespace and line-ending fixes, YAML/TOML/JSON validation, a large-file guard, `ruff` lint and
-format for Python, and `clang-format` for C++.
+format for Python, `clang-format` for C++ and a check that the generated `robot_config.hpp`
+matches `config/robot_params.yaml`. It then runs the Python tool tests with `pytest`.
 
-**firmware-static-analysis** runs `pio check` with cppcheck and clang-tidy and fails on any
-high- or medium-severity finding.
+**firmware** runs the host unit tests (`pio test -e native`), builds the ESP32 image with
+placeholder credentials, writes the RAM/flash usage to the job summary, runs cppcheck and
+clang-tidy (failing on any high- or medium-severity finding) and uploads `firmware.bin` and
+`firmware.elf` as artifacts.
 
 **docs** generates Doxygen XML, builds Sphinx with `-W`, uploads the HTML as an artifact and, on
 `main`, publishes it to GitHub Pages.

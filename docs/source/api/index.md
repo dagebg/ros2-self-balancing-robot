@@ -1,8 +1,9 @@
 # API reference
 
-Generated from the source code's Doxygen comments on every documentation build.
+Generated from the Doxygen comments in the public headers on every documentation build.
 
-## Firmware
+:::{toctree}
+:maxdepth: 1
 
-```{doxygenindex}
-```
+firmware
+:::

@@ -43,8 +43,11 @@ jobs:
       - name: Run all hooks
         run: pre-commit run --all-files --show-diff-on-failure
 
-  firmware-static-analysis:
-    name: Firmware static analysis (cppcheck + clang-tidy)
+      - name: Test Python tools
+        run: pytest
+
+  firmware:
+    name: Firmware (unit tests, build, static analysis)
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -70,5 +73,28 @@ jobs:
           path: ~/.platformio
           key: pio-${{ runner.os }}-${{ hashFiles('firmware/**/platformio.ini') }}
 
-      - name: Run static analysis
-        run: pio check --fail-on-defect=high --fail-on-defect=medium
+      - name: Unit tests (host)
+        run: pio test -e native
+
+      - name: Build firmware (placeholder credentials)
+        run: pio run -e esp32
+
+      - name: Report firmware size
+        run: |
+          {
+            echo '### Firmware size'
+            echo '```'
+            pio run -e esp32 -t size | grep -E '^(RAM|Flash):'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Static analysis (cppcheck + clang-tidy)
+        run: pio check -e esp32 --fail-on-defect=high --fail-on-defect=medium
+
+      - name: Upload firmware image
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-esp32
+          path: |
+            firmware/esp32/robot-firmware/.pio/build/esp32/firmware.bin
+            firmware/esp32/robot-firmware/.pio/build/esp32/firmware.elf

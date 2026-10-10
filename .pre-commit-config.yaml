@@ -32,3 +32,13 @@ repos:
     hooks:
       - id: clang-format
         types_or: [c++, c]
+
+  - repo: local
+    hooks:
+      - id: robot-config-header
+        name: robot_config.hpp matches config/robot_params.yaml
+        entry: python tools/gen_config.py --check
+        language: python
+        additional_dependencies: [pyyaml==6.0.3]
+        files: ^(config/robot_params\.yaml|tools/gen_config\.py|firmware/esp32/robot-firmware/include/robot_config\.hpp)$
+        pass_filenames: false

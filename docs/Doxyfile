@@ -8,16 +8,21 @@ GENERATE_HTML          = NO
 GENERATE_LATEX         = NO
 
 # Public interfaces only: implementation files would duplicate every declaration.
-INPUT                  = ../firmware/esp32/robot-firmware/lib
+INPUT                  = ../firmware/esp32/robot-firmware/include \
+                         ../firmware/esp32/robot-firmware/lib
 FILE_PATTERNS          = *.hpp *.h
 RECURSIVE              = YES
-EXCLUDE_PATTERNS       = */test/* */.pio/*
+EXCLUDE_PATTERNS       = */test/* */.pio/* */secrets*.hpp */credentials.hpp
 
 EXTRACT_ALL            = YES
 EXTRACT_STATIC         = YES
 JAVADOC_AUTOBRIEF      = YES
 BUILTIN_STL_SUPPORT    = YES
 ENABLE_PREPROCESSING   = YES
+# Attribute macros confuse the Sphinx C++ parser; expand them to nothing.
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+PREDEFINED             = "ROBOT_PRINTF_FORMAT(a,b)="
 
 QUIET                  = YES
 WARN_IF_UNDOCUMENTED   = NO

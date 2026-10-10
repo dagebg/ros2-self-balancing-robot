@@ -12,5 +12,7 @@ To add one, copy {doc}`0000-template` to the next free number and add it to the 
 0001-record-architecture-decisions
 0002-cpp17-on-arduino-esp32
 0003-custom-uart-protocol
+0004-single-source-robot-parameters
+0005-googletest-everywhere
 0000-template
 :::
