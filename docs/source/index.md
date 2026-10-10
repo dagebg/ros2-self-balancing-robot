@@ -27,6 +27,7 @@ hardware/index
 :caption: Software
 
 firmware/index
+protocol
 :::
 
 :::{toctree}

@@ -22,6 +22,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   size-reports and statically analyzes the firmware.
 - `config/robot_params.yaml` as the single source of robot constants, with a generator for the
   firmware header, tests, a pre-commit check and a docs table (ADR-0004, ADR-0005).
+- `shared/robot_protocol`: COBS + CRC-16 framed binary protocol v1 with eight message types, a
+  resynchronizing stream parser and loss tracking, built by CMake, colcon and PlatformIO from one
+  source (ADR-0006). 53 tests including golden wire bytes, reference vectors and seeded fuzzing.
+- CI job for shared libraries: coverage (≥ 90 % gate) with clang-tidy, and an ASan/UBSan run.
+- Protocol specification with byte layouts, validation rules, link budget and versioning policy.
 
 ### Changed
 

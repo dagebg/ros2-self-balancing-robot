@@ -6,4 +6,5 @@ Generated from the Doxygen comments in the public headers on every documentation
 :maxdepth: 1
 
 firmware
+protocol
 :::

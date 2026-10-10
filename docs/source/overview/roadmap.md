@@ -8,7 +8,7 @@ CI job and documentation together.
 | 1 | Documentation foundation: Sphinx, MyST, Doxygen, ADRs, hardware reference | Done |
 | 2 | CI foundation: pre-commit, formatting, static analysis | Done |
 | 3 | Firmware refactor to modern C++17, host unit-test harness | Done |
-| 4 | Binary UART protocol shared by firmware and ROS 2 | Planned |
+| 4 | Binary UART protocol shared by firmware and ROS 2 | Done |
 | 5 | Firmware drivers: IMUs, motor driver, encoders, hardware bring-up tool | Planned |
 | 6 | Balance core: sensor fusion, cascaded PID, odometry, safety state machine | Planned |
 | 7 | Firmware application: FreeRTOS tasks, comms, live tuning | Planned |

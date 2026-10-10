@@ -30,6 +30,11 @@ flowchart BT
   wheels), not just for individual outputs, so a test fails if the robot would fall.
 - **Same tools locally and in CI.** Every CI job is reproducible with the commands in
   {doc}`setup`.
+- **Sanitizers and coverage for shared code.** The shared libraries run their tests a second time
+  under AddressSanitizer and UndefinedBehaviorSanitizer, and CI fails below 90 % line coverage.
+- **Robustness by randomization.** Codecs are exercised with seeded random inputs (COBS round
+  trips across block boundaries, garbage bursts in front of valid frames, every single-bit flip
+  of a frame), so failures are reproducible from the seed.
 
 ## Frameworks
 
