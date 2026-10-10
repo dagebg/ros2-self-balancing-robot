@@ -1,15 +1,28 @@
 Checks: >
   bugprone-*,
   clang-analyzer-*,
+  cppcoreguidelines-*,
   modernize-*,
   performance-*,
   readability-*,
-  -modernize-use-trailing-return-type,
-  -readability-magic-numbers,
-  -readability-identifier-length,
   -bugprone-easily-swappable-parameters,
   -bugprone-throwing-static-initialization,
-  -readability-avoid-const-params-in-decls
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-avoid-non-const-global-variables,
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic,
+  -cppcoreguidelines-pro-bounds-constant-array-index,
+  -cppcoreguidelines-pro-type-vararg,
+  -modernize-use-trailing-return-type,
+  -readability-avoid-const-params-in-decls,
+  -readability-identifier-length,
+  -readability-magic-numbers
+# Rationale for the exclusions above:
+# - magic numbers: register maps and physical constants are clearer inline with a comment.
+# - non-const globals: Arduino's setup()/loop() model needs the composition root's objects
+#   to be file-scope statics in src/main.cpp.
+# - pointer arithmetic / array index: byte-level codecs and buffers; bounds are tested.
+# - vararg: printf-style logging is deliberate; ROBOT_PRINTF_FORMAT makes the compiler check
+#   every format string against its arguments.
 WarningsAsErrors: ''
-HeaderFilterRegex: '.*robot-firmware/(src|lib)/.*\.(h|hpp|cpp)$'
+HeaderFilterRegex: '.*robot-firmware/(include|src|lib)/.*\.(hpp|cpp)$'
 FormatStyle: file

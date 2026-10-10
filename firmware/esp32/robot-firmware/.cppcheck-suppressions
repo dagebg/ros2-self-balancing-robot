@@ -1,2 +1,2 @@
-unusedFunction:src/main.cpp
-unusedFunction:lib/WifiDebug/WifiDebug.cpp
+unusedFunction
+*:*/.platformio/packages/*

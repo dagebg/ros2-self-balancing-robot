@@ -84,6 +84,6 @@ htmlcov/
 .ipynb_checkpoints/
 mechanical_hardware/schematics/.history/
 
-SECRETS.h
+firmware/esp32/robot-firmware/include/secrets.hpp
 
 .history/
