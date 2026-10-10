@@ -20,5 +20,6 @@ To add one, copy {doc}`0000-template` to the next free number and add it to the 
 0009-cascaded-pid-controller
 0010-firmware-task-split
 0011-virtual-esp32-simulation
+0012-webapp-over-rosbridge
 0000-template
 :::

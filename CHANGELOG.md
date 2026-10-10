@@ -71,6 +71,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Gazebo extensions of the robot model (IMU, wheel friction, joint states, torque inputs, ground
   truth) for `sim:=true`.
 - Configurable gyro calibration window in `ControlConfig`.
+- Web app (React, TypeScript, Vite) over rosbridge: status and faults, arming, joystick and keyboard
+  driving, live PID tuning through the bridge's parameter services, and a telemetry plot
+  (ADR-0012). Unit and component tests against an in-memory client, an opt-in integration test
+  against the running simulation, and a CI job (lint, typecheck, tests, build).
+- `ROS_DOCKER_ARGS` for `tools/ros-docker.sh` (e.g. to publish rosbridge's port).
 
 ### Changed (ROS 2)
 

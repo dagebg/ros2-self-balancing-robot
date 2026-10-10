@@ -41,4 +41,5 @@ flowchart BT
 
 GoogleTest is used for all C++ tests: PlatformIO's native test runner for firmware, CMake/CTest
 for the shared libraries, and `ament_cmake_gtest` for ROS 2 packages. Python launch tests use
-`launch_testing`, and the web app uses Vitest.
+`launch_testing`, and the web app uses Vitest with Testing Library; its network client has an
+opt-in integration test against a running simulation.
