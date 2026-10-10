@@ -63,6 +63,14 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - `robot_bringup`: one launch file for model, bridge, rosbridge, optional gamepad teleoperation and
   RViz; parameters derived from `robot_params.yaml`; a launch test that starts it without hardware.
 - `wheel_mass` robot parameter.
+- `robot_sim`: Gazebo Harmonic simulation with a virtual ESP32 that runs the firmware's
+  `ControlLoop` and `CommsService` behind the unchanged bridge and bringup over a pseudo-terminal,
+  with a DC-motor model and automatic arming after calibration (ADR-0011).
+- End-to-end simulation test in CI: telemetry, arming through the bridge, 8 s of balancing and
+  driving forward, checked against Gazebo's ground truth.
+- Gazebo extensions of the robot model (IMU, wheel friction, joint states, torque inputs, ground
+  truth) for `sim:=true`.
+- Configurable gyro calibration window in `ControlConfig`.
 
 ### Changed (ROS 2)
 

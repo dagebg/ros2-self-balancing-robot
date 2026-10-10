@@ -35,7 +35,10 @@ the same quantity the encoders measure.
 ## Simulation mode
 
 `xacro robot.urdf.xacro sim:=true` drops `base_footprint` and `body_pitch_joint`. `base_link`
-becomes a free-floating root, so physics, not a joint state, decides the pitch in Gazebo.
+becomes a free-floating root, so physics, not a joint state, decides the pitch in Gazebo. It also
+adds `robot.gazebo.xacro`: an IMU sensor on `base_link` (200 Hz), wheel friction, joint-state
+publishing, a torque input per wheel and a ground-truth odometry publisher (see
+{doc}`simulation`).
 
 ## Tests
 
