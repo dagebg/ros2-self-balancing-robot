@@ -30,6 +30,11 @@ geometry:
     unit: kg
     measured: false
     doc: Total mass of the robot without the wheels.
+  wheel_mass:
+    value: 0.030
+    unit: kg
+    measured: false
+    doc: Mass of one wheel including its tyre.
 
 drivetrain:
   gear_ratio:
