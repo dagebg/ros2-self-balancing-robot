@@ -34,6 +34,13 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   extension, IMU mounting transform (ADR-0007, ADR-0008).
 - Wiring and IMU-mounting parameters with compile-time validation in `board.hpp`.
 - Interactive bring-up firmware (`pio run -e bringup`) and a step-by-step bring-up guide.
+- `shared/balance_core`: complementary filter with accelerometer rejection, gyro-bias calibration,
+  dual-IMU fusion with disagreement detection, PID with derivative on measurement and anti-windup,
+  cascaded velocity/pitch/yaw-rate controller, arming and fault state machine, and odometry that
+  compensates for body pitch (ADR-0009).
+- Wheeled-inverted-pendulum plant model and closed-loop tests: balancing, push recovery, velocity
+  and yaw tracking, and robustness of the default gains across ±30–40 % parameter errors.
+- Balance control documentation with the estimator, plant equations, controller and safety logic.
 
 ### Changed
 

@@ -28,6 +28,7 @@ hardware/index
 
 firmware/index
 protocol
+control
 :::
 
 :::{toctree}

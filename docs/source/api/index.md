@@ -7,4 +7,5 @@ Generated from the Doxygen comments in the public headers on every documentation
 
 firmware
 protocol
+balance_core
 :::

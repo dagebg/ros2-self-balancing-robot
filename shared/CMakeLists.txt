@@ -41,4 +41,5 @@ if(BUILD_TESTING)
   FetchContent_MakeAvailable(googletest)
 endif()
 
+add_subdirectory(balance_core)
 add_subdirectory(robot_protocol)

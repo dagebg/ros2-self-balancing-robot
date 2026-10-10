@@ -16,13 +16,16 @@ Checks: >
   -modernize-use-trailing-return-type,
   -readability-avoid-const-params-in-decls,
   -readability-identifier-length,
-  -readability-magic-numbers
+  -readability-magic-numbers,
+  -readability-math-missing-parentheses
 # Rationale for the exclusions above:
 # - magic numbers: protocol layouts and physical constants are clearer inline with a comment.
 # - pointer arithmetic / array index / unchecked access: byte-level codecs over fixed buffers.
 #   Indices are bounded by the surrounding logic, covered by tests and checked by the ASan build;
 #   .at() is not an alternative because it throws inside noexcept functions.
 # - vararg: printf-style logging is deliberate and format-checked by the compiler.
+# - math parentheses: physics formulas follow normal precedence (a*b + c*d); extra parentheses
+#   make the equations harder to compare with their derivation.
 WarningsAsErrors: '*'
 HeaderFilterRegex: '.*/(shared|ros2_ws/src)/.*\.hpp$'
 FormatStyle: file
