@@ -35,6 +35,9 @@ class TelnetSink final : public logging::Sink {
 
   void write(logging::Level level, std::string_view message) override;
 
+  /// Next byte typed by the telnet client, or -1 if none is pending.
+  [[nodiscard]] int read();
+
  private:
   [[nodiscard]] bool clientConnected();  // requires mutex_ held
 

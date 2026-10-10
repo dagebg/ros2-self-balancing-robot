@@ -136,6 +136,9 @@ jobs:
       - name: Build firmware (placeholder credentials)
         run: pio run -e esp32
 
+      - name: Build bring-up tool
+        run: pio run -e bringup
+
       - name: Report firmware size
         run: |
           {
@@ -155,3 +158,4 @@ jobs:
           path: |
             firmware/esp32/robot-firmware/.pio/build/esp32/firmware.bin
             firmware/esp32/robot-firmware/.pio/build/esp32/firmware.elf
+            firmware/esp32/robot-firmware/.pio/build/bringup/firmware.bin
