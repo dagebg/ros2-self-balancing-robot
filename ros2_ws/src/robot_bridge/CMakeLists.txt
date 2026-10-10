@@ -35,6 +35,7 @@ set(DEPENDENCIES
 )
 
 add_library(${PROJECT_NAME} SHARED
+  src/bridge_node.cpp
   src/conversions.cpp
   src/framed_link.cpp
   src/serial_port.cpp
@@ -48,6 +49,10 @@ target_link_libraries(${PROJECT_NAME}
   balance_core::balance_core
   robot_protocol::robot_protocol
 )
+rclcpp_components_register_node(${PROJECT_NAME}
+  PLUGIN "robot_bridge::BridgeNode"
+  EXECUTABLE bridge_node
+)
 
 install(TARGETS ${PROJECT_NAME}
   ARCHIVE DESTINATION lib
@@ -55,6 +60,7 @@ install(TARGETS ${PROJECT_NAME}
   RUNTIME DESTINATION bin
 )
 install(DIRECTORY include/ DESTINATION include)
+install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -66,6 +72,9 @@ if(BUILD_TESTING)
 
   ament_add_gtest(test_serial_port test/test_serial_port.cpp)
   target_link_libraries(test_serial_port ${PROJECT_NAME} util)
+
+  ament_add_gtest(test_bridge_node test/test_bridge_node.cpp TIMEOUT 120)
+  target_link_libraries(test_bridge_node ${PROJECT_NAME} util)
 endif()
 
 ament_package()

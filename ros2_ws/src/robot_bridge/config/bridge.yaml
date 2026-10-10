@@ -1,0 +1,15 @@
+# Default parameters for robot_bridge. Geometry (wheel_radius, track_width, counts_per_wheel_rev)
+# is filled in by robot_bringup from config/robot_params.yaml; gains default to the firmware's
+# BalanceConfig and can be changed at runtime.
+robot_bridge:
+  ros__parameters:
+    port: /dev/serial0
+    baud: 460800
+    odom_frame: odom
+    base_frame: base_link
+    imu_frame: imu_link
+    publish_tf: true
+    command_rate: 20.0
+    cmd_vel_timeout: 0.5
+    reconnect_period: 1.0
+    ack_timeout: 1.0
