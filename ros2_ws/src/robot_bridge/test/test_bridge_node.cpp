@@ -15,6 +15,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "robot_bridge/bridge_node.hpp"
 #include "robot_interfaces/msg/balance_state.hpp"
+#include "sensor_msgs/msg/joint_state.hpp"
 #include "std_srvs/srv/set_bool.hpp"
 
 namespace {
@@ -112,6 +113,22 @@ TEST_F(BridgeNodeTest, PublishesStateAndOdometryFromTelemetry) {
   EXPECT_EQ(state->state, robot_interfaces::msg::BalanceState::STATE_BALANCING);
   EXPECT_FLOAT_EQ(state->pitch, 0.02F);
   EXPECT_NEAR(odom->twist.twist.linear.x, 2.0 * 0.0325, 1e-5);
+}
+
+TEST_F(BridgeNodeTest, PublishesBodyPitchAndWheelsAsJointStates) {
+  std::optional<sensor_msgs::msg::JointState> joints;
+  auto sub = tester_->create_subscription<sensor_msgs::msg::JointState>(
+      "joint_states", 10, [&](const sensor_msgs::msg::JointState& msg) { joints = msg; });
+  rp::Telemetry telemetry;
+  telemetry.pitch = 0.1F;
+  telemetry.left_ticks = 4200;  // one wheel revolution
+  esp_.send(telemetry);
+
+  ASSERT_TRUE(spinUntil([&] { return joints.has_value(); }));
+  ASSERT_EQ(joints->name.size(), 3U);
+  EXPECT_EQ(joints->name[0], "body_pitch_joint");
+  EXPECT_NEAR(joints->position[0], 0.1, 1e-6);
+  EXPECT_NEAR(joints->position[1], 2.0 * M_PI, 1e-6);
 }
 
 TEST_F(BridgeNodeTest, ForwardsCmdVel) {
