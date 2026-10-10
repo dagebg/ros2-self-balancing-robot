@@ -13,6 +13,15 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Hardware reference: bill of materials, netlist-derived pinout, power rails and known issues.
 - Architecture decision records (ADR-0001 to ADR-0003).
 - Contribution guide and this changelog.
+- pre-commit hooks (ruff, clang-format, file hygiene) shared by local commits and CI.
+- Dependabot for GitHub Actions and Python tools, a pull request template and `.editorconfig`.
+- Documentation of the development environment, testing strategy and CI/CD pipeline.
+
+### Changed
+
+- CI restructured: a single `lint` job runs pre-commit, all tool versions are pinned and cached,
+  and superseded runs are cancelled.
+- `.clang-format` moved to the repository root so one C++ style applies everywhere.
 
 ### Fixed
 

@@ -6,7 +6,7 @@ CI job and documentation together.
 | # | Milestone | Status |
 |---|---|---|
 | 1 | Documentation foundation: Sphinx, MyST, Doxygen, ADRs, hardware reference | Done |
-| 2 | CI foundation: pre-commit, formatting, static analysis | Planned |
+| 2 | CI foundation: pre-commit, formatting, static analysis | Done |
 | 3 | Firmware refactor to modern C++17, host unit-test harness | Planned |
 | 4 | Binary UART protocol shared by firmware and ROS 2 | Planned |
 | 5 | Firmware drivers: IMUs, motor driver, encoders, hardware bring-up tool | Planned |

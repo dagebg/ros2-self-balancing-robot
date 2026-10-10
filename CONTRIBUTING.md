@@ -3,6 +3,18 @@
 This is a personal project, but it follows the workflow of a team project so that every change is
 reviewable and reproducible.
 
+## Setup
+
+```bash
+python3 -m venv .venv
+.venv/bin/pip install -r requirements-dev.txt -r docs/requirements.txt
+.venv/bin/pre-commit install
+```
+
+The pre-commit hooks (formatting, linting, file checks) then run on every commit, and CI runs the
+same hooks on every pull request. The full tool list is in the docs under *Development
+environment*.
+
 ## Branches and pull requests
 
 - `main` is always releasable; all work happens on short-lived branches merged through pull

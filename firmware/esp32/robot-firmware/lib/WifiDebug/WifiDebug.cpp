@@ -1,4 +1,5 @@
 #include "WifiDebug.h"
+
 #include <WiFi.h>
 
 static WiFiServer telnetServer(23);
@@ -20,16 +21,14 @@ void wifiDebugBegin(const char* ssid, const char* password) {
   telnetServer.setNoDelay(true);
 }
 
-void wifiDebugPrint(const String &msg) {
+void wifiDebugPrint(const String& msg) {
   Serial.print(msg);
   if (telnetClient != 0 && telnetClient.connected() != 0) {
     telnetClient.print(msg);
   }
 }
 
-void wifiDebugPrintln(const String &msg) {
-  wifiDebugPrint(msg + "\n");
-}
+void wifiDebugPrintln(const String& msg) { wifiDebugPrint(msg + "\n"); }
 
 void wifiDebugLoop() {
   if (telnetServer.hasClient()) {
