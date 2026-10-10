@@ -36,7 +36,15 @@ A receiver accumulates bytes until `0x00`, then decodes. Anything malformed — 
 line noise, a frame cut short by a reset — fails COBS, length or CRC checks, is counted and
 dropped, and decoding resumes after the next delimiter. A run of more than 104 bytes without a
 delimiter is discarded as an overflow. Empty frames (consecutive `0x00`) are ignored, so a sender
-may emit a lone `0x00` to make sure the next frame starts cleanly.
+may emit a lone `0x00` to make sure the next frame starts cleanly; the firmware does this right
+after opening the UART at start-up.
+
+### Link supervision
+
+The Pi must send a frame (normally `CmdVel`, otherwise `Heartbeat`) at least every 500 ms. If
+nothing arrives for longer, the ESP32 treats the link as lost: the velocity targets drop to zero,
+the robot keeps balancing on the spot, and telemetry carries the `kLinkTimeout` flag until frames
+arrive again.
 
 ## Messages
 
@@ -122,7 +130,7 @@ At 460 800 Bd one byte takes about 21.7 µs.
 | Stream | Frame size | Rate | Load |
 |---|---|---|---|
 | `Telemetry` | 56 B | 50 Hz | 2.8 kB/s (6 %) |
-| `ImuSample`, both IMUs | 36 B | 2 × 50 Hz | 3.6 kB/s (8 %) |
+| `ImuSample`, IMUs alternating | 36 B | 50 Hz | 1.8 kB/s (4 %) |
 | `CmdVel` from the Pi | 15 B | ≤ 50 Hz | 0.8 kB/s (2 %) |
 
 The link stays below 20 % utilization, leaving room for log frames and retries.

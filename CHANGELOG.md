@@ -41,6 +41,13 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Wheeled-inverted-pendulum plant model and closed-loop tests: balancing, push recovery, velocity
   and yaw tracking, and robustness of the default gains across ±30–40 % parameter errors.
 - Balance control documentation with the estimator, plant equations, controller and safety logic.
+- Firmware application: a 200 Hz control task on core 1 and a communication task on core 0,
+  connected by lock-free queues and latest-value mailboxes, with a 1 s task watchdog (ADR-0010).
+- `ControlLoop` (per-IMU bias calibration while disarmed, fusion, estimation, safety, odometry and
+  control) and `CommsService` (protocol routing, acknowledgements, 50 Hz telemetry, log
+  forwarding to the Pi), both covered by host tests including a firmware-level closed loop.
+- Link supervision: without frames from the Pi for 500 ms the robot stops but keeps balancing.
+- Firmware architecture page and a calibration and tuning guide.
 
 ### Changed
 
@@ -51,6 +58,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   `String`); `WifiDebug` replaced by `robot::telemetry::TelnetSink`; platform pinned to
   `espressif32@7.1.3`. clang-tidy now includes the C++ Core Guidelines checks.
 - Firmware logs no longer go to `Serial`, which is reserved for the Raspberry Pi link.
+- The I2C bus scan now runs once at start-up only, since the control task owns the bus afterwards.
 
 ### Fixed
 
