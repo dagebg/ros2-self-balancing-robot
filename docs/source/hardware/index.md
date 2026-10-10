@@ -18,4 +18,5 @@ power
 electronics
 mechanical
 known-issues
+bringup
 :::

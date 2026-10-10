@@ -7,23 +7,30 @@ the Arduino-ESP32 framework (see {doc}`../development/adr/0002-cpp17-on-arduino-
 :maxdepth: 1
 
 parameters
+drivers
 :::
 
 ## Project layout
 
 ```text
 firmware/esp32/robot-firmware/
-├── platformio.ini        envs: esp32 (robot), native (host unit tests)
+├── platformio.ini        envs: esp32 (robot), bringup (bring-up tool), native (host tests)
 ├── include/
 │   ├── pins.hpp          board wiring, from the KiCad netlist
+│   ├── board.hpp         wiring parameters resolved and checked at compile time
 │   ├── robot_config.hpp  generated from config/robot_params.yaml
 │   ├── credentials.hpp   picks secrets.hpp or the example fallback
 │   └── secrets.example.hpp
 ├── lib/
+│   ├── hal/              hardware interfaces (I2C, PWM, GPIO, counter, clock)
+│   ├── hal_arduino/      ESP32 implementations of those interfaces
+│   ├── hal_fakes/        test doubles for host unit tests
+│   ├── drivers/          IMU, motor driver, encoder and mounting logic (portable)
 │   ├── logging/          portable printf-style logger with pluggable sinks
 │   ├── diagnostics/      portable I2C bus scan
-│   └── telemetry/        WiFi SoftAP + telnet log sink (Arduino)
+│   └── telemetry/        WiFi SoftAP + telnet log sink and input (Arduino)
 ├── src/main.cpp          composition root: creates and wires the objects
+├── src/bringup/          interactive hardware bring-up tool (env "bringup")
 └── test/                 GoogleTest suites run on the host
 ```
 

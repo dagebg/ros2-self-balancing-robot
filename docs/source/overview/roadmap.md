@@ -9,7 +9,7 @@ CI job and documentation together.
 | 2 | CI foundation: pre-commit, formatting, static analysis | Done |
 | 3 | Firmware refactor to modern C++17, host unit-test harness | Done |
 | 4 | Binary UART protocol shared by firmware and ROS 2 | Done |
-| 5 | Firmware drivers: IMUs, motor driver, encoders, hardware bring-up tool | Planned |
+| 5 | Firmware drivers: IMUs, motor driver, encoders, hardware bring-up tool | Done |
 | 6 | Balance core: sensor fusion, cascaded PID, odometry, safety state machine | Planned |
 | 7 | Firmware application: FreeRTOS tasks, comms, live tuning | Planned |
 | 8 | ROS 2 bridge node | Planned |
@@ -23,4 +23,4 @@ CI job and documentation together.
 
 - Battery-voltage sensing (needs a voltage divider to a free ADC1 pin) and a low-battery cut-off.
 - State-space (LQR) balance controller as an alternative to cascaded PID.
-- Magnetometer calibration and yaw fusion from the MPU-9250.
+- AK8963 magnetometer driver, calibration and yaw fusion from the MPU-9250.
