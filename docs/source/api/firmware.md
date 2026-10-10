@@ -1,5 +1,25 @@
 # Firmware API
 
+## Hardware abstraction
+
+```{doxygennamespace} robot::hal
+```
+
+## Drivers
+
+```{doxygennamespace} robot::drivers
+```
+
+## ESP32 implementations
+
+```{doxygennamespace} robot::hal_arduino
+```
+
+## Board configuration
+
+```{doxygennamespace} robot::board
+```
+
 ## Logging
 
 ```{doxygennamespace} robot::logging

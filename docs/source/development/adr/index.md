@@ -15,5 +15,7 @@ To add one, copy {doc}`0000-template` to the next free number and add it to the 
 0004-single-source-robot-parameters
 0005-googletest-everywhere
 0006-shared-core-libraries
+0007-own-imu-driver
+0008-pcnt-quadrature-decoding
 0000-template
 :::

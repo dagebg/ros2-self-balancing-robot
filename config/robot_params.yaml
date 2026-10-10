@@ -71,3 +71,70 @@ link:
     unit: Bd
     measured: true
     doc: Baud rate of the ESP32 <-> Raspberry Pi UART link.
+
+# --- Firmware only ---------------------------------------------------------------------------
+# Determined on the robot with the bring-up firmware (see the hardware bring-up guide).
+
+wiring:
+  left_motor_channel:
+    value: 0
+    unit: "-"
+    measured: false
+    doc: TB6612 channel driving the left wheel (0 = A, 1 = B); the other wheel uses the other one.
+  left_motor_inverted:
+    value: 0
+    unit: "-"
+    measured: false
+    doc: 1 if a positive command turns the left wheel backwards.
+  right_motor_inverted:
+    value: 1
+    unit: "-"
+    measured: false
+    doc: 1 if a positive command turns the right wheel backwards.
+  left_encoder_connector:
+    value: 6
+    unit: "-"
+    measured: false
+    doc: Encoder connector of the left wheel (5 = J5, 6 = J6); the other wheel uses the other one.
+  left_encoder_inverted:
+    value: 0
+    unit: "-"
+    measured: false
+    doc: 1 if the left encoder counts down while the wheel turns forwards.
+  right_encoder_inverted:
+    value: 1
+    unit: "-"
+    measured: false
+    doc: 1 if the right encoder counts down while the wheel turns forwards.
+
+imu_mounting:
+  mpu9250_body_x:
+    value: 1
+    unit: axis
+    measured: false
+    doc: MPU-9250 axis along body x (forward). 1/2/3 = sensor x/y/z, negative = reversed.
+  mpu9250_body_y:
+    value: 2
+    unit: axis
+    measured: false
+    doc: MPU-9250 axis along body y (left).
+  mpu9250_body_z:
+    value: 3
+    unit: axis
+    measured: false
+    doc: MPU-9250 axis along body z (up).
+  mpu6050_body_x:
+    value: -1
+    unit: axis
+    measured: false
+    doc: MPU-6050 axis along body x (forward). Default assumes it faces backwards.
+  mpu6050_body_y:
+    value: -2
+    unit: axis
+    measured: false
+    doc: MPU-6050 axis along body y (left).
+  mpu6050_body_z:
+    value: 3
+    unit: axis
+    measured: false
+    doc: MPU-6050 axis along body z (up).

@@ -45,4 +45,12 @@ void TelnetSink::write(logging::Level level, std::string_view message) {
   client_.write(kLineEnd.data(), kLineEnd.size());
 }
 
+int TelnetSink::read() {
+  const std::lock_guard<std::mutex> lock(mutex_);
+  if (!clientConnected() || client_.available() <= 0) {
+    return -1;
+  }
+  return client_.read();
+}
+
 }  // namespace robot::telemetry

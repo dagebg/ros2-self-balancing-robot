@@ -27,6 +27,13 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   source (ADR-0006). 53 tests including golden wire bytes, reference vectors and seeded fuzzing.
 - CI job for shared libraries: coverage (≥ 90 % gate) with clang-tidy, and an ASan/UBSan run.
 - Protocol specification with byte layouts, validation rules, link budget and versioning policy.
+- Firmware hardware abstraction (I2C, PWM, GPIO, quadrature counter, clock) with ESP32
+  implementations and host test fakes.
+- Drivers: one MPU-6050/MPU-9250 driver (200 Hz, 42 Hz DLPF, ±4 g, ±500 °/s), TB6612 H-bridge
+  with duty limit and NaN-safe commands, PCNT ×4 encoder decoding with glitch filter and 32-bit
+  extension, IMU mounting transform (ADR-0007, ADR-0008).
+- Wiring and IMU-mounting parameters with compile-time validation in `board.hpp`.
+- Interactive bring-up firmware (`pio run -e bringup`) and a step-by-step bring-up guide.
 
 ### Changed
 
