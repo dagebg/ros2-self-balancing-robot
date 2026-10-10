@@ -78,7 +78,7 @@ Files:
 ros2-self-balancing-robot/
 ├── ros2_ws/              ROS2 workspace (packages: diff drive, navigation, etc.)
 ├── firmware/             ESP32 firmware (motor controller, IMU bridge)
-├── mechanical_hardware   CAD design & wiring schematics     
+├── mechanical_hardware   CAD design & wiring schematics  
 └── docs/                 Architecture notes + Sphinx documentation
 ```
 
