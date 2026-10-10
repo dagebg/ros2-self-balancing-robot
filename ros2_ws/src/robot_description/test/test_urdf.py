@@ -61,3 +61,16 @@ def test_geometry_and_masses_come_from_robot_params():
     assert math.isclose(float(mass), p["body_mass"]["value"])
     pitch_origin = robot.find("joint[@name='body_pitch_joint']/origin").get("xyz").split()
     assert math.isclose(float(pitch_origin[2]), p["wheel_radius"]["value"])
+
+
+def test_simulation_model_has_gazebo_sensors_and_plugins():
+    robot = expand(sim=True)
+    sensor = robot.find("gazebo[@reference='base_link']/sensor[@type='imu']")
+    assert sensor is not None
+    plugins = [p.get("filename") for p in robot.findall("gazebo/plugin")]
+    assert plugins.count("gz-sim-apply-joint-force-system") == 2
+    assert "gz-sim-joint-state-publisher-system" in plugins
+
+
+def test_real_robot_model_has_no_gazebo_tags():
+    assert expand(sim=False).find("gazebo") is None

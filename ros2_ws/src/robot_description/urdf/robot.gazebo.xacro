@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+  Gazebo Harmonic extensions, included by robot.urdf.xacro when sim:=true.
+
+  The model exposes exactly what the real hardware does: an IMU on the body, wheel angles relative
+  to the chassis (joint states), and a torque input per wheel. The virtual ESP32 (robot_sim) turns
+  its motor commands into torques with the DC-motor model, like the real motors would.
+-->
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <gazebo reference="base_link">
+    <sensor name="imu" type="imu">
+      <always_on>true</always_on>
+      <update_rate>200</update_rate>
+      <topic>robot/imu</topic>
+    </sensor>
+  </gazebo>
+
+  <xacro:macro name="tyre" params="side">
+    <gazebo reference="${side}_wheel_link">
+      <mu1>1.0</mu1>
+      <mu2>1.0</mu2>
+    </gazebo>
+  </xacro:macro>
+  <xacro:tyre side="left"/>
+  <xacro:tyre side="right"/>
+
+  <gazebo>
+    <plugin filename="gz-sim-joint-state-publisher-system"
+            name="gz::sim::systems::JointStatePublisher">
+      <topic>robot/joint_states</topic>
+      <joint_name>left_wheel_joint</joint_name>
+      <joint_name>right_wheel_joint</joint_name>
+    </plugin>
+    <plugin filename="gz-sim-apply-joint-force-system" name="gz::sim::systems::ApplyJointForce">
+      <joint_name>left_wheel_joint</joint_name>
+    </plugin>
+    <plugin filename="gz-sim-apply-joint-force-system" name="gz::sim::systems::ApplyJointForce">
+      <joint_name>right_wheel_joint</joint_name>
+    </plugin>
+    <!-- Ground truth for tests and comparison with the wheel odometry. -->
+    <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+      <odom_frame>sim_odom</odom_frame>
+      <robot_base_frame>base_link</robot_base_frame>
+      <odom_topic>robot/ground_truth</odom_topic>
+      <dimensions>3</dimensions>
+      <odom_publish_frequency>50</odom_publish_frequency>
+    </plugin>
+  </gazebo>
+</robot>
