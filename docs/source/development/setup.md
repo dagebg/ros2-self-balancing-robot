@@ -50,6 +50,9 @@ given command. The image is rebuilt automatically when a `package.xml` changes.
 | Web app: dev server | `cd webapp && npm install && npm run dev` |
 | Web app: checks | `cd webapp && npm run lint && npm run typecheck && npm test && npm run build` |
 | Simulation with rosbridge on the host | `ROS_DOCKER_ARGS="-p 9090:9090" tools/ros-docker.sh "cd ros2_ws && source install/setup.bash && ros2 launch robot_sim sim.launch.py"` |
+| Merged flash image | `tools/merge_firmware.sh esp32 robot-firmware.bin` (after `pio run -e esp32`) |
+| Preview release notes | `.venv/bin/git-cliff --unreleased` |
+| Build the Docker images | `docker buildx build -f docker/robot.Dockerfile -t robot --load .` (and `docker/web.Dockerfile`) |
 | Build the docs | `make -C docs html SPHINXBUILD=../.venv/bin/sphinx-build SPHINXOPTS="-W --keep-going"` |
 
 (`pio`, `cmake`, `ctest`, `gcovr` and `clang-tidy` come from `.venv/bin` unless the venv is
