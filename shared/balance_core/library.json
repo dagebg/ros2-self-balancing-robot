@@ -1,0 +1,12 @@
+{
+  "name": "balance_core",
+  "version": "1.0.0",
+  "description": "State estimation, cascaded balance control, safety logic and odometry for a balancing robot.",
+  "license": "MIT",
+  "frameworks": "*",
+  "platforms": "*",
+  "build": {
+    "srcDir": "src",
+    "includeDir": "include"
+  }
+}
