@@ -6,6 +6,7 @@
 /// Constructors only store configuration; begin() touches the hardware. Objects can therefore
 /// be file-scope statics in the composition root without static-initialization-order problems.
 
+#include <HardwareSerial.h>
 #include <Wire.h>
 #include <driver/pcnt.h>
 
@@ -79,6 +80,19 @@ class PcntQuadratureCounter final : public hal::QuadratureCounter {
   pcnt_unit_t unit_;
   std::uint8_t pin_a_;
   std::uint8_t pin_b_;
+};
+
+/// UART via an Arduino `HardwareSerial` port.
+class SerialByteStream final : public hal::ByteStream {
+ public:
+  explicit SerialByteStream(HardwareSerial& serial) noexcept : serial_(serial) {}
+
+  void begin(std::uint32_t baud);
+  std::size_t read(std::uint8_t* data, std::size_t capacity) override;
+  std::size_t write(const std::uint8_t* data, std::size_t size) override;
+
+ private:
+  HardwareSerial& serial_;
 };
 
 /// Arduino `micros()` and `delay()`.

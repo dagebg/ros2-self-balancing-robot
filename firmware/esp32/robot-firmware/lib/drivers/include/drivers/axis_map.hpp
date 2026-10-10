@@ -25,6 +25,20 @@ class AxisMap {
   /// (determinant +1). A mirror image cannot be produced by mounting a sensor.
   [[nodiscard]] constexpr bool isValid() const noexcept { return valid_; }
 
+  /// Transforms a vector from body axes back to sensor axes (the inverse of apply()).
+  [[nodiscard]] Vector3 toSensor(const Vector3& body) const noexcept {
+    if (!valid_) {
+      return {};
+    }
+    std::array<float, 3> s{};
+    const std::array<float, 3> b{body.x, body.y, body.z};
+    for (std::size_t i = 0; i < 3; ++i) {
+      const int code = codes_[i];
+      s[static_cast<std::size_t>(magnitude(code) - 1)] = code < 0 ? -b[i] : b[i];
+    }
+    return {s[0], s[1], s[2]};
+  }
+
   /// Transforms a vector from sensor axes to body axes.
   [[nodiscard]] Vector3 apply(const Vector3& sensor) const noexcept {
     if (!valid_) {

@@ -3,6 +3,7 @@
 /// @file
 /// Test doubles for the hardware abstraction interfaces (host unit tests only).
 
+#include <algorithm>
 #include <array>
 #include <cstddef>
 #include <cstdint>
@@ -116,6 +117,29 @@ class FakePcnt final : public hal::QuadratureCounter {
  private:
   std::int16_t limit_;
   std::int16_t raw_ = 0;
+};
+
+/// In-memory serial link: tests push received bytes and inspect sent ones.
+class FakeByteStream final : public hal::ByteStream {
+ public:
+  void receive(const std::vector<std::uint8_t>& bytes) {
+    rx.insert(rx.end(), bytes.begin(), bytes.end());
+  }
+
+  std::size_t read(std::uint8_t* data, std::size_t capacity) override {
+    const std::size_t count = std::min(capacity, rx.size());
+    std::copy(rx.begin(), rx.begin() + static_cast<std::ptrdiff_t>(count), data);
+    rx.erase(rx.begin(), rx.begin() + static_cast<std::ptrdiff_t>(count));
+    return count;
+  }
+
+  std::size_t write(const std::uint8_t* data, std::size_t size) override {
+    tx.insert(tx.end(), data, data + size);
+    return size;
+  }
+
+  std::vector<std::uint8_t> rx;
+  std::vector<std::uint8_t> tx;
 };
 
 /// Manually advanced clock; delays advance it instantly.
