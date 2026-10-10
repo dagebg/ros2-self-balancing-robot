@@ -30,7 +30,23 @@ so ROS 2 containers behave like they do on the robot.
 | Task | Command |
 |---|---|
 | Lint and format everything | `.venv/bin/pre-commit run --all-files` |
-| Firmware static analysis | `cd firmware/esp32/robot-firmware && ../../../.venv/bin/pio check` |
+| Python tool tests | `.venv/bin/pytest` |
+| Regenerate `robot_config.hpp` | `.venv/bin/python tools/gen_config.py` |
+| Firmware unit tests (host) | `cd firmware/esp32/robot-firmware && pio test -e native` |
+| Firmware build | `cd firmware/esp32/robot-firmware && pio run -e esp32` |
+| Firmware static analysis | `cd firmware/esp32/robot-firmware && pio check -e esp32` |
 | Build the docs | `make -C docs html SPHINXBUILD=../.venv/bin/sphinx-build SPHINXOPTS="-W --keep-going"` |
 
-Commands for firmware builds, unit tests and ROS 2 are added to this page as those parts land.
+(`pio` is `.venv/bin/pio` unless the venv is activated.)
+
+## Troubleshooting (macOS)
+
+Host-side C++ builds (`pio test -e native`, CMake) link with Apple's toolchain. Two local setups
+are known to break that link step with `tapi error: unknown architecture arm64e.x1`:
+
+- **Conda on `PATH`:** conda ships its own, older `ld`. Deactivate conda (or drop its `bin` from
+  `PATH`) for the build.
+- **An SDK newer than the Command Line Tools:** if `xcrun --show-sdk-path` points at an SDK
+  newer than the installed linker supports, point the build at a matching one, e.g.
+  `export SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk`, or update the
+  Command Line Tools.

@@ -24,6 +24,13 @@ hardware/index
 
 :::{toctree}
 :maxdepth: 2
+:caption: Software
+
+firmware/index
+:::
+
+:::{toctree}
+:maxdepth: 2
 :caption: Deployment
 
 deployment/networking

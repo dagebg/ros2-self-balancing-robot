@@ -75,6 +75,7 @@ temp/
 docs/_build/
 docs/build/
 docs/doxygen_output/
+docs/source/_generated/
 
 .pytest_cache/
 .mypy_cache/

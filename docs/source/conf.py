@@ -6,7 +6,11 @@ import shutil
 import subprocess
 from pathlib import Path
 
+import yaml
+
 DOCS_DIR = Path(__file__).resolve().parent.parent
+REPO_ROOT = DOCS_DIR.parent
+GENERATED_DIR = Path(__file__).resolve().parent / "_generated"
 
 # -- Project information -----------------------------------------------------
 project = "ROS2 Self-Balancing Robot"
@@ -45,6 +49,30 @@ if os.environ.get("SKIP_DOXYGEN") != "1":
 breathe_projects = {"robot": str(DOXYGEN_XML)}
 breathe_default_project = "robot"
 breathe_default_members = ("members", "undoc-members")
+
+# -- Generated pages ---------------------------------------------------------
+# The robot parameter table is rendered from config/robot_params.yaml so it never drifts.
+
+
+def _render_params_table() -> str:
+    params = yaml.safe_load((REPO_ROOT / "config" / "robot_params.yaml").read_text("utf-8"))
+    rows = [
+        "| Group | Parameter | Value | Unit | Status | Description |",
+        "|---|---|---|---|---|---|",
+    ]
+    for group, entries in params.items():
+        for name, entry in entries.items():
+            status = "measured" if entry["measured"] else "**placeholder**"
+            rows.append(
+                f"| {group} | `{name}` | {entry['value']} | {entry['unit']} | {status} "
+                f"| {entry['doc']} |"
+            )
+    return "\n".join(rows) + "\n"
+
+
+GENERATED_DIR.mkdir(exist_ok=True)
+(GENERATED_DIR / "robot_params_table.md").write_text(_render_params_table(), "utf-8")
+exclude_patterns.append("_generated")
 
 # -- HTML output -------------------------------------------------------------
 html_theme = "furo"
