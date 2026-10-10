@@ -1,0 +1,73 @@
+# Robot parameters: the single source of truth for constants shared by the
+# firmware, the ROS 2 packages and the simulation.
+#
+# Every entry has a value, a unit and a `measured` flag. `measured: false` marks a
+# placeholder that still has to be determined on the real robot; see the
+# calibration guide in the docs.
+#
+# After editing, regenerate the firmware header:
+#   python tools/gen_config.py
+# (pre-commit and CI fail if the header is out of date.)
+
+geometry:
+  wheel_radius:
+    value: 0.0325
+    unit: m
+    measured: false
+    doc: Radius of the drive wheels, including the tyre.
+  track_width:
+    value: 0.150
+    unit: m
+    measured: false
+    doc: Distance between the contact points of the two wheels.
+  com_height:
+    value: 0.080
+    unit: m
+    measured: false
+    doc: Height of the centre of mass above the wheel axle.
+  body_mass:
+    value: 0.900
+    unit: kg
+    measured: false
+    doc: Total mass of the robot without the wheels.
+
+drivetrain:
+  gear_ratio:
+    value: 150.0
+    unit: "1"
+    measured: false
+    doc: Motor revolutions per wheel revolution.
+  encoder_pulses_per_motor_rev:
+    value: 7
+    unit: "1"
+    measured: false
+    doc: Pulses per motor-shaft revolution on one encoder channel (before x4 decoding).
+  motor_supply_voltage:
+    value: 11.5
+    unit: V
+    measured: true
+    doc: Voltage of the motor rail (U3 converter) feeding TB6612 VM.
+  motor_rated_voltage:
+    value: 6.0
+    unit: V
+    measured: false
+    doc: Rated voltage of the N20 motors; limits the maximum PWM duty cycle.
+
+control:
+  loop_rate:
+    value: 200
+    unit: Hz
+    measured: true
+    doc: Rate of the balance control loop on the ESP32.
+  telemetry_rate:
+    value: 50
+    unit: Hz
+    measured: true
+    doc: Rate at which the ESP32 sends telemetry to the Pi.
+
+link:
+  uart_baud:
+    value: 460800
+    unit: Bd
+    measured: true
+    doc: Baud rate of the ESP32 <-> Raspberry Pi UART link.
